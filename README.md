@@ -1,4 +1,4 @@
-# 2324_1DVO_WPL2_GROEP_06
+  # 2324_1DVO_WPL2_GROEP_06
 
 # Case
 Case gaat over...
@@ -9,5 +9,6 @@ Case gaat over...
 - Maite Gijbels
 - Yilmaz Feride
 - Jelle Vandebroek
+- Jarno Mensaert
 
 # Bronnen
