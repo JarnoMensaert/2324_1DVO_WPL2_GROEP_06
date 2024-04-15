@@ -1,0 +1,12 @@
+{
+  "name": "2324_1dvo_wpl2_groep_06",
+  "version": "1.0.0",
+  "description": "Case gaat over...",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
