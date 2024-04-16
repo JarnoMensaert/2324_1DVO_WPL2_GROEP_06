@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "vue-template",
   "version": "0.0.0",
   "private": true,
@@ -18,16 +17,4 @@
     "@vitejs/plugin-vue": "^5.0.3",
     "vite": "^5.0.11"
   }
-=======
-  "name": "2324_1dvo_wpl2_groep_06",
-  "version": "1.0.0",
-  "description": "Case gaat over...",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
->>>>>>> b059e6e960d1cda2286813ac8fd4c5d484b1c0a6
 }
