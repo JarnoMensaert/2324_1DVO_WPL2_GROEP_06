@@ -1,0 +1,266 @@
+@use 'base' as *;
+
+// HeaderComponent
+.nav
+{
+  height: 280px;
+  background-color: $background-color;
+  position: relative;
+  &-top
+  {
+    display: flex;
+    height: 200px;
+
+    justify-content: flex-end;
+    align-items: center;
+    img
+    {
+      height: 39px;
+      width: 39px;
+    }
+    .logo
+    {
+      height: 96px;
+      width: 246px;
+      position: absolute;
+      left: calc((100% - 195px) / 2);
+      top: 50px;
+    }
+    .navtopitem {
+    }
+
+    .iconlinks {
+      position: absolute;
+      left: 2%;
+    }
+
+    .iconrechts:nth-child(1),
+    .iconrechts:nth-child(2) {
+      margin-right: 5%;
+    }
+  }
+  &-bottom {
+    display: flex;
+    .navitems
+    {
+      width: 1083px;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
+      .navitem
+      {
+        list-style-type: none;
+        font-size: $font-regular;
+        font-family: $font-main;
+      }
+    }
+  }
+}
+
+// FooterComponent
+footer
+{
+  background-color: $footer-background;
+}
+.footerTop
+{
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  .footerInfo
+  {
+    padding: 20px;
+    @include textStyles($font-small);
+    padding: 30px 0;
+    .icon
+    {
+      font-size: 45px;
+      margin-bottom: 50px;
+      margin-right: 20px;
+      color: $background-color;
+    }
+    .footerTitle
+    {
+      @include textStyles($font-regular);
+      font-weight: normal;
+      padding-bottom: 40px;
+    }
+    .footerList
+    {
+      list-style-type: none;
+    }
+    #email
+    {
+      border: none;
+      background-color: transparent;
+      color: $background-color;
+      border-bottom: 4px solid $background-color;
+      margin-top: 25px;
+      padding: 5px 0;
+      width: 100%;
+    }
+    #email::placeholder {
+      @include textStyles($font-small);
+    }
+    #email:focus
+    {
+      outline: none;
+    }
+    #submitEmail
+    {
+      position: absolute;
+      margin: 32px 0 0 -30px;
+      background-color: transparent;
+      border: none;
+      color: $background-color;
+    }
+  }
+}
+.footerBottom
+{
+  @include textStyles($font-small);
+  text-decoration: underline;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+// DiscoverMoreComponent
+
+.caroussel
+{
+  width: 100%;
+  text-align: center;
+  img
+  {
+    width: 100%;
+  }
+  #discover
+  {
+    width: 15%;
+    @include textStyles($font-large);
+    background-color: $color-secondary;
+    padding: 20px 10px;
+    position: relative;
+    top: -100px;
+    border: none;
+  }
+}
+
+// WatchComponent
+
+.middleScreen
+{
+  width: 100%;
+  text-align: center;
+  .groteTekst
+  {
+    font-size: $font-extraLarge;
+    margin-bottom: 50px;
+  }
+  .aanbiedingen
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .aanbieding
+    {
+      width: 30%;
+      img
+      {
+        height: 360px;
+        width: 283px;
+      }
+    }
+  }
+}
+
+// LookingForComponent
+
+.fullscreen
+{
+  width: 100%;
+  height: 580px;
+  text-align: center;
+  h3
+  {
+    font-size: $font-extraLarge;
+    margin-bottom: 50px;
+  }
+  .lookingForWhat
+  {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    .lookingFor
+    {
+      width: 20%;
+    }
+    img {
+      height: 580px;
+    }
+  }
+}
+
+// StoriesComponent
+
+.kleineRuimte
+{
+  text-align: center;
+  width: 100%;
+  .groteTekst
+  {
+    font-size: $font-extraLarge;
+    font-family: $font-main;
+    font-weight: normal;
+    margin: 100px 0 50px 0;
+  }
+  .stories
+  {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    .story
+    {
+      width: 33%;
+      .storyTitel
+      {
+        font-size: $font-extraLarge;
+        font-family: $font-main;
+        padding: 20px 0;
+        text-align: left;
+        margin-left: 50px
+      }
+      .storyBeschrijving
+      {
+        font-size: $font-small;
+        font-family: $font-secondary;
+        text-align: left;
+        margin-left: 50px;
+        width: 400px;
+      }
+      .storyKnop
+      {
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-right: 325px;
+        padding: 10px 0;
+        color: $footer-background;
+      }
+    }
+  }
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.inputtext:hover {
+  cursor: alias;
+}

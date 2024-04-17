@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+$background-color: #F6F1EE;
+$footer-background: rgba(#6C5F5B, 0.85);
+$color-secondary: #FFD966;
+$color-black: #000000;
+$color-white: #ffffff;
+
+$font-main: "Inter", sans-serif;
+$font-secondary: "Arial", sans-serif;
+
+$font-extraLarge: 32px;
+$font-large: 26px;
+$font-regular: 20px;
+$font-small: 14px;
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin textStyles($fontSize)
+{
+  font-size: $fontSize;
+  font-family: $font-main;
+  color: $background-color;
+}
