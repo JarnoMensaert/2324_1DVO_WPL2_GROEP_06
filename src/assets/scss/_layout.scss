@@ -1,5 +1,14 @@
 @use 'base' as *;
 
+body {
+  font: $font-main;
+
+  p, a, h1, h2, h3, h4, h5, h6 {
+
+    font-family: $font-main;
+  }
+}
+
 // HeaderComponent
 .nav
 {
@@ -17,6 +26,7 @@
     {
       height: 39px;
       width: 39px;
+      margin-right: 2%;
     }
     .logo
     {
@@ -182,8 +192,7 @@ footer
 .fullscreen
 {
   width: 100%;
-  height: 580px;
-  text-align: center;
+  position: relative;
   h3
   {
     font-size: $font-extraLarge;
@@ -191,16 +200,46 @@ footer
   }
   .lookingForWhat
   {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    width: auto;
+
     .lookingFor
     {
       width: 20%;
+      padding: 0;
+      margin: 0;
+      height: auto;
     }
     img {
       height: 580px;
+      padding: 0;
+      margin: 0;
+      width: calc(100vw / 5);
+    }
+    .lookingForTekst {
+      position: absolute;
+      bottom: 0.8%;
+      background-color: $licht-grijs-geel;
+      width: calc(100vw / 5);
+      height: 64px;
+      font: $font-main;
+
+      .homeCategorie {
+        font-size: $font-regular;
+        text-align: start;
+        padding-left: 10%;
+        margin-bottom: 1%;
+      }
+
+      .shopNow {
+        font-size: $font-small;
+        padding-left: 10%;
+        margin-bottom: 1%;
+      }
     }
   }
 }
@@ -209,38 +248,37 @@ footer
 
 .kleineRuimte
 {
-  text-align: center;
   width: 100%;
   .groteTekst
   {
+    text-align: center;
     font-size: $font-extraLarge;
     font-family: $font-main;
     font-weight: normal;
     margin: 100px 0 50px 0;
+    width: 100%;
   }
   .stories
   {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    margin: 0 auto;
     padding-bottom: 50px;
+    width: 100%;
     .story
     {
-      width: 33%;
-      .storyTitel
-      {
+
+      .storyTitel {
         font-size: $font-extraLarge;
         font-family: $font-main;
         padding: 20px 0;
         text-align: left;
-        margin-left: 50px
       }
       .storyBeschrijving
       {
         font-size: $font-small;
         font-family: $font-secondary;
         text-align: left;
-        margin-left: 50px;
         width: 400px;
       }
       .storyKnop
@@ -253,9 +291,155 @@ footer
         padding: 10px 0;
         color: $footer-background;
       }
+      .storyImage {
+      }
     }
   }
 }
+// AboutView
+
+.aboutTitle
+{
+  text-align: center;
+  font-size: $font-pageTitle;
+  font-weight: 400;
+  font-family: $font-main;
+  padding: 50px;
+}
+.breadcrumb
+{
+  margin:  0 40px;
+  p
+  {
+    font-style: italic;
+  }
+}
+
+// MissieVisieComponent
+
+.missieVisie
+{
+  display: flex;
+  align-items: center;
+  img
+  {
+    width: 50%;
+    height: auto;
+    padding: 40px;
+    margin-right: 40px;
+  }
+  .info
+  {
+    flex: 1;
+    .infoTitle
+    {
+      font-family: $font-main;
+      font-size: $font-extraLarge;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
+    p
+    {
+      font-family: $font-main;
+      font-size: $font-small;
+      width: 40vw;
+    }
+  }
+}
+
+// AdresContactComponent
+
+.adresContact
+{
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+  .info
+  {
+    flex: 1;
+    padding-left: 20px;
+    .infoTitle
+    {
+      font-family: $font-main;
+      font-size: $font-extraLarge;
+      font-weight: 400;
+      margin: 0 0 25px 25px;
+    }
+    p
+    {
+      font-family: $font-main;
+      font-size: $font-small;
+      width: 575px;
+      margin: 0 0 25px 25px;
+    }
+  }
+
+  iframe
+  {
+    width: 50%;
+    height: 500px;
+    padding: 40px;
+    border: 0;
+  }
+}
+
+//FAQSectionComponent
+
+.faq
+{
+  font-size: $font-extraLarge;
+  font-family: $font-main;
+  font-weight: 400;
+  padding: 25px 0;
+  margin-left: 30px;
+}
+h2
+{
+  font-size: $font-large;
+  font-family: $font-main;
+  font-weight: 400;
+  margin-left: 40px;
+}
+.accWrapper
+{
+  width: 60%;
+  .accTitle
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p
+    {
+      font-size: $font-regular;
+      margin-left: 60px;
+      padding: 10px 0;
+    }
+  }
+  .accContent
+  {
+    font-size: $font-small;
+    font-family: $font-main;
+    font-weight: 300;
+    margin-left: 60px;
+    width: 75%;
+    a
+    {
+      color: $color-black;
+    }
+    ul
+    {
+      margin-left: 20px;
+    }
+  }
+}
+.faqButton
+{
+  width: 20px;
+  height: auto;
+  color: black;
+  font-size: 200px;
+}
+
 
 .clickable:hover {
   cursor: pointer;
@@ -263,4 +447,9 @@ footer
 
 .inputtext:hover {
   cursor: alias;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: $color-black;
 }

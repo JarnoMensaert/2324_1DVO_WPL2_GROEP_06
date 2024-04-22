@@ -1,25 +1,22 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 
 export default {
   data() {
-    return {
-    }
+    return {}
   },
   components: {
     HeaderComponent,
-  },
+    FooterComponent,
+  }
 }
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
+  <HeaderComponent/>
 
-    </div>
-  </header>
-
-  <RouterView/>
+  <FooterComponent/>
 </template>
 
 <style scoped>
