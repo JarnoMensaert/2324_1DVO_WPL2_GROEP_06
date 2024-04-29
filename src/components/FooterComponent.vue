@@ -43,7 +43,7 @@ import { AnFilledInstagram } from "@kalimahapps/vue-icons";
       </div>
     </div>
     <div class="footerBottom">
-      <a class="clickable">Algemene voorwaarden / Cookies / Privacybeleid</a>
+      <RouterLink to="/voorwaarden"><a class="clickable">Algemene voorwaarden / Cookies / Privacybeleid</a></RouterLink>
     </div>
   </footer>
 </template>

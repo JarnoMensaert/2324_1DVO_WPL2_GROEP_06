@@ -1,42 +1,43 @@
-<script setup>
+<script>
+export default {
+  data() {
+    return {
+      shopNow: "Shop now ->",
+      categories: [
+        {
+          name: "Zitmeubels",
+          image: "@/assets/Images/Zitmeubels.png",
+        },
+        {
+          name: "Eetkamer",
+          image: "@/assets/Images/Eetkamer.png",
+        },
+        {
+          name: "Slapen",
+          image: "@/assets/Images/Slapen.png",
+        },
+        {
+          name: "Tafels",
+          image: "@/assets/Images/Tafels.png",
+        },
+        {
+          name: "Kasten",
+          image: "@/assets/Images/Kasten.png",
+        }
+      ]
+    }
+  }
+}
 </script>
 <template>
   <div class="fullscreen">
     <h3>What are you looking for?</h3>
     <div class="lookingForWhat">
-      <div class="lookingFor">
-        <img height="360" src="../assets/Images/Zitmeubels.png" width="288"/>
+      <div v-for="(category, index) in categories" :key="index" class="lookingFor">
+        <img :src="category.image" :alt="category.name"/>
         <div class="lookingForTekst">
-          <p class="homeCategorie">Zitmeubels</p>
-          <a class="shopNow">Shop now -></a>
-        </div>
-      </div>
-      <div class="lookingFor">
-        <img height="360" src="../assets/Images/Eetkamer.png" width="288"/>
-        <div class="lookingForTekst">
-          <p class="homeCategorie">Eetkamer</p>
-          <a class="shopNow">Shop now -></a>
-        </div>
-      </div>
-      <div class="lookingFor">
-        <img height="360" src="../assets/Images/Slapen.png" width="288"/>
-        <div class="lookingForTekst">
-          <p class="homeCategorie">Slapen</p>
-          <a class="shopNow">Shop now -></a>
-        </div>
-      </div>
-      <div class="lookingFor">
-        <img height="360" src="../assets/Images/Tafels.png" width="288"/>
-        <div class="lookingForTekst">
-          <p class="homeCategorie">Tafels</p>
-          <a class="shopNow">Shop now -></a>
-        </div>
-      </div>
-      <div class="lookingFor">
-        <img height="360" src="../assets/Images/Kasten.png" width="288"/>
-        <div class="lookingForTekst">
-          <p class="homeCategorie">Kasten</p>
-          <a class="shopNow">Shop now -></a>
+          <p class="homeCategorie">{{ category.name }}</p>
+          <a class="shopNow">{{ shopNow }}</a>
         </div>
       </div>
     </div>
