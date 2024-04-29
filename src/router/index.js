@@ -5,6 +5,8 @@ import MeubelsView from '../views/MeubelsView.vue'
 import WoonaccesoiresView from "@/views/WoonaccesoiresView.vue";
 import StoriesView from "@/views/StoriesView.vue";
 import KlantenserviceView from "@/views/KlantenserviceView.vue";
+import VoorwaardenView from "@/views/VoorwaardenView.vue";
+import WinkelmandView from "@/views/WinkelmandView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -38,6 +40,16 @@ const router = createRouter({
       path: '/klantenservice',
       name: 'klantenservice',
       component: KlantenserviceView
+    },
+    {
+      path: '/voorwaarden',
+      name: 'voorwaarden',
+      component: VoorwaardenView
+    },
+    {
+      path: '/winkelmand',
+      name: 'winkelmand',
+      component: WinkelmandView
     }
   ]
 })

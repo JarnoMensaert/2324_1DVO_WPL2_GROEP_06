@@ -23,7 +23,7 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">Over Ons</div>
   <div class="breadcrumb">
-    <p>HOME / OVER ONS</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>HOME / OVER ONS</p>
     <hr>
   </div>
   <MissieVisieComponent/>

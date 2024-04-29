@@ -3,10 +3,10 @@
 <template>
   <nav class="nav">
     <div class="nav-top">
-      <img class="clickable iconlinks navtopitem" src="../assets/Icons/Search.png"/>
-      <RouterLink to="/"><img class="logo clickable" src="../assets/Comfortmeubel/Logo.png"/></RouterLink>
-      <img class="clickable iconrechts navtopitem" src="../assets/Icons/Person.png"/>
-      <img class="clickable iconrechts navtopitem" src="../assets/Icons/Shopping Cart.png"/>
+      <img class="clickable iconlinks navtopitem" src="@/assets/Icons/Search.png"/>
+      <RouterLink to="/"><img class="logo clickable" src="@/assets/Comfortmeubel/Logo.png"/></RouterLink>
+      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/Person.png"/>
+      <RouterLink to="/winkelmand"><img class="clickable iconrechts navtopitem" src="@/assets/Icons/Shopping Cart.png"/></RouterLink>
     </div>
     <div class="nav-bottom">
       <ul class="navitems">

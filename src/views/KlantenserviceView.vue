@@ -1,6 +1,7 @@
 <script>
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import FooterComponent from "@/components/FooterComponent.vue";
+import HeaderComponent from '../components/HeaderComponent.vue'
+import KlantenserviceComponent from '../components/KlantenserviceComponent.vue'
+import FooterComponent from '../components/FooterComponent.vue'
 
 export default {
   data() {
@@ -8,6 +9,7 @@ export default {
   },
   components: {
     HeaderComponent,
+    KlantenserviceComponent,
     FooterComponent,
   }
 }
@@ -15,10 +17,11 @@ export default {
 
 <template>
   <HeaderComponent/>
-
+  <div class="aboutTitle">Klantenservice</div>  
+  <div class="breadcrumb">
+    <p>HOME / KLANTENSERVICE</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <hr>
+  </div>
+  <KlantenserviceComponent/>
   <FooterComponent/>
 </template>
-
-<style scoped>
-
-</style>
