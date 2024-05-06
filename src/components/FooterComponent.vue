@@ -86,8 +86,8 @@ export default {
       </div>
       <div class="footerInfo">
         <h5 class="footerTitle">{{ footerTitleR2 }}</h5>
-        <a href="https://www.facebook.com/comfortmeubel/"><img src="/assets/Icons/facebook.png" class="icon clickable" alt="Facebook"/></a>
-        <a href="https://www.instagram.com/comfortmeubel/"><img src= "/assets/Icons/instagram.png" class="icon clickable" alt="Instagram"/></a>
+        <a href="https://www.facebook.com/comfortmeubel/" target="_blank"><img src="/assets/Icons/facebook.png" class="icon clickable" alt="Facebook"/></a>
+        <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><img src= "/assets/Icons/instagram.png" class="icon clickable" alt="Instagram"/></a>
         <form>
           <p>{{ footerInfoR2 }}</p>
           <input id="email" type="email" placeholder="Je e-mailadres">
