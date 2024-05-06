@@ -2,27 +2,28 @@
 export default {
   data() {
     return {
+      title: "What are you looking for?",
       shopNow: "Shop now ->",
       categories: [
         {
           name: "Zitmeubels",
-          image: "@/assets/Images/Zitmeubels.png",
+          image: "/assets/images/Zitmeubels.png",
         },
         {
           name: "Eetkamer",
-          image: "@/assets/Images/Eetkamer.png",
+          image: "/assets/images/Eetkamer.png",
         },
         {
           name: "Slapen",
-          image: "@/assets/Images/Slapen.png",
+          image: "/assets/images/Slapen.png",
         },
         {
           name: "Tafels",
-          image: "@/assets/Images/Tafels.png",
+          image: "/assets/images/Tafels.png",
         },
         {
           name: "Kasten",
-          image: "@/assets/Images/Kasten.png",
+          image: "/assets/images/Kasten.png",
         }
       ]
     }
@@ -31,7 +32,7 @@ export default {
 </script>
 <template>
   <div class="fullscreen">
-    <h3>What are you looking for?</h3>
+    <h3>{{ title }}</h3>
     <div class="lookingForWhat">
       <div v-for="(category, index) in categories" :key="index" class="lookingFor">
         <img :src="category.image" :alt="category.name"/>

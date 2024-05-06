@@ -1,35 +1,41 @@
 <script>
-
+export default {
+  data() {
+    return {
+      stories: [
+        {
+          title: "Nieuwe favoriete eettafel",
+          description: "Mijn eettafel van Comfortmeubel heeft mijn huis getransformeerd tot een plek van samenzijn en vreugde. Met zijn tijdloze ontwerp ...",
+          image: "/assets/images/favEettafel.png"
+        },
+        {
+          title: "Comfortabele zetel",
+          description: "Mijn relaxfauteuil, gekozen met zorg bij Comfortmeubel, is niet zomaar een meubelstuk; het is een oase van rust in mijn huis. Met zijn...",
+          image: "/assets/images/comfZetel.png"
+        },
+        {
+          title: "Perfecte zitbank",
+          description: "Mijn Comfortmeubel zetel is meer dan slechts een stuk meubilair; het is een toevluchtsoord van troost en rust in mijn huis. Met zijn omhelzende...",
+          image: "/assets/images/perfZitbank.png"
+        }
+      ]
+    };
+  }
+};
 </script>
-
 <template>
   <div class="kleineRuimte">
     <h3 class="groteTekst">Stories</h3>
     <div class="stories">
-      <div class="story">
-        <img class="storyImage" src="@/assets/images/favEettafel.png">
-        <div class="storyTitel">Nieuwe favoriete eettafel</div>
-        <div class="storyBeschrijving">Mijn eettafel van Comfortmeubel heeft mijn huis getransformeerd tot een plek van
-          samenzijn en vreugde. Met zijn tijdloze ontwerp ...
-        </div>
-        <button class="storyKnop">Read more</button>
-      </div>
-      <div class="story">
-        <img class="storyImage" src="@/assets/images/comfZetel.png">
-        <div class="storyTitel">Comfortabele zetel</div>
-        <div class="storyBeschrijving">Mijn relaxfauteuil, gekozen met zorg bij Comfortmeubel, is niet zomaar een
-          meubelstuk; het is een oase van rust in mijn huis. Met zijn...
-        </div>
-        <button class="storyKnop">Read more</button>
-      </div>
-      <div class="story">
-        <img class="storyImage" src="@/assets/images/perfZitbank.png">
-        <div class="storyTitel">Perfecte zitbank</div>
-        <div class="storyBeschrijving">Mijn Comfortmeubel zetel is meer dan slechts een stuk meubilair; het is een
-          toevluchtsoord van troost en rust in mijn huis. Met zijn omhelzende...
-        </div>
+      <div class="story" v-for="(story, index) in stories" :key="index">
+        <img class="storyImage" :src="story.image">
+        <div class="storyTitel">{{ story.title }}</div>
+        <div class="storyBeschrijving">{{ story.description }}</div>
         <button class="storyKnop">Read more</button>
       </div>
     </div>
   </div>
 </template>
+
+
+

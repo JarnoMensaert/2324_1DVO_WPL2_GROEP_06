@@ -1,354 +1,118 @@
-<script setup>
+<script>
 
+import voorwaardenView from "../views/VoorwaardenView.vue";
+
+export default {
+  data() {
+    return {
+      Titel: "Algemene Voorwaarden",
+      voorwaarden: [
+        {
+          voorwaardenTitel1: "Artikel 1 – TOEPASSINGSGEBIED",
+          voorwaardenTekst1: "De onderliggende algemene voorwaarden zijn van toepassing op alle rechtsbetrekkingen\n waaronder begrepen: aanbiedingen, overeenkomsten en opdrachten tot levering van goederen en diensten, tussen een\n Klant die een bestelling plaatst in de fysieke winkel Comfortmeubel, uw interieurspecialist, te Kerkstraat 114, 2060\n Antwerpen en Buhara BVBA (hierna: Comfortmeubel). \n Deze algemene voorwaarden zijn niet van toepassing voor aankopen in de webshop. Voor de aankopen in de webshop\n gelden de algemene voorwaarden bij online aankopen.\n Onder het woord “Klant” wordt verstaan elke natuurlijke persoon of rechtspersoon die een opdracht heeft gegeven of\n een bestelling heeft geplaatst, namelijk elke contractuele tegenpartij van Comfortmeubel.\n Door het plaatsen van een bestelling verklaart de koper kennis te hebben genomen van de algemene voorwaarden en\n aanvaardt de koper deze voorwaarden.\n Behoudens tegenstrijdige, uitdrukkelijk en geschreven beding worden al onze leveringen en verkopen beheerst door de\n hierna volgende algemene voorwaarden. Behoudens uitdrukkelijk en geschreven beding wordt de Klant geacht te verzaken\n aan zijn eigen algemene en bijzondere koopvoorwaarden en in te stemmen met de hiernavolgende bepalingen, welke\n altijd primeren op deze van de Klant. ",
+        },
+        {
+          voorwaardenTitel2: "Artikel 2 – OFFERTE – BESTELLING EN AANVAARDING VAN DE ALGEMENE VOORWAARDEN",
+          voorwaardenTekst2: "De offerte van Comfortmeubel is vrijblijvend en informatief. Een bestelling wordt daarbij\n pas bevestigd nadat de Klant de algemene voorwaarden heeft gelezen en aanvaard via een handtekening op zijn\n bestelbon.\n De in de offertes opgenomen prijzen zijn afhankelijk van schommelingen in de aankoopprijs van grondstoffen, dewelke\n doorgerekend worden. Aan eventuele vergissingen, onjuiste gegevens of onjuiste prijzen kunnen geen aanspraken\n ontleend worden. Voorstellen en offertes aan de Klant verbinden de partijen pas mits schriftelijk akkoord van\n beiden. Een begin van uitvoering geldt als bevestiging van verkoop, behoudens de uitvoering onder voorbehoud is\n gebeurd.",
+        },
+        {
+          voorwaardenTitel3: "Artikel 3 – BESTELLING",
+          voorwaardenTekst3: "De producten en diensten worden te koop aangeboden en duidelijk vermeld op de bestelbon.\n De bestelbon wordt in drievoud opgemaakt: één voor de Klant, één voor de verkoper en één voor de boekhouding. Na het\n overlopen van de bestelbon en de algemene voorwaarden tekenen zowel de Comfortmeubel als de koper de bestelbon. De\n bestelbon geldt als een rechtmatige overeenkomst. \n Comfortmeubel kan niet verantwoordelijk gesteld worden voor het niet beschikbaar zijn van een product of dienst bij\n de Leverancier, noch voor de schade die daar zou uit kunnen voortvloeien. In het geval één of meerdere producten of\n diensten van een bestelling niet beschikbaar zouden zijn, zal de Klant via e-mail of telefonisch op de hoogte\n gesteld worden dat zijn/haar bestelling geheel of gedeeltelijk geannuleerd wordt. In het geval de niet\n beschikbaarheid vastgesteld en gecommuniceerd wordt op het moment dat de Klant reeds betaald heeft voor zijn\n producten of diensten, zal Comfortmeubel het nodige doen om de betaalde bedragen terug te storten.",
+        },
+      ],
+      voorwaardenTitel4: "Artikel 4 – LEVERING",
+      voorwaardenTekst4: "Tenzij uitdrukkelijk overeengekomen zijn leveringstermijnen informatief en vormen geen\n resultaatsverbintenis. De leveringstermijnen worden bij wijze van inlichting verstrekt. Comfortmeubel zal alle\n redelijke maatregelen nemen teneinde de bestelde producten op tijd te leveren. Vertraging in de uitvoering van de\n bestelling kan nooit aanleiding geven tot enige (schade)vergoeding en/of ontbinding van de overeenkomst.\n Voor voorraadproducten geldt er meestal een leveringstermijn van 4 weken. Producten die niet op voorraad zijn of\n maatwerk verrichten kunnen duren tot 12 weken. Als een product of dienst niet binnen de leveringstermijn geleverd\n wordt op het leveradres, is het aan de Klant om contact op te nemen met Comfortmeubel om de levering te laten\n verrichten binnen een aanvullende termijn die gezien de omstandigheden passend is. Contact opnemen moet gebeuren via\n de telefoon of per mail naar info@comfortmeubel.be.\n De bestellingen worden geleverd op het leveradres zoals het door de Klant opgegeven wordt tijdens het bestellen en\n volgens de voorwaarden die aldaar beschreven worden. De artikelen worden standaard niet gemonteerd bij de levering\n tenzij hiervoor, na overleg met de Klantendienst, een afspraak werd gemaakt tegen een afgesproken meerprijs. Ook een\n ladderlift dient apart aangevraagd te worden en kost 85 euro per uur tot en met de vijfde verdieping in Antwerpen.\n Wanneer de Klant hiervoor kiest, wordt dit op de bestelbon genoteerd en organiseert Comfortmeubel de\n ladderliftdienst. Heel belangrijk is dat er zeker 10 meter opening beschikbaar is voor de deur. Hiervoor moet de\n Klant bij zijn gemeente of stad op tijd parkeerborden aanvragen. Indien er onvoldoende plaats beschikbaar is en de\n levering niet kan worden uitgevoerd, gaat de leverdienst verder. Een tweede ladderlift komt dan op € 150,00. De\n kostprijs van een ladderlift buiten Antwerpen en hoger dan de 5e verdieping wordt ondubbelzinnig meegedeeld met de\n Klant bij de aankoop.\n Het karton of verpakkingsmateriaal wordt nooit meegenomen tenzij Comfortmeubel ook de montage doet. In alle andere\n gevallen blijven de producten ingepakt. Indien de producten worden gemonteerd, kan Comfortmeubel geen enkel product\n meer terug aannemen. De montagekost is afhankelijk van het te monteren product en wordt duidelijk en ondubbelzinnig\n meegedeeld bij het aanvragen van deze extra service.\n De bestellingen kunnen alleen geleverd worden op adressen die gelegen zijn in Europa. Comfortmeubel kan de\n bestelling opsplitsen in één of meerdere leveringen in functie van de beschikbaarheid van de producten. Elke\n levering wordt aangekondigd via e-mail of per telefoon. Op de factuur worden ook de transportkosten en de BTW\n vermeld. De levering is vergezeld van een leverbon, in feite een kopie van de bestelbon, waarop ook de details van\n de geleverde goederen zijn vermeld. De levering wordt aangeboden aan de Klant of aan elke andere persoon die\n aanwezig is op het leveradres. Als niemand het pakket in ontvangst kan nemen op het moment dat het aangeboden wordt,\n zal de transporteur terug vertrekken. De Klant moet dan zelf contact opnemen met Comfortmeubel om te zien waar en\n wanneer het pakket opgehaald kan worden door de Klant of opnieuw worden geleverd tegen extra leverkosten. Deze\n bedraagt de oorspronkelijke leverkost plus een extra van 50 euro.\n Alles wordt getransporteerd door de transportdienst van Comfortmeubel. Hierbij geldt dat wanneer de totale\n aankoopsom boven € 1.000,00 bedraagt, het gratis gelijkvloers wordt geleverd in Antwerpen. Wanneer de totale\n aankoopsom onder de € 1.000,00 bedraagt, worden de aankopen in Antwerpen gelijkvloers geleverd voor € 50,00. Voor\n alle andere gevallen geldt dat de leverkost € 1,00 is per km te berekenen vanuit het magazijnadres (zie artikel 9). \n Het is de verantwoordelijkheid van de Klant om de levering op de afgesproken plaats mogelijk te maken in\n aanwezigheid van de Klant of een door de Klant aangewezen derde partij. Er is sprake van een levering zodra de\n bestelde Producten één keer aan de Klant zijn aangeboden. Indien een aangeboden levering onsuccesvol is ten gevolge\n van een tekortkoming door de Klant of de door Klant aangewezen derde partij, dan zijn de kosten van nieuwe\n leveringspogingen volledig voor rekening van de Klant.\n Comfortmeubel draagt het risico voor beschadiging en/of vermissing van de Producten tot op het moment van leverin Het risico van de Producten gaat over op de Klant zodra de Klant of een door hem aangewezen derde partij de bestelde\n Producten in ontvangst neemt. Iedere levering vereist in principe de ondertekening van de leveringsbevestiging maar\n een gebrek aan ondertekening heeft geen invloed op de overdracht van het risico.",
+
+      voorwaardenTitel5: "Artikel 5 – GARANTIE",
+      voorwaardenTekst5: "Krachtens de wet van 21 september 2004 betreffende de bescherming van de consumenten bij\n verkoop van consumptiegoederen heeft de consument wettelijke rechten. Deze Klant geniet een wettelijke\n garantietermijn van twee (2) jaar. De Klant kan beroep doen op deze wettelijke garantie wanneer het geleverde\n product niet overeenkomt met het gevraagde of bestelde product (non-conformiteit), voor zover de Klant deze\n niet-conformiteit niet kon vaststellen bij de ontvangst van het product.\n gaat het Product defect binnen de eerste zes (6) maanden na de levering, dan geldt het vermoeden dat het gebrek\n bestaat sinds de levering. Comfortmeubel kan het tegendeel bewijzen.\n wordt het defect van het Product meer dan zes (6) maanden na de levering vastgesteld, dan moet de Klant bewijzen dat\n het Product niet-conform was op het moment van de levering.\n Om een beroep te doen op de garantie, moet de Klant een aankoopbewijs kunnen voorleggen. Klanten worden aangeraden\n om de oorspronkelijke verpakking van de goederen te bewaren.\n Bij vaststelling van een gebrek moet de Klant Comfortmeubel zo snel mogelijk inlichten. In ieder geval dient elk\ngebrek binnen een termijn van 15 werkdagen na vaststelling ervan door de Klant te worden gemeld. Nadien vervalt elk\n recht op herstelling of vervanging.\n Comfortmeubel staat overeenkomstig artikelen 1641 t.e.m. 1649 BW, ten aanzien van haar Klanten in voor de verborgen\n gebreken aan de door haar geleverde Producten. Het stelsel van de verborgen gebreken vindt geen toepassing indien de\n Klant op het ogenblik van de koop op de hoogte was van deze gebreken. Bijgevolg heeft iedere Klant recht op herstel\n indien hij, ná de levering, een verborgen gebrek vaststelt in het geleverde Product, conform de wettelijke\n voorschriften.\n Defecten die zich manifesteren na een periode van 6 maanden volgend op datum van aankoop, desgevallend levering,\n worden geacht geen verborgen gebreken te zijn, behoudens tegenbewijs door de Klant.\n De wettelijke garantie evenals de garantie voor verborgen gebreken is niet van toepassing op:\n schade veroorzaakt door normale slijtage, onopzettelijke of opzettelijke veranderingen toegebracht door de Klant aan\n de Producten, inclusief onoordeelkundig en verkeerd gebruik en blootstelling aan vocht, brand, aardbeving en andere\n externe oorzaken;\n schade veroorzaakt door gebruik op een wijze die niet in overeenstemming is met de verstrekte instructies en\n informatie;\n op dezelfde manier is de waarborg niet van toepassing wanneer de schade afkomstig is van sleet, transport;\n producten die opzettelijk beschadigd zijn of beschadigd zijn door nalatigheid (breuk, vocht, niet aangepaste\n temperatuur, roest, infiltratie van een vloeistof, overspanning, brand, of elke andere vorm van overmacht) en voor\n producten waarvan duidelijk is dat ze opengemaakt zijn (herstelling en/of aanpassing uitgevoerd door een hersteller\n die niet erkend is door Comfortmeubel). \n De terugzending van een niet-conform of gebrekkig product (zowel zichtbare als verborgen gebreken) gebeurt steeds op\n risico van de Klant. De Klant die een product onterecht terug verzendt, zal zelf instaan voor de kosten. \n Het verkleuren van hout, textiel, vezelstoffen en leder, plooivorming bij leder en stof, wijziging van hardheid van\n zitkussens en matrassen, alsook natuurlijke kenmerken  van hout, zoals (wind)barsten, noesten, vergroeiingen, knopen\n en het werken van hout voor zover deze verkleuring of dit werken vanuit een technisch oogpunt niet te voorkomen is,\n of volgens de gebruiken in de meubelsector algemeen aanvaard worden of eigen zijn aan de gebruikte materialen,\n vormen normale eigenschappen van de verkochte goederen en tasten de overeenstemming met de verkoopovereenkomst niet\n aan. Deze lijst is niet limitatief.\n Gebreken aan goederen die de Klant bij het sluiten van de verkoopovereenkomst kende of redelijkerwijze moest kennen,\n bijvoorbeeld bij verkoop van solden- en toonzaalmodellen met prijsvermindering, tasten evenmin de overeenstemming\n met de verkoopovereenkomst en voorwaarden aan.\n Comfortmeubel is niet aansprakelijk voor fouten die geschieden tijdens het monteren van de producten door de Klant.\n Bij montagefout door de eigen dienst van Comfortmeubel, staat Comfortmeubel wel garant. Comfortmeubel kan in geen\n geval verantwoordelijk gehouden worden voor eventuele technische gebreken van de geleverde producten, behalve\n wanneer ze onmiddellijk vastgesteld worden bij het uitpakken van het product. In dat geval moet de Klant\n onmiddellijk contact opnemen met Comfortmeubel. ",
+
+      voorwaardenTitel6: "Artikel 6 – BETALING EN PRIJZEN",
+      voorwaardenTekst6: "\"De prijzen die vermeld worden tijdens het aankoopproces, zijn uitgedrukt in euro (€), en zijn inclusief BTW en administratieve kosten, tenzij het expliciet anders vermeld wordt. De prijzen van de producten en diensten bevatten niet de transportkosten, niet de service lift/trap, niet de extra service montage en niet de extra service ladderlift. Deze worden desgevallend apart aangerekend. Het BTW tarief dat van toepassing is, is het BTW tarief dat geldig is in het land waar het leveringsadres gelegen is. Comfortmeubel houdt zich het recht voor om op elk moment de verkoopsprijzen te wijzigen. De prijs die op de dag van de aankoop staat is de geldige prijs. Comfortmeubel is niet aansprakelijk voor eventuele fouten in de prijs of beschrijving. De producten blijven de eigendom van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant, ongeacht of de levering reeds heeft plaatsgevonden. Comfortmeubel stelt haar leveringsverplichtingen uit tot ontvangst van de volledige betaling van alle door de Klant verschuldigde bedragen. De producten blijven de eigendom van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant. De doorgehaalde prijzen zijn ofwel prijzen aangeraden door de leverancier ofwel de prijs voor promotie. De prijzen in de fysieke winkel kunnen afwijken van de online prijzen. Comfortmeubel houdt zich het recht voor om elke bestelling te weigeren van een Klant waarmee een geschil loopt, of in het verleden een geschil gerezen is. Comfortmeubel is niet aansprakelijk voor materiële fouten, zet- of drukfouten. Elke betaling wordt in principe onmiddellijk en volledig afgehandeld, dit is op het moment waar het order door de Klant wordt geplaatst. Behoudens andersluidende schriftelijke bepalingen zijn de facturen contant betaalbaar op het maatschappelijk adres van Comfortmeubel. De betaling zal geschieden zonder enige schuldvergelijking of korting welke niet schriftelijk is overeengekomen. De aankopen kunnen in de winkel kan de Klant betalen met: Bancontact, Mastercard, VISA, Maestro of cash. Betalen met ecocheques is niet mogelijk. Comfortmeubel kan de betalingsmogelijkheden in de toekomst uitbreiden of beperken. Uitbreiding van betalingsmogelijkheden zullen bekendgemaakt worden via de website. In geval de bank van de Klant de betaling weigert, wordt de bestelling automatisch geweigerd. Bij de aankoop dient voor stockartikelen een voorschot van 20% te worden betaald of van 30% indien het besteld moet worden. Bij annulering verliest de Klant zijn voorschot. Comfortmeubel heeft geen toegang tot de confidentiële betalingsgegevens van haar Klanten. Facturen worden enkel per aanvraag uitgekeerd aan rechtspersonen (B2B). Consumenten worden hiervan uitdrukkelijk uitgesloten en kunnen bijgevolg geen factuur aanvragen. Comfortmeubel is gerechtigd een bestelling te weigeren ingevolge een ernstige tekortkoming van de Klant met betrekking tot bestellingen waarbij de Klant betrokken is. Bij niet-betaling op de vervaldag worden de facturen van rechtswege en zonder een vereiste ingebrekestelling verhoogd met een forfaitaire schadevergoeding van 10 % met een minimum van € 50,00 en een wettelijke interest (consument) en intresten cfr. de wet van 02.08.2002 inzake betalingsachterstand bij handelstransacties (onderneming) waarbij elke begonnen maand beschouwd wordt als zijnde verlopen. Ingeval van niet naleving van de vastgestelde betalingstermijnen en indien er gegronde twijfel bestaat omtrent de kredietwaardigheid van de Klant houdt Comfortmeubel het recht voor om bijkomende waarborgen te eisen of alle verdere, ongeacht uit welke overeenkomst voortvloeiende verbintenissen, te staken en eventueel de overeenkomst als verbroken lastens\n de Klant te beschouwen, onverminderd het recht van Comfortmeubel op een schadevergoeding. De\n hieruit ontstane gevolgen en risico’s zijn geheel voor rekening van de Klant.\n Ingeval de Klant in gebreke blijft om één of meerdere uitstaande verplichtingen ten aanzien van Comfortmeubel te\n voldoen, kan Comfortmeubel alle verdere leveringen van producten opschorten tot wanneer alle uitstaande rekeningen\n worden aangezuiverd, inclusief de toegevoegde schadevergoedingen en verwijlintresten.\n De klachtneerlegging heeft geenszins een schorsing van betaling tot gevolg. Ten laste van de Klant komen tevens alle\n (buiten-) gerechtelijke kosten van welke aard dan ook, die Comfortmeubel, als gevolg van de niet-nakoming door de\n Klant van diens (betalings-) verplichtingen, heeft moeten maken.",
+
+      voorwaardenTitel7: "Artikel 7 – ANNULATIES EN TERUGBETALING",
+      voorwaardenTekst7: "Zo lang er geen goederen en/of diensten aan de Klant zijn geleverd en er geen sprake is\n van contractuele wanprestatie, heeft de Klant het recht om de verkoopovereenkomst eenzijdig te verbreken. Elke\n annulering van een bestelling dient in dat opzicht schriftelijk te gebeuren. \n Wanneer de koper van dit recht gebruik maakt, dient hij aan Comfortmeubel een verbrekingsvergoeding te betalen\n gelijk aan zijn/haar voorschot van 20% bij stockartikelen en 30% bij te bestellen producten. Bij eenzijdige\n verbreking, zal het reeds bekomen voorschot volledig worden verrekend als annulatievergoeding. In geval van misbruik\n door de Klant (bijvoorbeeld wanneer de Klant een uitvoering van de overeenkomst of levering herhaaldelijk tegenwerkt\n of uitstelt voor een periode meer dan 3 maanden na binnenkomst van de goederen) is eenzelfde annulatievergoeding van\n toepassing.\n Geopende en gemonteerde pakketten worden nooit teruggenomen. Ook gebreken o.w.v. montagefout door de Klant zelf valt\n niet onder garantie. Indien Comfortmeubel het bestelde goed niet kan leveren o.w.v. bijvoorbeeld een einde aan de\n collectie, een faillissement van de leverancier etc. kan de Klant opteren voor een annulering. Dan wordt het bedrag\n dat de Klant reeds heeft betaald teruggestort. \n Wanneer Comfortmeubel haar verplichtingen niet nakomt, verbindt zij er zich toe de Klant te vergoeden op dezelfde\n wijze als hierboven bepaald. ",
+
+      voorwaardenTitel8: "Artikel 8 – HET VERZAKINGSRECHT",
+      voorwaardenTekst8: "Het verzakingsrecht is niet van toepassing op verkopen binnen de toonzaal.",
+
+      voorwaardenTitel9: "Artikel 9 – CONTACTGEGEVENS",
+      voorwaardenTekst9: "Buhara BVBA met als handelsnaam Comfortmeubel is een Besloten vennootschap met beperkte\n aansprakelijkheid, opgericht volgens de Belgische wetgeving en gevestigd in België, met maatschappelijke zetel te\n 2060 Antwerpen, Groenstraat 84. Zij is ingeschreven in het KBO-register met BTW-nummer BE0455.738.563, Email:\n info@comfortmeubel.be, telefoon +32 (0)235 78 74, fax +32 (0)235 78 74. De exploitatieadres is Kerkstraat 114, 2060\n Antwerpen. Het magazijn is gevestigd op Helmstraat 12, 2140 Antwerpen.",
+
+      voorwaardenTitel10: "Artikel 10 – OVERMACHT",
+      voorwaardenTekst10: "Indien Comfortmeubel door een omstandigheid onafhankelijk van haar wil geheel of\n gedeeltelijk verhinderd is om haar verplichtingen tegenover de andere partij na te komen, zal er sprake zijn van\n overmacht. In dat geval is Comfortmeubel niet gehouden haar verplichtingen jegens de andere partij na te komen.\n Comfortmeubel is gerechtigd haar verplichtingen op te schorten voor de duur van de overmacht.",
+
+      voorwaardenTitel11: "Artikel 11 – INTELLECTUELE EIGENDOMSRECHTEN",
+      voorwaardenTekst11: "Alle intellectuele eigendomsrechten en afgeleide rechten betreffende de producten en\nhandelsnamen blijven behouden bij Comfortmeubel. Onder deze intellectuele eigendomsrechten worden verstaan auteurs-,\  merk, tekeningen- en modellenrechten en/of andere (intellectuele eigendomsrechten, waaronder al dan niet\n octrooieerbare technische en/of commerciële knowhow, methoden en concepten etc. Het is de Klant ten strengste\n verboden gebruik te maken van en/of wijzigingen aan te brengen in de intellectuele eigendomsrechten zoals beschreven\n in dit artikel, behoudens voorafgaandelijk schriftelijke toestemming van Comfortmeubel. Elke inbreuk hiertegen zal\n juridisch vervolgd worden.",
+
+      voorwaardenTitel12: "Artikel 12 – AANSPRAKELIJKHEID",
+      voorwaardenTekst12: "Comfortmeubel kan niet verantwoordelijk gehouden worden voor gebeurlijke fouten in de\n foto´s of de teksten die gebruikt worden voor de product omschrijvingen op de website www.comfortmeubel.be, op alle\n sociale media of in onze folder.\n Comfortmeubel is niet verantwoordelijk voor ongelukken, diefstallen of alle daden die plaatsvinden op de parking te\n Groenstraat 84, 2060 Antwerpen en op de twee parkeerplaatsen voor de garagepoorten te Kerkstraat 112/114.\n Comfortmeubel is niet verantwoordelijk voor ongelukken die gebeuren in de winkel o.w.v. nalatigheid door de ouders\n van een kind en andere nalatigheden te wijten aan de Klant.",
+
+      voorwaardenTitel13: "Artikel 13 – WIJZIGINGEN VAN DE ALGEMENE VOORWAARDEN",
+      voorwaardenTekst13: "Comfortmeubel kan op elk moment de onderliggende Algemene Voorwaarden wijzigen. Alle\n wijzigingen worden dan duidelijk en expliciet beschreven en meegedeeld. Elke aankoop, dienst of alle betrekkingen\n tot Comfortmeubel impliceert dat de Klant weet heeft van de algemene voorwaarden en deze respecteert.",
+
+      voorwaardenTitel14: "Artikel 14 – VERWERKING PERSOONSGEGEVENS ",
+      voorwaardenTekst14: "De verantwoordelijke voor de verwerking respecteert de Belgische wet van 8 december 1992\n met betrekking tot de bescherming van het privéleven in de verwerking van de persoonlijke gegevens.\n De door de Klant meegedeelde persoonsgegevens zullen enkel gebruikt worden voor volgende doeleinden: de correcte\n uitvoering van de verkoopovereenkomst, het verwerken van de bestelling. Als deze gegevens ontbreken wordt de\n bestelling onvermijdelijk geannuleerd. Het opgeven van onjuiste of valse persoonsgegevens, wordt beschouwd als een\n inbreuk op de huidige Verkoopsvoorwaarden. De persoonsgegevens van de Klant zullen uitsluitend verwerkt worden in\n overeenstemming met de privacyverklaring die raadpleegbaar is via de Website.\n De Klant beschikt over een wettelijk recht op inzage en eventuele correctie van uw persoonsgegevens. Mits bewijs van\n identiteit (kopie identiteitskaart) kan de Klant via een schriftelijke, gedateerde en ondertekende aanvraag aan\n Comfortmeubel, gratis de schriftelijke mededeling bekomen van zijn/haar persoonsgegevens. Indien nodig kan de Klant\n ook vragen de gegevens te corrigeren die onjuist, niet volledig of niet pertinent zouden zijn.\n COMFORTMEUBEL vindt privacy enorm belangrijk. Op geen enkele manier gaan wij uw persoonlijke informatie verkopen of\n doorspelen aan derden: gegevens worden veilig opgeslagen in een niet-publiek toegankelijke database. Nieuwsbrieven\n worden enkel gestuurd na expliciete toestemming en kunnen ten allertijden worden uitgeschreven. Uw privé gegevens\n worden door ons enkel gebruikt om uw bestelling correct af te handelen.\n Wij maken gebruik van tal van beveiligde systemen om de veiligheid van uw persoonlijke informatie te garanderen\n wanneer u een bestelling plaatst of gegevens inbrengt, verzendt of uw persoonlijke gegevens raadpleegt. Onze server\n is uitermate beveiligd met de nieuwste technologie.\n Tijdens een bezoek aan de site kunnen ‘cookies’ op de harde schijf van uw computer geplaatst worden. Een cookie is\n een tekstbestand dat door de server van een website in de browser van uw computer of op uw mobiel apparaat geplaatst\n wordt wanneer u een website raadpleegt. Cookies kunnen niet worden gebruikt om personen te identificeren, een cookie\n kan slechts een machine identificeren. Wij gebruiken technische cookies om onze site te kunnen optimaliseren en u\n meer comfort te bieden zoals het automatisch invullen van formulieren.\n U kunt uw internetbrowser zodanig instellen dat cookies niet worden geaccepteerd, dat u een waarschuwing ontvangt\n wanneer een cookie geïnstalleerd wordt of dat de cookies nadien van uw harde schijf worden verwijderd. Dit kan u\n doen via de instellingen van uw browser (via de help-functie). Hou er hierbij wel rekening mee dat bepaalde\n grafische elementen niet correct kunnen verschijnen, of dat u bepaalde applicaties niet zal kunnen gebruiken.\n Door gebruik te maken van onze website, gaat u akkoord met ons gebruik van cookies.\n De Klant is zelf verantwoordelijk voor het vertrouwelijk houden van zijn logingegevens en het gebruik van zijn\n paswoord. Comfortmeubel houdt online (anonieme) bezoekersstatistieken bij om te kunnen bekijken welke pagina’s van\n de internetsite in welke mate bezocht worden.\n Uw informatie wordt zeker en vast nooit verkocht of meegedeeld met derden. Enkel wanneer wij wettelijk hiertoe\n verplicht worden kan dit gebeuren.\n Reviews achtergelaten door U kunnen verder gebruikt worden voor commerciële doeleinden zoals gebruik van de reviews\n bij printadvertenties en ander sociale media.",
+
+      voorwaardenTitel15: "Artikel 15 – NIETIGHEID",
+      voorwaardenTekst15: "De eventuele nietigheid van één van de bepalingen van de overeenkomst zal geenszins de\n invloed hebben op de geldigheid van de andere clausules ondanks de nietigheid van de betwiste clausule. De partijen\n zullen alles in het werk stellen om, in onderlinge overeenstemming, de nietige clausule te vervangen door een\n geldige clausule met dezelfde of grotendeels dezelfde economische impact als de nietige clausule. Het niet opeisen\n van een recht of het niet toepassen van een sanctie door Comfortmeubel houdt geenszins een afstand van recht in.",
+
+      voorwaardenTitel16: "Artikel 16 – TOEPASSELIJK RECHT EN BEVOEGDE RECHTER ",
+      voorwaardenTekst16: "Deze voorwaarden worden exclusief beheerst en geïnterpreteerd in overeenstemming met het\n Belgisch recht. Op alle aanbiedingen en verkoopovereenkomsten is uitsluitend Belgisch recht van toepassing. De\n toepasselijkheid van het Weens Koopverdrag wordt uitdrukkelijk uitgesloten.\n Alle geschillen die verband houden met of voortvloeien uit aanbiedingen van Comfortmeubel, of Verkoopovereenkomsten\n die met haar gesloten zijn, worden voorgelegd aan de rechtbanken van het gerechtelijk arrondissement Antwerpen.",
+
+      voorwaardenTitel17: "Artikel 1 – TOEPASSINGSGEBIED",
+      voorwaardenTekst17: "De e-commerce website van Comfortmeubel (handelsnaam), thans Buhara een besloten\n vennootschap, met maatschappelijke zetel te 2060 Antwerpen, Groenstraat 84. Zij is ingeschreven in het KBO-register\n met BTW-nummer BE0455.738.563, Email: info@comfortmeubel.be, telefoon +32 (0)235 78 74, fax +32 (0)235 78 74. De\n exploitatieadres is Kerkstraat 114, 2060 Antwerpen. Het magazijn is gevestigd op Helmstraat 12, 2140 Antwerpen.biedt\n haar Klanten de mogelijkheid om de producten uit haar webwinkel online aan te kopen.\n Onderhavige Algemene Voorwaarden zijn van toepassing op elke bestelling die geplaatst wordt door een bezoeker van\n deze e-commerce website (“Klant”). Bij het plaatsen van een bestelling via de webwinkel van Comfortmeubel moet de\n Klant deze Voorwaarden uitdrukkelijk aanvaarden, waarmee hij/zij instemt met de toepasselijkheid van deze\n Voorwaarden, met uitsluiting van alle andere voorwaarden. Bijkomende voorwaarden van de Klant worden uitgesloten,\n behoudens wanneer deze voorafgaandelijk, schriftelijk en uitdrukkelijk door Comfortmeubel aanvaard zijn.\n Deze algemene voorwaarden zijn niet van toepassing voor aankopen in de fysieke winkel te Kerkstraat 114, 2060\n Antwerpen. Voor de aankopen in de winkel gelden de algemene voorwaarden zoals opgenomen in de bestelbon gekregen in\n de winkel.\n Het gebruik van de website www.comfortmeubel.be en elke aankoop op de site impliceert dat de Klant onvoorwaardelijk\n en onherroepelijk de onderliggende Algemene Voorwaarden aanvaardt. Een bestelling wordt daarbij pas bevestigd nadat\n de Klant de Algemene Voorwaarden heeft gelezen en aanvaard.",
+
+      voorwaardenTitel18: "Artikel 2 – BETALING EN PRIJZEN",
+      voorwaardenTekst18: "De prijzen die vermeld worden tijdens het aankoopproces, zijn in euro (€) en zijn\n inclusief BTW en administratieve kosten, tenzij het expliciet anders vermeld wordt. De prijzen van de producten en\n diensten bevatten niet de transportkosten, niet de extra service montage en niet de extra service ladderlift. Deze\n worden desgevallend apart aangerekend. Het BTW tarief dat van toepassing is, is het BTW tarief dat geldig is in het\n land waar het leveringsadres gelegen is.\n De opgave van prijs slaat uitsluitend op de artikelen zoals het woordelijk wordt omschreven. De bijhorende foto’s\n zijn decoratief bedoeld en kunnen elementen bevatten die niet inbegrepen zijn in de prijs. Indien voor de leverings-\n of afhalingsdatum de BTW wijzigingen ondergaat, wordt de totale prijs in dezelfde mate aangepast.\n Comfortmeubel houdt zich het recht voor om op elk moment de verkoopsprijzen te wijzigen. De prijs die op de dag van\n de aankoop op de website of het medium staat is de geldige prijs. Comfortmeubel is niet aansprakelijk voor eventuele\n fouten in de prijs of beschrijving. Bij eventuele fouten wordt de klant onmiddellijk na de aankoop op de hoogte\n gebracht.\n De producten blijven de eigendom van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant,\n ongeacht of de levering reeds heeft plaatsgevonden. Comfortmeubel stelt haar leveringsverplichtingen uit tot\n ontvangst van de volledige betaling van alle door de Klant verschuldigde bedragen. De producten blijven de eigendom\n van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant. \n De doorgehaalde prijzen zijn ofwel prijzen aangeraden door de leverancier ofwel de prijs voor promotie. De prijzen\n in de fysieke winkel kunnen afwijken van de online prijzen. Comfortmeubel houdt zich het recht voor om elke\n bestelling te weigeren van een Klant waarmee een geschil loopt, of in het verleden een geschil gerezen is.\n Comfortmeubel is niet aansprakelijk voor materiële fouten, zet- of drukfouten.\n De aankopen kunnen uitsluitend online betaald worden, met Bancontact, PayPal, Creditcard, KBC/CBC Payment Button en\n Belfius Direct Net. Comfortmeubel kan de betalingsmogelijkheden in de toekomst uitbreiden of beperken. Uitbreiding\n van betalingsmogelijkheden zullen bekendgemaakt worden via de website.\n In geval de bank van de Klant de betaling weigert, wordt de bestelling automatisch geweigerd. De Klanten garanderen\n dat ze gewettigd zijn om online betalingen met één van de hoger vermelde betalingsmethodes uit te voeren en dat er\n voldoende dekking is op de bankrekening die gelinkt zijn om alle kosten die voorvloeien uit de transactie te dekken.\n Voor de afhandeling van de online betaling werkt Comfortmeubel samen met Mollie. Bij de aankoop online dient ofwel\n een voorschot te worden betaald van 50% ofwel moet het aankoopbedrag volledig worden betaald. Bestellingen die met\n de post worden opgestuurd moeten 100% betaald zijn. Voor bij de meubeltransport kan de Klant opteren voor volledige\n betaling of 50% voorschot betaling. Het resterende bedrag moet dan bij de levering cash of met bankcheque\n overhandigd worden aan de leverdienst. Comfortmeubel heeft geen toegang tot de confidentiële betalingsgegevens van\n haar Klanten.\n Facturen worden enkel per aanvraag uitgekeerd aan rechtspersonen (B2B). Consumenten worden hiervan uitdrukkelijk\n uitgesloten en kunnen bijgevolg geen factuur aanvragen.\n Comfortmeubel is gerechtigd een bestelling te weigeren ingevolge een ernstige tekortkoming van de Klant met\n betrekking tot bestellingen waarbij de Klant betrokken is.\n Bij niet-betaling op de vervaldag worden de facturen van rechtswege en zonder een vereiste ingebrekestelling\n verhoogd met een forfaitaire schadevergoeding van 10 % met een minimum van € 50,00 en een wettelijke interest\n (consument) en intresten cfr. de wet van 02.08.2002 inzake betalingsachterstand bij handelstransacties (onderneming)\n waarbij elke begonnen maand beschouwd wordt als zijnde verlopen.\n Ingeval de Klant in gebreke blijft om één of meerdere uitstaande verplichtingen ten aanzien van Comfortmeubel te\n voldoen, kan Comfortmeubel alle verdere leveringen van producten opschorten tot wanneer alle uitstaande rekeningen\n worden aangezuiverd, inclusief de toegevoegde schadevergoedingen en verwijlintresten.\n De klachtneerlegging heeft geenszins een schorsing van betaling tot gevolg. Ten laste van de Klant komen tevens alle\n (buiten-) gerechtelijke kosten van welke aard dan ook, die Comfortmeubel, als gevolg van de niet-nakoming door de\n Klant van diens (betalings-) verplichtingen, heeft moeten maken.",
+
+
+    }
+  }
+}
 </script>
 
 <template>
   <div class="breadcrumb">
-    <p class="aboutTitle">Algemene Voorwaarden</p>
-    <p>HOME / OVER ONS</p>
+    <p class="aboutTitle">{{ Titel }}</p>
+    <p>HOME   /   ALGEMENE VOORWAARDEN & PRIVACYBELEID</p>
     <hr>
   </div>
   <p class="voorwaardenHoofdtitel">ALGEMENE VOORWAARDEN BIJ AANKOPEN IN DE WINKEL</p>
-  <p class="voorwaardenTitel">Artikel 1 – TOEPASSINGSGEBIED</p>
-  <p class="voorwaardenTekst">De onderliggende algemene voorwaarden zijn van toepassing op alle rechtsbetrekkingen
-    waaronder begrepen: aanbiedingen, overeenkomsten en opdrachten tot levering van goederen en diensten, tussen een
-    Klant die een bestelling plaatst in de fysieke winkel Comfortmeubel, uw interieurspecialist, te Kerkstraat 114, 2060
-    Antwerpen en Buhara BVBA (hierna: Comfortmeubel). 
-    Deze algemene voorwaarden zijn niet van toepassing voor aankopen in de webshop. Voor de aankopen in de webshop
-    gelden de algemene voorwaarden bij online aankopen.
-    Onder het woord “Klant” wordt verstaan elke natuurlijke persoon of rechtspersoon die een opdracht heeft gegeven of
-    een bestelling heeft geplaatst, namelijk elke contractuele tegenpartij van Comfortmeubel.
-    Door het plaatsen van een bestelling verklaart de koper kennis te hebben genomen van de algemene voorwaarden en
-    aanvaardt de koper deze voorwaarden.
-    Behoudens tegenstrijdige, uitdrukkelijk en geschreven beding worden al onze leveringen en verkopen beheerst door de
-    hierna volgende algemene voorwaarden. Behoudens uitdrukkelijk en geschreven beding wordt de Klant geacht te verzaken
-    aan zijn eigen algemene en bijzondere koopvoorwaarden en in te stemmen met de hiernavolgende bepalingen, welke
-    altijd primeren op deze van de Klant. </p>
-  <p class="voorwaardenTitel">Artikel 2 – OFFERTE – BESTELLING EN AANVAARDING VAN DE ALGEMENE VOORWAARDEN</p>
-  <p class="voorwaardenTekst">De offerte van Comfortmeubel is vrijblijvend en informatief. Een bestelling wordt daarbij
-    pas bevestigd nadat de Klant de algemene voorwaarden heeft gelezen en aanvaard via een handtekening op zijn
-    bestelbon.
-    De in de offertes opgenomen prijzen zijn afhankelijk van schommelingen in de aankoopprijs van grondstoffen, dewelke
-    doorgerekend worden. Aan eventuele vergissingen, onjuiste gegevens of onjuiste prijzen kunnen geen aanspraken
-    ontleend worden. Voorstellen en offertes aan de Klant verbinden de partijen pas mits schriftelijk akkoord van
-    beiden. Een begin van uitvoering geldt als bevestiging van verkoop, behoudens de uitvoering onder voorbehoud is
-    gebeurd.</p>
-  <p class="voorwaardenTitel">Artikel 3 – BESTELLING</p>
-  <p class="voorwaardenTekst">De producten en diensten worden te koop aangeboden en duidelijk vermeld op de bestelbon.
-    De bestelbon wordt in drievoud opgemaakt: één voor de Klant, één voor de verkoper en één voor de boekhouding. Na het
-    overlopen van de bestelbon en de algemene voorwaarden tekenen zowel de Comfortmeubel als de koper de bestelbon. De
-    bestelbon geldt als een rechtmatige overeenkomst. 
-    Comfortmeubel kan niet verantwoordelijk gesteld worden voor het niet beschikbaar zijn van een product of dienst bij
-    de Leverancier, noch voor de schade die daar zou uit kunnen voortvloeien. In het geval één of meerdere producten of
-    diensten van een bestelling niet beschikbaar zouden zijn, zal de Klant via e-mail of telefonisch op de hoogte
-    gesteld worden dat zijn/haar bestelling geheel of gedeeltelijk geannuleerd wordt. In het geval de niet
-    beschikbaarheid vastgesteld en gecommuniceerd wordt op het moment dat de Klant reeds betaald heeft voor zijn
-    producten of diensten, zal Comfortmeubel het nodige doen om de betaalde bedragen terug te storten.</p>
-  <p class="voorwaardenTitel">Artikel 4 – LEVERING</p>
-  <p class="voorwaardenTekst">Tenzij uitdrukkelijk overeengekomen zijn leveringstermijnen informatief en vormen geen
-    resultaatsverbintenis. De leveringstermijnen worden bij wijze van inlichting verstrekt. Comfortmeubel zal alle
-    redelijke maatregelen nemen teneinde de bestelde producten op tijd te leveren. Vertraging in de uitvoering van de
-    bestelling kan nooit aanleiding geven tot enige (schade)vergoeding en/of ontbinding van de overeenkomst.
-    Voor voorraadproducten geldt er meestal een leveringstermijn van 4 weken. Producten die niet op voorraad zijn of
-    maatwerk verrichten kunnen duren tot 12 weken. Als een product of dienst niet binnen de leveringstermijn geleverd
-    wordt op het leveradres, is het aan de Klant om contact op te nemen met Comfortmeubel om de levering te laten
-    verrichten binnen een aanvullende termijn die gezien de omstandigheden passend is. Contact opnemen moet gebeuren via
-    de telefoon of per mail naar info@comfortmeubel.be.
-    De bestellingen worden geleverd op het leveradres zoals het door de Klant opgegeven wordt tijdens het bestellen en
-    volgens de voorwaarden die aldaar beschreven worden. De artikelen worden standaard niet gemonteerd bij de levering
-    tenzij hiervoor, na overleg met de Klantendienst, een afspraak werd gemaakt tegen een afgesproken meerprijs. Ook een
-    ladderlift dient apart aangevraagd te worden en kost 85 euro per uur tot en met de vijfde verdieping in Antwerpen.
-    Wanneer de Klant hiervoor kiest, wordt dit op de bestelbon genoteerd en organiseert Comfortmeubel de
-    ladderliftdienst. Heel belangrijk is dat er zeker 10 meter opening beschikbaar is voor de deur. Hiervoor moet de
-    Klant bij zijn gemeente of stad op tijd parkeerborden aanvragen. Indien er onvoldoende plaats beschikbaar is en de
-    levering niet kan worden uitgevoerd, gaat de leverdienst verder. Een tweede ladderlift komt dan op € 150,00. De
-    kostprijs van een ladderlift buiten Antwerpen en hoger dan de 5e verdieping wordt ondubbelzinnig meegedeeld met de
-    Klant bij de aankoop.
-    Het karton of verpakkingsmateriaal wordt nooit meegenomen tenzij Comfortmeubel ook de montage doet. In alle andere
-    gevallen blijven de producten ingepakt. Indien de producten worden gemonteerd, kan Comfortmeubel geen enkel product
-    meer terug aannemen. De montagekost is afhankelijk van het te monteren product en wordt duidelijk en ondubbelzinnig
-    meegedeeld bij het aanvragen van deze extra service.
-    De bestellingen kunnen alleen geleverd worden op adressen die gelegen zijn in Europa. Comfortmeubel kan de
-    bestelling opsplitsen in één of meerdere leveringen in functie van de beschikbaarheid van de producten. Elke
-    levering wordt aangekondigd via e-mail of per telefoon. Op de factuur worden ook de transportkosten en de BTW
-    vermeld. De levering is vergezeld van een leverbon, in feite een kopie van de bestelbon, waarop ook de details van
-    de geleverde goederen zijn vermeld. De levering wordt aangeboden aan de Klant of aan elke andere persoon die
-    aanwezig is op het leveradres. Als niemand het pakket in ontvangst kan nemen op het moment dat het aangeboden wordt,
-    zal de transporteur terug vertrekken. De Klant moet dan zelf contact opnemen met Comfortmeubel om te zien waar en
-    wanneer het pakket opgehaald kan worden door de Klant of opnieuw worden geleverd tegen extra leverkosten. Deze
-    bedraagt de oorspronkelijke leverkost plus een extra van 50 euro.
-    Alles wordt getransporteerd door de transportdienst van Comfortmeubel. Hierbij geldt dat wanneer de totale
-    aankoopsom boven € 1.000,00 bedraagt, het gratis gelijkvloers wordt geleverd in Antwerpen. Wanneer de totale
-    aankoopsom onder de € 1.000,00 bedraagt, worden de aankopen in Antwerpen gelijkvloers geleverd voor € 50,00. Voor
-    alle andere gevallen geldt dat de leverkost € 1,00 is per km te berekenen vanuit het magazijnadres (zie artikel 9). 
-    Het is de verantwoordelijkheid van de Klant om de levering op de afgesproken plaats mogelijk te maken in
-    aanwezigheid van de Klant of een door de Klant aangewezen derde partij. Er is sprake van een levering zodra de
-    bestelde Producten één keer aan de Klant zijn aangeboden. Indien een aangeboden levering onsuccesvol is ten gevolge
-    van een tekortkoming door de Klant of de door Klant aangewezen derde partij, dan zijn de kosten van nieuwe
-    leveringspogingen volledig voor rekening van de Klant.
-    Comfortmeubel draagt het risico voor beschadiging en/of vermissing van de Producten tot op het moment van levering.
-    Het risico van de Producten gaat over op de Klant zodra de Klant of een door hem aangewezen derde partij de bestelde
-    Producten in ontvangst neemt. Iedere levering vereist in principe de ondertekening van de leveringsbevestiging maar
-    een gebrek aan ondertekening heeft geen invloed op de overdracht van het risico.</p>
-  <p class="voorwaardenTitel">Artikel 5 – GARANTIE</p>
-  <p class="voorwaardenTekst">Krachtens de wet van 21 september 2004 betreffende de bescherming van de consumenten bij
-    verkoop van consumptiegoederen heeft de consument wettelijke rechten. Deze Klant geniet een wettelijke
-    garantietermijn van twee (2) jaar. De Klant kan beroep doen op deze wettelijke garantie wanneer het geleverde
-    product niet overeenkomt met het gevraagde of bestelde product (non-conformiteit), voor zover de Klant deze
-    niet-conformiteit niet kon vaststellen bij de ontvangst van het product.
-    gaat het Product defect binnen de eerste zes (6) maanden na de levering, dan geldt het vermoeden dat het gebrek
-    bestaat sinds de levering. Comfortmeubel kan het tegendeel bewijzen.
-    wordt het defect van het Product meer dan zes (6) maanden na de levering vastgesteld, dan moet de Klant bewijzen dat
-    het Product niet-conform was op het moment van de levering.
-    Om een beroep te doen op de garantie, moet de Klant een aankoopbewijs kunnen voorleggen. Klanten worden aangeraden
-    om de oorspronkelijke verpakking van de goederen te bewaren.
-    Bij vaststelling van een gebrek moet de Klant Comfortmeubel zo snel mogelijk inlichten. In ieder geval dient elk
-    gebrek binnen een termijn van 15 werkdagen na vaststelling ervan door de Klant te worden gemeld. Nadien vervalt elk
-    recht op herstelling of vervanging.
-    Comfortmeubel staat overeenkomstig artikelen 1641 t.e.m. 1649 BW, ten aanzien van haar Klanten in voor de verborgen
-    gebreken aan de door haar geleverde Producten. Het stelsel van de verborgen gebreken vindt geen toepassing indien de
-    Klant op het ogenblik van de koop op de hoogte was van deze gebreken. Bijgevolg heeft iedere Klant recht op herstel
-    indien hij, ná de levering, een verborgen gebrek vaststelt in het geleverde Product, conform de wettelijke
-    voorschriften.
-    Defecten die zich manifesteren na een periode van 6 maanden volgend op datum van aankoop, desgevallend levering,
-    worden geacht geen verborgen gebreken te zijn, behoudens tegenbewijs door de Klant.
-    De wettelijke garantie evenals de garantie voor verborgen gebreken is niet van toepassing op:
-    schade veroorzaakt door normale slijtage, onopzettelijke of opzettelijke veranderingen toegebracht door de Klant aan
-    de Producten, inclusief onoordeelkundig en verkeerd gebruik en blootstelling aan vocht, brand, aardbeving en andere
-    externe oorzaken;
-    schade veroorzaakt door gebruik op een wijze die niet in overeenstemming is met de verstrekte instructies en
-    informatie;
-    op dezelfde manier is de waarborg niet van toepassing wanneer de schade afkomstig is van sleet, transport;
-    producten die opzettelijk beschadigd zijn of beschadigd zijn door nalatigheid (breuk, vocht, niet aangepaste
-    temperatuur, roest, infiltratie van een vloeistof, overspanning, brand, of elke andere vorm van overmacht) en voor
-    producten waarvan duidelijk is dat ze opengemaakt zijn (herstelling en/of aanpassing uitgevoerd door een hersteller
-    die niet erkend is door Comfortmeubel). 
-    De terugzending van een niet-conform of gebrekkig product (zowel zichtbare als verborgen gebreken) gebeurt steeds op
-    risico van de Klant. De Klant die een product onterecht terug verzendt, zal zelf instaan voor de kosten. 
-    Het verkleuren van hout, textiel, vezelstoffen en leder, plooivorming bij leder en stof, wijziging van hardheid van
-    zitkussens en matrassen, alsook natuurlijke kenmerken  van hout, zoals (wind)barsten, noesten, vergroeiingen, knopen
-    en het werken van hout voor zover deze verkleuring of dit werken vanuit een technisch oogpunt niet te voorkomen is,
-    of volgens de gebruiken in de meubelsector algemeen aanvaard worden of eigen zijn aan de gebruikte materialen,
-    vormen normale eigenschappen van de verkochte goederen en tasten de overeenstemming met de verkoopovereenkomst niet
-    aan. Deze lijst is niet limitatief.
-    Gebreken aan goederen die de Klant bij het sluiten van de verkoopovereenkomst kende of redelijkerwijze moest kennen,
-    bijvoorbeeld bij verkoop van solden- en toonzaalmodellen met prijsvermindering, tasten evenmin de overeenstemming
-    met de verkoopovereenkomst en voorwaarden aan.
-    Comfortmeubel is niet aansprakelijk voor fouten die geschieden tijdens het monteren van de producten door de Klant.
-    Bij montagefout door de eigen dienst van Comfortmeubel, staat Comfortmeubel wel garant. Comfortmeubel kan in geen
-    geval verantwoordelijk gehouden worden voor eventuele technische gebreken van de geleverde producten, behalve
-    wanneer ze onmiddellijk vastgesteld worden bij het uitpakken van het product. In dat geval moet de Klant
-    onmiddellijk contact opnemen met Comfortmeubel. </p>
-  <p class="voorwaardenTitel">Artikel 6 – BETALING EN PRIJZEN</p>
-  <p class="voorwaardenTekst">De prijzen die vermeld worden tijdens het aankoopproces, zijn uitgedrukt in euro (€), en
-    zijn inclusief BTW en administratieve kosten, tenzij het expliciet anders vermeld wordt. De prijzen van de producten
-    en diensten bevatten niet de transportkosten, niet de service lift/trap, niet de extra service montage en niet de
-    extra service ladderlift. Deze worden desgevallend apart aangerekend. Het BTW tarief dat van toepassing is, is het
-    BTW tarief dat geldig is in het land waar het leveringsadres gelegen is.
-    Comfortmeubel houdt zich het recht voor om op elk moment de verkoopsprijzen te wijzigen. De prijs die op de dag van
-    de aankoop staat is de geldige prijs. Comfortmeubel is niet aansprakelijk voor eventuele fouten in de prijs of
-    beschrijving. 
-    De producten blijven de eigendom van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant,
-    ongeacht of de levering reeds heeft plaatsgevonden. Comfortmeubel stelt haar leveringsverplichtingen uit tot
-    ontvangst van de volledige betaling van alle door de Klant verschuldigde bedragen. De producten blijven de eigendom
-    van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant. 
-    De doorgehaalde prijzen zijn ofwel prijzen aangeraden door de leverancier ofwel de prijs voor promotie. De prijzen
-    in de fysieke winkel kunnen afwijken van de online prijzen. Comfortmeubel houdt zich het recht voor om elke
-    bestelling te weigeren van een Klant waarmee een geschil loopt, of in het verleden een geschil gerezen is.
-    Comfortmeubel is niet aansprakelijk voor materiële fouten, zet- of drukfouten.
-    Elke betaling wordt in principe onmiddellijk en volledig afgehandeld, dit is op het moment waar het order door de
-    Klant wordt geplaatst. 
-    Behoudens andersluidende schriftelijke bepalingen zijn de facturen contant betaalbaar op het maatschappelijk adres
-    van Comfortmeubel. De betaling zal geschieden zonder enige schuldvergelijking of korting welke niet schriftelijk is
-    overeengekomen.
-    De aankopen kunnen in de winkel kan de Klant betalen met: Bancontact, Mastercard, VISA, Maestro of cash. Betalen met
-    ecocheques is niet mogelijk. Comfortmeubel kan de betalingsmogelijkheden in de toekomst uitbreiden of beperken.
-    Uitbreiding van betalingsmogelijkheden zullen bekendgemaakt worden via de website.
-    In geval de bank van de Klant de betaling weigert, wordt de bestelling automatisch geweigerd. Bij de aankoop dient
-    voor stockartikelen een voorschot van 20% te worden betaald of van 30% indien het besteld moet worden. Bij
-    annulering verliest de Klant zijn voorschot. Comfortmeubel heeft geen toegang tot de confidentiële betalingsgegevens
-    van haar Klanten.
-    Facturen worden enkel per aanvraag uitgekeerd aan rechtspersonen (B2B). Consumenten worden hiervan uitdrukkelijk
-    uitgesloten en kunnen bijgevolg geen factuur aanvragen.
-    Comfortmeubel is gerechtigd een bestelling te weigeren ingevolge een ernstige tekortkoming van de Klant met
-    betrekking tot bestellingen waarbij de Klant betrokken is.
-    Bij niet-betaling op de vervaldag worden de facturen van rechtswege en zonder een vereiste ingebrekestelling
-    verhoogd met een forfaitaire schadevergoeding van 10 % met een minimum van € 50,00 en een wettelijke interest
-    (consument) en intresten cfr. de wet van 02.08.2002 inzake betalingsachterstand bij handelstransacties (onderneming)
-    waarbij elke begonnen maand beschouwd wordt als zijnde verlopen.
-    Ingeval van niet naleving van de vastgestelde betalingstermijnen en indien er gegronde twijfel bestaat omtrent de
-    kredietwaardigheid van de Klant houdt Comfortmeubel het recht voor om bijkomende waarborgen te eisen of alle
-    verdere, ongeacht uit welke overeenkomst voortvloeiende verbintenissen, te staken en eventueel de overeenkomst als
-    verbroken lastens de Klant te beschouwen, onverminderd het recht van Comfortmeubel op een schadevergoeding. De
-    hieruit ontstane gevolgen en risico’s zijn geheel voor rekening van de Klant.
-    Ingeval de Klant in gebreke blijft om één of meerdere uitstaande verplichtingen ten aanzien van Comfortmeubel te
-    voldoen, kan Comfortmeubel alle verdere leveringen van producten opschorten tot wanneer alle uitstaande rekeningen
-    worden aangezuiverd, inclusief de toegevoegde schadevergoedingen en verwijlintresten.
-    De klachtneerlegging heeft geenszins een schorsing van betaling tot gevolg. Ten laste van de Klant komen tevens alle
-    (buiten-) gerechtelijke kosten van welke aard dan ook, die Comfortmeubel, als gevolg van de niet-nakoming door de
-    Klant van diens (betalings-) verplichtingen, heeft moeten maken.</p>
-  <p class="voorwaardenTitel">Artikel 7 – ANNULATIES EN TERUGBETALING</p>
-  <p class="voorwaardenTekst">Zo lang er geen goederen en/of diensten aan de Klant zijn geleverd en er geen sprake is
-    van contractuele wanprestatie, heeft de Klant het recht om de verkoopovereenkomst eenzijdig te verbreken. Elke
-    annulering van een bestelling dient in dat opzicht schriftelijk te gebeuren. 
-    Wanneer de koper van dit recht gebruik maakt, dient hij aan Comfortmeubel een verbrekingsvergoeding te betalen
-    gelijk aan zijn/haar voorschot van 20% bij stockartikelen en 30% bij te bestellen producten. Bij eenzijdige
-    verbreking, zal het reeds bekomen voorschot volledig worden verrekend als annulatievergoeding. In geval van misbruik
-    door de Klant (bijvoorbeeld wanneer de Klant een uitvoering van de overeenkomst of levering herhaaldelijk tegenwerkt
-    of uitstelt voor een periode meer dan 3 maanden na binnenkomst van de goederen) is eenzelfde annulatievergoeding van
-    toepassing.
-    Geopende en gemonteerde pakketten worden nooit teruggenomen. Ook gebreken o.w.v. montagefout door de Klant zelf valt
-    niet onder garantie. Indien Comfortmeubel het bestelde goed niet kan leveren o.w.v. bijvoorbeeld een einde aan de
-    collectie, een faillissement van de leverancier etc. kan de Klant opteren voor een annulering. Dan wordt het bedrag
-    dat de Klant reeds heeft betaald teruggestort. 
-    Wanneer Comfortmeubel haar verplichtingen niet nakomt, verbindt zij er zich toe de Klant te vergoeden op dezelfde
-    wijze als hierboven bepaald. </p>
-  <p class="voorwaardenTitel">Artikel 8 – HET VERZAKINGSRECHT</p>
-  <p class="voorwaardenTekst">Het verzakingsrecht is niet van toepassing op verkopen binnen de toonzaal.</p>
-  <p class="voorwaardenTitel">Artikel 9 – CONTACTGEGEVENS </p>
-  <p class="voorwaardenTekst">Buhara BVBA met als handelsnaam Comfortmeubel is een Besloten vennootschap met beperkte
-    aansprakelijkheid, opgericht volgens de Belgische wetgeving en gevestigd in België, met maatschappelijke zetel te
-    2060 Antwerpen, Groenstraat 84. Zij is ingeschreven in het KBO-register met BTW-nummer BE0455.738.563, Email:
-    info@comfortmeubel.be, telefoon +32 (0)235 78 74, fax +32 (0)235 78 74. De exploitatieadres is Kerkstraat 114, 2060
-    Antwerpen. Het magazijn is gevestigd op Helmstraat 12, 2140 Antwerpen.</p>
-  <p class="voorwaardenTitel">Artikel 10 – OVERMACHT</p>
-  <p class="voorwaardenTekst">Indien Comfortmeubel door een omstandigheid onafhankelijk van haar wil geheel of
-    gedeeltelijk verhinderd is om haar verplichtingen tegenover de andere partij na te komen, zal er sprake zijn van
-    overmacht. In dat geval is Comfortmeubel niet gehouden haar verplichtingen jegens de andere partij na te komen.
-    Comfortmeubel is gerechtigd haar verplichtingen op te schorten voor de duur van de overmacht.</p>
-  <p class="voorwaardenTitel">Artikel 11 – INTELLECTUELE EIGENDOMSRECHTEN</p>
-  <p class="voorwaardenTekst">Alle intellectuele eigendomsrechten en afgeleide rechten betreffende de producten en
-    handelsnamen blijven behouden bij Comfortmeubel. Onder deze intellectuele eigendomsrechten worden verstaan auteurs-,
-    merk, tekeningen- en modellenrechten en/of andere (intellectuele eigendomsrechten, waaronder al dan niet
-    octrooieerbare technische en/of commerciële knowhow, methoden en concepten etc. Het is de Klant ten strengste
-    verboden gebruik te maken van en/of wijzigingen aan te brengen in de intellectuele eigendomsrechten zoals beschreven
-    in dit artikel, behoudens voorafgaandelijk schriftelijke toestemming van Comfortmeubel. Elke inbreuk hiertegen zal
-    juridisch vervolgd worden.</p>
-  <p class="voorwaardenTitel">Artikel 12 – AANSPRAKELIJKHEID</p>
-  <p class="voorwaardenTekst">Comfortmeubel kan niet verantwoordelijk gehouden worden voor gebeurlijke fouten in de
-    foto´s of de teksten die gebruikt worden voor de product omschrijvingen op de website www.comfortmeubel.be, op alle
-    sociale media of in onze folder.
-    Comfortmeubel is niet verantwoordelijk voor ongelukken, diefstallen of alle daden die plaatsvinden op de parking te
-    Groenstraat 84, 2060 Antwerpen en op de twee parkeerplaatsen voor de garagepoorten te Kerkstraat 112/114.
-    Comfortmeubel is niet verantwoordelijk voor ongelukken die gebeuren in de winkel o.w.v. nalatigheid door de ouders
-    van een kind en andere nalatigheden te wijten aan de Klant.</p>
-  <p class="voorwaardenTitel">Artikel 13 – WIJZIGINGEN VAN DE ALGEMENE VOORWAARDEN</p>
-  <p class="voorwaardenTekst">Comfortmeubel kan op elk moment de onderliggende Algemene Voorwaarden wijzigen. Alle
-    wijzigingen worden dan duidelijk en expliciet beschreven en meegedeeld. Elke aankoop, dienst of alle betrekkingen
-    tot Comfortmeubel impliceert dat de Klant weet heeft van de algemene voorwaarden en deze respecteert.</p>
-  <p class="voorwaardenTitel">Artikel 14 – VERWERKING PERSOONSGEGEVENS </p>
-  <p class="voorwaardenTekst">De verantwoordelijke voor de verwerking respecteert de Belgische wet van 8 december 1992
-    met betrekking tot de bescherming van het privéleven in de verwerking van de persoonlijke gegevens.
-    De door de Klant meegedeelde persoonsgegevens zullen enkel gebruikt worden voor volgende doeleinden: de correcte
-    uitvoering van de verkoopovereenkomst, het verwerken van de bestelling. Als deze gegevens ontbreken wordt de
-    bestelling onvermijdelijk geannuleerd. Het opgeven van onjuiste of valse persoonsgegevens, wordt beschouwd als een
-    inbreuk op de huidige Verkoopsvoorwaarden. De persoonsgegevens van de Klant zullen uitsluitend verwerkt worden in
-    overeenstemming met de privacyverklaring die raadpleegbaar is via de Website.
-    De Klant beschikt over een wettelijk recht op inzage en eventuele correctie van uw persoonsgegevens. Mits bewijs van
-    identiteit (kopie identiteitskaart) kan de Klant via een schriftelijke, gedateerde en ondertekende aanvraag aan
-    Comfortmeubel, gratis de schriftelijke mededeling bekomen van zijn/haar persoonsgegevens. Indien nodig kan de Klant
-    ook vragen de gegevens te corrigeren die onjuist, niet volledig of niet pertinent zouden zijn.
-    COMFORTMEUBEL vindt privacy enorm belangrijk. Op geen enkele manier gaan wij uw persoonlijke informatie verkopen of
-    doorspelen aan derden: gegevens worden veilig opgeslagen in een niet-publiek toegankelijke database. Nieuwsbrieven
-    worden enkel gestuurd na expliciete toestemming en kunnen ten allertijden worden uitgeschreven. Uw privé gegevens
-    worden door ons enkel gebruikt om uw bestelling correct af te handelen.
-    Wij maken gebruik van tal van beveiligde systemen om de veiligheid van uw persoonlijke informatie te garanderen
-    wanneer u een bestelling plaatst of gegevens inbrengt, verzendt of uw persoonlijke gegevens raadpleegt. Onze server
-    is uitermate beveiligd met de nieuwste technologie.
-    Tijdens een bezoek aan de site kunnen ‘cookies’ op de harde schijf van uw computer geplaatst worden. Een cookie is
-    een tekstbestand dat door de server van een website in de browser van uw computer of op uw mobiel apparaat geplaatst
-    wordt wanneer u een website raadpleegt. Cookies kunnen niet worden gebruikt om personen te identificeren, een cookie
-    kan slechts een machine identificeren. Wij gebruiken technische cookies om onze site te kunnen optimaliseren en u
-    meer comfort te bieden zoals het automatisch invullen van formulieren.
-    U kunt uw internetbrowser zodanig instellen dat cookies niet worden geaccepteerd, dat u een waarschuwing ontvangt
-    wanneer een cookie geïnstalleerd wordt of dat de cookies nadien van uw harde schijf worden verwijderd. Dit kan u
-    doen via de instellingen van uw browser (via de help-functie). Hou er hierbij wel rekening mee dat bepaalde
-    grafische elementen niet correct kunnen verschijnen, of dat u bepaalde applicaties niet zal kunnen gebruiken.
-    Door gebruik te maken van onze website, gaat u akkoord met ons gebruik van cookies.
-    De Klant is zelf verantwoordelijk voor het vertrouwelijk houden van zijn logingegevens en het gebruik van zijn
-    paswoord. Comfortmeubel houdt online (anonieme) bezoekersstatistieken bij om te kunnen bekijken welke pagina’s van
-    de internetsite in welke mate bezocht worden.
-    Uw informatie wordt zeker en vast nooit verkocht of meegedeeld met derden. Enkel wanneer wij wettelijk hiertoe
-    verplicht worden kan dit gebeuren.
-    Reviews achtergelaten door U kunnen verder gebruikt worden voor commerciële doeleinden zoals gebruik van de reviews
-    bij printadvertenties en ander sociale media.</p>
-  <p class="voorwaardenTitel">Artikel 15 – NIETIGHEID</p>
-  <p class="voorwaardenTekst">De eventuele nietigheid van één van de bepalingen van de overeenkomst zal geenszins de
-    invloed hebben op de geldigheid van de andere clausules ondanks de nietigheid van de betwiste clausule. De partijen
-    zullen alles in het werk stellen om, in onderlinge overeenstemming, de nietige clausule te vervangen door een
-    geldige clausule met dezelfde of grotendeels dezelfde economische impact als de nietige clausule. Het niet opeisen
-    van een recht of het niet toepassen van een sanctie door Comfortmeubel houdt geenszins een afstand van recht in.</p>
-  <p class="voorwaardenTitel">Artikel 16 – TOEPASSELIJK RECHT EN BEVOEGDE RECHTER </p>
-  <p class="voorwaardenTekst">Deze voorwaarden worden exclusief beheerst en geïnterpreteerd in overeenstemming met het
-    Belgisch recht. Op alle aanbiedingen en verkoopovereenkomsten is uitsluitend Belgisch recht van toepassing. De
-    toepasselijkheid van het Weens Koopverdrag wordt uitdrukkelijk uitgesloten.
-    Alle geschillen die verband houden met of voortvloeien uit aanbiedingen van Comfortmeubel, of Verkoopovereenkomsten
-    die met haar gesloten zijn, worden voorgelegd aan de rechtbanken van het gerechtelijk arrondissement Antwerpen.</p>
+  <div v-for="(item, index) in voorwaarden" :key="index">
+    <p class="voorwaardenTitel">{{ item.voorwaardenTitel }}</p>
+    <p class="voorwaardenTekst">{{ item.voorwaardenTekst }}</p>
+  </div>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel4 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst4 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel5 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst5 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel6 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst6 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel7 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst7 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel8 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst8 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel9 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst9 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel10 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst10 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel11 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst11 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel12 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst12 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel13 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst13 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel14 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst14 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel15 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst15 }}</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel16 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst16 }}</p>
   <p class="voorwaardenHoofdtitel">ALGEMENE VOORWAARDEN BIJ AANKOPEN IN DE WINKEL</p>
-  <p class="voorwaardenTitel">Artikel 1 – TOEPASSINGSGEBIED</p>
-  <p class="voorwaardenTekst">De e-commerce website van Comfortmeubel (handelsnaam), thans Buhara een besloten
-    vennootschap, met maatschappelijke zetel te 2060 Antwerpen, Groenstraat 84. Zij is ingeschreven in het KBO-register
-    met BTW-nummer BE0455.738.563, Email: info@comfortmeubel.be, telefoon +32 (0)235 78 74, fax +32 (0)235 78 74. De
-    exploitatieadres is Kerkstraat 114, 2060 Antwerpen. Het magazijn is gevestigd op Helmstraat 12, 2140 Antwerpen.biedt
-    haar Klanten de mogelijkheid om de producten uit haar webwinkel online aan te kopen.
-    Onderhavige Algemene Voorwaarden zijn van toepassing op elke bestelling die geplaatst wordt door een bezoeker van
-    deze e-commerce website (“Klant”). Bij het plaatsen van een bestelling via de webwinkel van Comfortmeubel moet de
-    Klant deze Voorwaarden uitdrukkelijk aanvaarden, waarmee hij/zij instemt met de toepasselijkheid van deze
-    Voorwaarden, met uitsluiting van alle andere voorwaarden. Bijkomende voorwaarden van de Klant worden uitgesloten,
-    behoudens wanneer deze voorafgaandelijk, schriftelijk en uitdrukkelijk door Comfortmeubel aanvaard zijn.
-    Deze algemene voorwaarden zijn niet van toepassing voor aankopen in de fysieke winkel te Kerkstraat 114, 2060
-    Antwerpen. Voor de aankopen in de winkel gelden de algemene voorwaarden zoals opgenomen in de bestelbon gekregen in
-    de winkel.
-    Het gebruik van de website www.comfortmeubel.be en elke aankoop op de site impliceert dat de Klant onvoorwaardelijk
-    en onherroepelijk de onderliggende Algemene Voorwaarden aanvaardt. Een bestelling wordt daarbij pas bevestigd nadat
-    de Klant de Algemene Voorwaarden heeft gelezen en aanvaard.</p>
-  <p class="voorwaardenTitel">Artikel 2 – BETALING EN PRIJZEN</p>
-  <p class="voorwaardenTekst">De prijzen die vermeld worden tijdens het aankoopproces, zijn in euro (€) en zijn
-    inclusief BTW en administratieve kosten, tenzij het expliciet anders vermeld wordt. De prijzen van de producten en
-    diensten bevatten niet de transportkosten, niet de extra service montage en niet de extra service ladderlift. Deze
-    worden desgevallend apart aangerekend. Het BTW tarief dat van toepassing is, is het BTW tarief dat geldig is in het
-    land waar het leveringsadres gelegen is.
-    De opgave van prijs slaat uitsluitend op de artikelen zoals het woordelijk wordt omschreven. De bijhorende foto’s
-    zijn decoratief bedoeld en kunnen elementen bevatten die niet inbegrepen zijn in de prijs. Indien voor de leverings-
-    of afhalingsdatum de BTW wijzigingen ondergaat, wordt de totale prijs in dezelfde mate aangepast.
-    Comfortmeubel houdt zich het recht voor om op elk moment de verkoopsprijzen te wijzigen. De prijs die op de dag van
-    de aankoop op de website of het medium staat is de geldige prijs. Comfortmeubel is niet aansprakelijk voor eventuele
-    fouten in de prijs of beschrijving. Bij eventuele fouten wordt de klant onmiddellijk na de aankoop op de hoogte
-    gebracht.
-    De producten blijven de eigendom van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant,
-    ongeacht of de levering reeds heeft plaatsgevonden. Comfortmeubel stelt haar leveringsverplichtingen uit tot
-    ontvangst van de volledige betaling van alle door de Klant verschuldigde bedragen. De producten blijven de eigendom
-    van Comfortmeubel tot op het ogenblik dat ze integraal betaald zijn door de Klant. 
-    De doorgehaalde prijzen zijn ofwel prijzen aangeraden door de leverancier ofwel de prijs voor promotie. De prijzen
-    in de fysieke winkel kunnen afwijken van de online prijzen. Comfortmeubel houdt zich het recht voor om elke
-    bestelling te weigeren van een Klant waarmee een geschil loopt, of in het verleden een geschil gerezen is.
-    Comfortmeubel is niet aansprakelijk voor materiële fouten, zet- of drukfouten.
-    De aankopen kunnen uitsluitend online betaald worden, met Bancontact, PayPal, Creditcard, KBC/CBC Payment Button en
-    Belfius Direct Net. Comfortmeubel kan de betalingsmogelijkheden in de toekomst uitbreiden of beperken. Uitbreiding
-    van betalingsmogelijkheden zullen bekendgemaakt worden via de website.
-    In geval de bank van de Klant de betaling weigert, wordt de bestelling automatisch geweigerd. De Klanten garanderen
-    dat ze gewettigd zijn om online betalingen met één van de hoger vermelde betalingsmethodes uit te voeren en dat er
-    voldoende dekking is op de bankrekening die gelinkt zijn om alle kosten die voorvloeien uit de transactie te dekken.
-    Voor de afhandeling van de online betaling werkt Comfortmeubel samen met Mollie. Bij de aankoop online dient ofwel
-    een voorschot te worden betaald van 50% ofwel moet het aankoopbedrag volledig worden betaald. Bestellingen die met
-    de post worden opgestuurd moeten 100% betaald zijn. Voor bij de meubeltransport kan de Klant opteren voor volledige
-    betaling of 50% voorschot betaling. Het resterende bedrag moet dan bij de levering cash of met bankcheque
-    overhandigd worden aan de leverdienst. Comfortmeubel heeft geen toegang tot de confidentiële betalingsgegevens van
-    haar Klanten.
-    Facturen worden enkel per aanvraag uitgekeerd aan rechtspersonen (B2B). Consumenten worden hiervan uitdrukkelijk
-    uitgesloten en kunnen bijgevolg geen factuur aanvragen.
-    Comfortmeubel is gerechtigd een bestelling te weigeren ingevolge een ernstige tekortkoming van de Klant met
-    betrekking tot bestellingen waarbij de Klant betrokken is.
-    Bij niet-betaling op de vervaldag worden de facturen van rechtswege en zonder een vereiste ingebrekestelling
-    verhoogd met een forfaitaire schadevergoeding van 10 % met een minimum van € 50,00 en een wettelijke interest
-    (consument) en intresten cfr. de wet van 02.08.2002 inzake betalingsachterstand bij handelstransacties (onderneming)
-    waarbij elke begonnen maand beschouwd wordt als zijnde verlopen.
-    Ingeval de Klant in gebreke blijft om één of meerdere uitstaande verplichtingen ten aanzien van Comfortmeubel te
-    voldoen, kan Comfortmeubel alle verdere leveringen van producten opschorten tot wanneer alle uitstaande rekeningen
-    worden aangezuiverd, inclusief de toegevoegde schadevergoedingen en verwijlintresten.
-    De klachtneerlegging heeft geenszins een schorsing van betaling tot gevolg. Ten laste van de Klant komen tevens alle
-    (buiten-) gerechtelijke kosten van welke aard dan ook, die Comfortmeubel, als gevolg van de niet-nakoming door de
-    Klant van diens (betalings-) verplichtingen, heeft moeten maken.</p>
+  <p class="voorwaardenTitel">{{ voorwaardenTitel17 }}</p>
+  <p class="voorwaardenTekst">{{ voorwaardenTekst17}}</p>
+  <p class="voorwaardenTitel"></p>
+  <p class="voorwaardenTekst"></p>
   <p class="voorwaardenTitel">Artikel 3 – PRODUCTEN</p>
   <p class="voorwaardenTekst">Ondanks het feit dat de online catalogus en de e-commerce website met de grootst mogelijke
     zorgvuldigheid worden samengesteld, is het toch mogelijk dat de aangeboden informatie onvolledig is, materiële

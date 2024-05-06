@@ -1,6 +1,7 @@
 <script>
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import MeubelsComponent from "@/components/MeubelsComponent.vue";
 
 export default {
   data() {
@@ -8,6 +9,7 @@ export default {
   },
   components: {
     HeaderComponent,
+    MeubelsComponent,
     FooterComponent,
   }
 }
@@ -15,7 +17,7 @@ export default {
 
 <template>
   <HeaderComponent/>
-
+  <MeubelsComponent/>
   <FooterComponent/>
 </template>
 

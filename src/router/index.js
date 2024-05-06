@@ -7,6 +7,8 @@ import StoriesView from "@/views/StoriesView.vue";
 import KlantenserviceView from "@/views/KlantenserviceView.vue";
 import VoorwaardenView from "@/views/VoorwaardenView.vue";
 import WinkelmandView from "@/views/WinkelmandView.vue";
+import RegistreerView from "@/views/RegistreerView.vue";
+import InloggenView from "@/views/InloggenView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +52,16 @@ const router = createRouter({
       path: '/winkelmand',
       name: 'winkelmand',
       component: WinkelmandView
+    },
+    {
+      path: '/registreer',
+      name: 'registreer',
+      component: RegistreerView
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: InloggenView
     }
   ]
 })
