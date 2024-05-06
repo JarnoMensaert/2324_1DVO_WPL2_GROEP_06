@@ -1,425 +1,594 @@
-@use 'base' as *;
+  @use 'base' as *;
 
-body {
-  font: $font-main;
+  body {
+    font: $font-main;
 
-  p, a, h1, h2, h3, h4, h5, h6 {
+    p, a, h1, h2, h3, h4, h5, h6 {
 
-    font-family: $font-main;
+      font-family: $font-main;
+    }
   }
-}
 
-// HeaderComponent
-.nav {
-  height: 280px;
-  background-color: $background-color;
-  position: relative;
-  padding-right: 2%;
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-  &-top {
-    display: flex;
-    height: 200px;
+  // HeaderComponent
+  .nav {
+    height: 280px;
+    background-color: $background-color;
+    position: relative;
+    padding-right: 2%;
 
-    justify-content: flex-end;
-    align-items: center;
+    &-top {
+      display: flex;
+      height: 200px;
+
+      justify-content: flex-end;
+      align-items: center;
+
+      img {
+        height: 39px;
+        width: 39px;
+        margin-right: 2%;
+      }
+
+      .logo {
+        height: 96px;
+        width: 246px;
+        position: absolute;
+        left: calc((100% - 195px) / 2);
+        top: 50px;
+      }
+
+      .iconlinks {
+        position: absolute;
+        left: 2%;
+      }
+
+      .iconrechts:nth-child(1),
+      .iconrechts:nth-child(2) {
+        margin-right: 5%;
+      }
+    }
+
+    &-bottom {
+      display: flex;
+
+      .navitems {
+        width: 1083px;
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+
+        .navitem {
+          list-style-type: none;
+          font-size: $font-regular;
+          font-family: $font-main;
+        }
+
+        .navitem:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // FooterComponent
+  footer {
+    background-color: $footer-background;
+    height: 300px;
+    padding-bottom: 5px;
+  }
+
+  .footerTop {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    .footerInfo {
+      padding: 20px;
+      @include textStyles($font-small);
+      padding: 30px 0;
+
+      .icon {
+        font-size: 45px;
+        margin-bottom: 50px;
+        margin-right: 20px;
+        color: $background-color;
+      }
+
+      .footerTitle {
+        @include textStyles($font-regular);
+        font-weight: normal;
+        padding-bottom: 40px;
+      }
+
+      .footerList {
+        list-style-type: none;
+        .footerListItem
+        {
+          a
+          {
+            color: $color-white;
+          }
+        }
+      }
+
+      #email {
+        border: none;
+        background-color: transparent;
+        color: $background-color;
+        border-bottom: 4px solid $background-color;
+        margin-top: 25px;
+        padding: 5px 0;
+        width: 100%;
+      }
+
+      #email::placeholder {
+        @include textStyles($font-small);
+      }
+
+      #email:focus {
+        outline: none;
+      }
+
+      #submitEmail {
+        position: absolute;
+        margin: 32px 0 0 -30px;
+        background-color: transparent;
+        border: none;
+        color: $background-color;
+      }
+    }
+  }
+
+  .footerBottom {
+    @include textStyles($font-small);
+    text-decoration: underline;
+    text-align: center;
+    .voorwaardenFooter {
+      color: $color-white;
+    }
+  }
+
+  // DiscoverMoreComponent
+
+  .caroussel {
+    width: 100%;
+    text-align: center;
 
     img {
-      height: 39px;
-      width: 39px;
-      margin-right: 2%;
-    }
-
-    .logo {
-      height: 96px;
-      width: 246px;
-      position: absolute;
-      left: calc((100% - 195px) / 2);
-      top: 50px;
-    }
-
-    .iconlinks {
-      position: absolute;
-      left: 2%;
-    }
-
-    .iconrechts:nth-child(1),
-    .iconrechts:nth-child(2) {
-      margin-right: 5%;
-    }
-  }
-
-  &-bottom {
-    display: flex;
-
-    .navitems {
-      width: 1083px;
-      display: flex;
-      margin: 0 auto;
-      align-items: center;
-      justify-content: space-between;
-
-      .navitem {
-        list-style-type: none;
-        font-size: $font-regular;
-        font-family: $font-main;
-      }
-
-      .navitem:hover {
-        text-decoration: underline;
-        cursor: pointer;
-      }
-    }
-  }
-}
-
-// FooterComponent
-footer {
-  background-color: $footer-background;
-}
-
-.footerTop {
-  width: 95%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-
-  .footerInfo {
-    padding: 20px;
-    @include textStyles($font-small);
-    padding: 30px 0;
-
-    .icon {
-      font-size: 45px;
-      margin-bottom: 50px;
-      margin-right: 20px;
-      color: $background-color;
-    }
-
-    .footerTitle {
-      @include textStyles($font-regular);
-      font-weight: normal;
-      padding-bottom: 40px;
-    }
-
-    .footerList {
-      list-style-type: none;
-    }
-
-    #email {
-      border: none;
-      background-color: transparent;
-      color: $background-color;
-      border-bottom: 4px solid $background-color;
-      margin-top: 25px;
-      padding: 5px 0;
       width: 100%;
     }
 
-    #email::placeholder {
-      @include textStyles($font-small);
-    }
-
-    #email:focus {
-      outline: none;
-    }
-
-    #submitEmail {
-      position: absolute;
-      margin: 32px 0 0 -30px;
-      background-color: transparent;
+    #discover {
+      width: 15%;
+      @include textStyles($font-large);
+      background-color: $color-secondary;
+      padding: 20px 10px;
+      position: relative;
+      top: -100px;
       border: none;
-      color: $background-color;
     }
   }
-}
 
-.footerBottom {
-  @include textStyles($font-small);
-  text-decoration: underline;
-  padding-bottom: 5px;
-  text-align: center;
-}
+  // WatchComponent
 
-// DiscoverMoreComponent
-
-.caroussel {
-  width: 100%;
-  text-align: center;
-
-  img {
+  .middleScreen {
     width: 100%;
+    text-align: center;
+
+    .groteTekst {
+      font-size: $font-extraLarge;
+      margin-bottom: 50px;
+    }
+
+    .aanbiedingen {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .aanbieding {
+        width: 30%;
+
+        img {
+          height: 360px;
+          width: 283px;
+        }
+      }
+    }
   }
 
-  #discover {
-    width: 15%;
-    @include textStyles($font-large);
-    background-color: $color-secondary;
-    padding: 20px 10px;
+  // LookingForComponent
+
+  .fullscreen {
+    width: 100%;
     position: relative;
-    top: -100px;
-    border: none;
-  }
-}
 
-// WatchComponent
+    h3 {
+      font-size: $font-extraLarge;
+      margin-bottom: 50px;
+      text-align: center;
+    }
 
-.middleScreen {
-  width: 100%;
-  text-align: center;
+    .lookingForWhat {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+      width: auto;
 
-  .groteTekst {
-    font-size: $font-extraLarge;
-    margin-bottom: 50px;
-  }
-
-  .aanbiedingen {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    .aanbieding {
-      width: 30%;
+      .lookingFor {
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        height: auto;
+      }
 
       img {
-        height: 360px;
-        width: 283px;
+        height: 580px;
+        padding: 0;
+        margin: 0;
+        width: calc(100vw / 5);
+      }
+
+      .lookingForTekst {
+        position: absolute;
+        bottom: 0.8%;
+        background-color: $licht-grijs-geel;
+        width: calc(100vw / 5);
+        height: 64px;
+        font: $font-main;
+
+        .homeCategorie {
+          font-size: $font-regular;
+          text-align: start;
+          padding-left: 10%;
+          margin-bottom: 1%;
+        }
+
+        .shopNow {
+          font-size: $font-small;
+          padding-left: 10%;
+          margin-bottom: 1%;
+        }
       }
     }
   }
-}
 
-// LookingForComponent
+  // StoriesComponent
 
-.fullscreen {
-  width: 100%;
-  position: relative;
+  .kleineRuimte {
+    width: 100%;
 
-  h3 {
-    font-size: $font-extraLarge;
-    margin-bottom: 50px;
+    .groteTekst {
+      text-align: center;
+      font-size: $font-extraLarge;
+      font-family: $font-main;
+      font-weight: normal;
+      margin: 100px 0 50px 0;
+      width: 100%;
+    }
+
+    .stories {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding-bottom: 50px;
+      width: 100%;
+
+      .story {
+        .storyTitel {
+          font-size: $font-extraLarge;
+          font-family: $font-main;
+          padding: 20px 0;
+          text-align: left;
+        }
+
+        .storyBeschrijving {
+          font-size: $font-small;
+          font-family: $font-secondary;
+          text-align: left;
+          width: 400px;
+        }
+
+        .storyKnop {
+          background: transparent;
+          border: none;
+          font-weight: bold;
+          text-decoration: underline;
+          margin-right: 325px;
+          padding: 10px 0;
+          color: $footer-background;
+        }
+
+        .storyImage {
+        }
+      }
+    }
+  }
+
+  // AboutView
+
+  .aboutTitle {
     text-align: center;
-  }
-
-  .lookingForWhat {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    width: auto;
-
-    .lookingFor {
-      width: 20%;
-      padding: 0;
-      margin: 0;
-      height: auto;
-    }
-
-    img {
-      height: 580px;
-      padding: 0;
-      margin: 0;
-      width: calc(100vw / 5);
-    }
-
-    .lookingForTekst {
-      position: absolute;
-      bottom: 0.8%;
-      background-color: $licht-grijs-geel;
-      width: calc(100vw / 5);
-      height: 64px;
-      font: $font-main;
-
-      .homeCategorie {
-        font-size: $font-regular;
-        text-align: start;
-        padding-left: 10%;
-        margin-bottom: 1%;
-      }
-
-      .shopNow {
-        font-size: $font-small;
-        padding-left: 10%;
-        margin-bottom: 1%;
-      }
-    }
-  }
-}
-
-// StoriesComponent
-
-.kleineRuimte {
-  width: 100%;
-
-  .groteTekst {
-    text-align: center;
-    font-size: $font-extraLarge;
+    font-size: $font-pageTitle;
+    font-weight: 400;
     font-family: $font-main;
-    font-weight: normal;
-    margin: 100px 0 50px 0;
-    width: 100%;
+    padding: 50px;
   }
 
-  .stories {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding-bottom: 50px;
-    width: 100%;
-
-    .story {
-      .storyTitel {
-        font-size: $font-extraLarge;
-        font-family: $font-main;
-        padding: 20px 0;
-        text-align: left;
-      }
-
-      .storyBeschrijving {
-        font-size: $font-small;
-        font-family: $font-secondary;
-        text-align: left;
-        width: 400px;
-      }
-
-      .storyKnop {
-        background: transparent;
-        border: none;
-        font-weight: bold;
-        text-decoration: underline;
-        margin-right: 325px;
-        padding: 10px 0;
-        color: $footer-background;
-      }
-
-      .storyImage {
-      }
-    }
-  }
-}
-
-// AboutView
-
-.aboutTitle {
-  text-align: center;
-  font-size: $font-pageTitle;
-  font-weight: 400;
-  font-family: $font-main;
-  padding: 50px;
-}
-
-.breadcrumb {
-  margin: 0 40px;
-
-  p {
-    font-style: italic;
-  }
-}
-
-// MissieVisieComponent
-
-.missieVisie {
-  display: flex;
-  align-items: center;
-
-  img {
-    width: 50%;
-    height: auto;
-    padding: 40px;
-    margin-right: 40px;
-  }
-
-  .info {
-    flex: 1;
-
-    .infoTitle {
-      font-family: $font-main;
-      font-size: $font-extraLarge;
-      font-weight: 400;
-      margin-bottom: 25px;
-    }
+  .breadcrumb {
+    margin: 0 40px;
 
     p {
-      font-family: $font-main;
-      font-size: $font-small;
-      width: 40vw;
-    }
-  }
-}
-
-// AdresContactComponent
-
-.adresContact {
-  background-color: $background-color;
-  display: flex;
-  align-items: center;
-
-  .info {
-    flex: 1;
-    padding-left: 20px;
-
-    .infoTitle {
-      font-family: $font-main;
-      font-size: $font-extraLarge;
-      font-weight: 400;
-      margin: 0 0 25px 25px;
-    }
-
-    p {
-      font-family: $font-main;
-      font-size: $font-small;
-      width: 575px;
-      margin: 0 0 25px 25px;
+      font-style: italic;
     }
   }
 
-  iframe {
-    width: 50%;
-    height: 500px;
-    padding: 40px;
-    border: 0;
-  }
-}
+  // MissieVisieComponent
 
-//FAQSectionComponent
-
-.faq {
-  font-size: $font-extraLarge;
-  font-family: $font-main;
-  font-weight: 400;
-  padding: 25px 0;
-  margin-left: 30px;
-}
-
-h2 {
-  font-size: $font-large;
-  font-family: $font-main;
-  font-weight: 400;
-  margin-left: 40px;
-}
-
-.accWrapper {
-  width: 60%;
-
-  .accTitle {
+  .missieVisie {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 
-    p {
-      font-size: $font-regular;
-      margin-left: 60px;
-      padding: 10px 0;
+    img {
+      width: 50%;
+      height: auto;
+      padding: 40px;
+      margin-right: 40px;
+    }
+
+    .info {
+      flex: 1;
+
+      .infoTitle {
+        font-family: $font-main;
+        font-size: $font-extraLarge;
+        font-weight: 400;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-family: $font-main;
+        font-size: $font-small;
+        width: 40vw;
+      }
     }
   }
 
-  .accContent {
-    font-size: $font-small;
+  // AdresContactComponent
+
+  .adresContact {
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+
+    .info {
+      flex: 1;
+      padding-left: 20px;
+
+      .infoTitle {
+        font-family: $font-main;
+        font-size: $font-extraLarge;
+        font-weight: 400;
+        margin: 0 0 25px 25px;
+      }
+
+      p {
+        font-family: $font-main;
+        font-size: $font-small;
+        width: 575px;
+        margin: 0 0 25px 25px;
+      }
+    }
+
+    iframe {
+      width: 50%;
+      height: 500px;
+      padding: 40px;
+      border: 0;
+    }
+  }
+
+  //FAQSectionComponent
+
+  .faq {
+    font-size: $font-extraLarge;
     font-family: $font-main;
-    font-weight: 300;
-    margin-left: 60px;
-    width: 75%;
+    font-weight: 400;
+    padding: 25px 0;
+    margin-left: 30px;
+  }
+
+  h2 {
+    font-size: $font-large;
+    font-family: $font-main;
+    font-weight: 400;
+    margin-left: 40px;
+  }
+
+  .accWrapper {
+    width: 60%;
+
+    .accTitle {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-size: $font-regular;
+        margin-left: 60px;
+        padding: 10px 0;
+      }
+    }
+
+    .accContent {
+      font-size: $font-small;
+      font-family: $font-main;
+      font-weight: 300;
+      margin-left: 60px;
+      width: 75%;
+
+      a {
+        color: $color-black;
+      }
+
+      ul {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .faqButton {
+    width: 20px;
+    height: auto;
+    color: black;
+    font-size: 200px;
+  }
+
+
+  .clickable:hover {
+    cursor: pointer;
+  }
+
+  .inputtext:hover {
+    cursor: alias;
+  }
+
+  a, a:visited {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  //ImageGridComponent
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    .image-container {
+      position: relative;
+      margin: 45px 60px;
+
+
+      .image-wrapper {
+        position: relative;
+
+        .image-content {
+          display: flex;
+          flex-direction: column;
+
+          img {
+            width: 330px;
+            height: 320px;
+          }
+
+          .title {
+            font-size: $font-extraLarge;
+            font-weight: $font-main;
+            margin: 30px 0;
+            color: $color-black;
+          }
+        }
+
+        button {
+          display: flex;
+          align-items: center;
+          width: 90%;
+          background-color: $color-secondary;
+          border: none;
+
+          .quickviewButton {
+            font-size: $font-small;
+            color: $color-black;
+          }
+
+          .buttonText {
+            font-size: $font-small;
+            text-align: center;
+          }
+        }
+      }
+
+      button {
+        position: absolute;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+      }
+
+      .image-wrapper:hover button,
+      .image-wrapper:hover button:hover,
+      .button-container button:hover {
+        display: block;
+      }
+    }
+  }
+
+  .voorwaardenTekst, .voorwaardenTitel, .voorwaardenHoofdtitel {
+    font-style: italic;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    $font-size: $font-regular;
+  }
+
+  .voorwaardenHoofdtitel {
+    margin-bottom: 24px;
+
+  }
+
+  .voorwaardenTitel {
+    font-weight: bold;
+
+  }
+
+  .voorwaardenTekst {
+    margin-bottom: 20px;
+  }
+
+  //ModalComponent
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    overflow: auto;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: $font-main;
+
+    h1 {
+      padding-top: 50px;
+      font-size: $font-extraLarge;
+      font-family: $font-main;
+      font-weight: 400;
+    }
 
     a {
       color: $color-black;
@@ -427,310 +596,517 @@ h2 {
 
     ul {
       margin-left: 20px;
-    }
-  }
-}
 
-.faqButton {
-  width: 20px;
-  height: auto;
-  color: black;
-  font-size: 200px;
-}
-
-
-.clickable:hover {
-  cursor: pointer;
-}
-
-.inputtext:hover {
-  cursor: alias;
-}
-
-a, a:visited {
-  text-decoration: none;
-  color: $color-black;
-}
-
-//ImageGridComponent
-.image-grid {
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: auto;
-
-  .image-container {
-    position: relative;
-    margin: 45px 60px;
-
-
-    .image-wrapper {
-      position: relative;
-
-      .image-content {
-        display: flex;
-        flex-direction: column;
-
-        img {
-          width: 330px;
-          height: 320px;
-        }
-
-        .title {
-          font-size: $font-extraLarge;
-          font-weight: $font-main;
-          margin: 30px 0;
-          color: $color-black;
-        }
+      .thuisLevering {
+        list-style-type: none;
       }
 
-      button {
-        display: flex;
-        align-items: center;
-        width: 90%;
-        background-color: $color-secondary;
-        border: none;
-
-        .quickviewButton {
-          font-size: $font-small;
-          color: $color-black;
-        }
-
-        .buttonText {
-          font-size: $font-small;
-          text-align: center;
-        }
+      .prijsLevering {
+        list-style-type: none;
+        margin-left: 30px;
       }
     }
-
-    button {
-      position: absolute;
-      bottom: 120px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: none;
-    }
-
-    .image-wrapper:hover button,
-    .image-wrapper:hover button:hover,
-    .button-container button:hover {
-      display: block;
-    }
   }
-}
 
-.voorwaardenTekst, .voorwaardenTitel, .voorwaardenHoofdtitel {
-  font-style: italic;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  $font-size: $font-regular;
-}
+  .closeBtn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 3%;
+    right: 3%;
 
-.voorwaardenHoofdtitel {
-  margin-bottom: 24px;
-
-}
-
-.voorwaardenTitel {
-  font-weight: bold;
-
-}
-
-.voorwaardenTekst {
-  margin-bottom: 20px;
-}
-
-//ModalComponent
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  position: relative;
-  width: 80%;
-  height: 80%;
-  overflow: auto;
-  background-color: $background-color;
-  padding: 20px;
-  border-radius: 5px;
-  font-family: $font-main;
-
-  h1 {
-    padding-top: 50px;
     font-size: $font-extraLarge;
-    font-family: $font-main;
-    font-weight: 400;
   }
 
-  a {
-    color: $color-black;
+  //InloggenView
+  .inlogInfo {
+    display: flex;
   }
 
-  ul {
-    margin-left: 20px;
+  // AanmeldenComponent
 
-    .thuisLevering {
-      list-style-type: none;
+  .aanmelden {
+    background-color: $background-color;
+    margin: 5%;
+    padding: 3% 2%;
+    width: 40%;
+
+    h1 {
+      font-size: $font-extraLarge;
+      font-family: $font-main;
+      color: $color-black;
+      font-weight: 800;
     }
 
-    .prijsLevering {
-      list-style-type: none;
-      margin-left: 30px;
-    }
-  }
-}
-
-.closeBtn {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 3%;
-  right: 3%;
-
-  font-size: $font-extraLarge;
-}
-
-//InloggenView
-.inlogInfo {
-  display: flex;
-}
-
-// AanmeldenComponent
-
-.aanmelden {
-  background-color: $background-color;
-  margin: 5%;
-  padding: 3% 2%;
-  width: 40%;
-
-  h1 {
-    font-size: $font-extraLarge;
-    font-family: $font-main;
-    color: $color-black;
-    font-weight: 800;
-  }
-
-  p {
-    font-size: $font-small;
-    font-family: $font-secondary;
-    color: $color-black;
-    font-style: italic;
-    margin-bottom: 35px;
-  }
-
-  form {
-    label {
+    p {
       font-size: $font-small;
       font-family: $font-secondary;
       color: $color-black;
       font-style: italic;
+      margin-bottom: 35px;
     }
 
-    input {
-      background-color: $color-brown;
+    form {
+      label {
+        font-size: $font-small;
+        font-family: $font-secondary;
+        color: $color-black;
+        font-style: italic;
+      }
+
+      input {
+        background-color: $color-brown;
+        border: none;
+        font-size: $font-regular;
+        padding: 2%;
+        width: 95%;
+        margin-top: 5px;
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: $color-black;
+        font-size: $font-small;
+        font-family: $font-main;
+      }
+    }
+
+    .geleKnop {
+      background-color: $color-secondary;
+      border: none;
+      font-size: $font-large;
+      font-family: $font-main;
+      position: relative;
+      left: 60%;
+      padding: 3%;
+    }
+  }
+
+  //AccountAanmaakComponent
+  .accountAanmaken {
+    background-color: $background-color;
+    margin: 5%;
+    padding: 3% 2%;
+    width: 40%;
+
+    h1 {
+      font-size: $font-extraLarge;
+      font-family: $font-main;
+      color: $color-black;
+      font-weight: 800;
+      margin-top: 100px;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: $font-small;
+      font-family: $font-secondary;
+      color: $color-black;
+      font-style: italic;
+      margin-bottom: 19%;
+    }
+
+    .geleKnop {
+      background-color: $color-secondary;
+      border: none;
+      font-size: $font-large;
+      font-family: $font-main;
+      position: relative;
+      left: 40%;
+      padding: 2.5%;
+    }
+  }
+  // StoriesView
+
+  .storiesInfo
+  {
+    display: flex;
+    align-items: center;
+    img
+    {
+      width: 50%;
+      height: auto;
+      padding: 40px;
+      margin-right: 40px;
+    }
+    .info
+    {
+      flex: 1;
+      padding: 100px;
+      .infoTitle
+      {
+        font-family: $font-main;
+        font-size: $font-extraLarge;
+        font-weight: 400;
+        margin-bottom: 25px;
+
+      }
+      p
+      {
+        font-family: $font-main;
+        font-size: $font-small;
+        width: 350px;
+      }
+    }
+  }
+
+  // RegistreerComponent
+
+  .nieuweKlant
+  {
+    background-color: $background-color;
+    width: 65%;
+    font-family: $font-main;
+    padding-left: 2%;
+    margin-left: 5%;
+    h1
+    {
+      color: $color-black;
+      font-size: $font-extraLarge;
+      padding-top: 15%;
+      padding-bottom: 40px;
+    }
+    form
+    {
+      .gender
+      {
+        font-size: $font-small;
+        label
+        {
+          margin-right: 80px;
+          text-align: center;
+        }
+        input[type="checkbox"]
+        {
+          position: relative;
+          width: 20px;
+          height: 20px;
+          background-color: $color-brown;
+          outline: none;
+          appearance: none;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        input[type="checkbox"]:checked
+        {
+          appearance: auto;
+          // Niet gedesigned op FIGMA
+        }
+      }
+      .accountInfo
+      {
+        font-size: $font-small;
+        label
+        {
+          display: block;
+          margin: 40px 0 20px 0;
+        }
+        input
+        {
+          position: relative;
+          width: 70%;
+          height: 40px;
+          background-color: $color-brown;
+          outline: none;
+          border: none;
+          appearance: none;
+          cursor: pointer;
+        }
+      }
+      .opDeHoogte
+      {
+        margin-top: 40px;
+        background-color: $color-brown;
+        width: 90%;
+        padding: 2%;
+        p
+        {
+          width: 80%;
+        }
+        label
+        {
+          margin-right: 80px;
+          text-align: center;
+        }
+        input[type="checkbox"]
+        {
+          margin-top: 2%;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          background-color: $background-color;
+          appearance: none;
+          outline: none;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      }
+      .geleKnop
+      {
+        background-color: $color-secondary;
+        border: none;
+        font-size: $font-large;
+        font-family: $font-main;
+        font-weight: 500;
+        position: relative;
+        left: 10%;
+        margin: 5% -10%;
+        padding: 3%;
+      }
+    }
+  }
+
+  //AccountInfoComponent
+
+  .profielInfo
+  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-brown;
+    margin: 20px 60px;
+    padding: 10px 0;
+    p
+    {
+      font-size: $font-regular;
+
+    }
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .modal-content {
+    background-color: $background-color;
+    margin: 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+
+    h1
+    {
+      margin-top: -3%;
+      margin-bottom: 3%;
+      font-size: $font-pageTitle;
+    }
+    p
+    {
+      font-size: $font-extraLarge;
+      margin-bottom: 5%;
+    }
+    form
+    {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 100%;
+      margin: 0 auto;
+      .field {
+        margin-bottom: 15px;
+        width: 50%
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 80%;
+        height: 50px;
+        padding: 8px;
+        background-color: $color-brown;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .voorwaarden
+      {
+        label
+        {
+          margin-right: 80px;
+          text-align: center;
+        }
+        input[type="checkbox"]
+        {
+          margin-top: 2%;
+          position: relative;
+          width: 20px;
+          height: 20px;
+          background-color: $color-brown;
+          appearance: none;
+          outline: none;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+        // input[type="checkbox"]:checked
+        // {
+        //     //Niet gedesigned in FIGMA
+        // }
+      }
+    }
+
+    .geleKnop
+    {
+      background-color: $color-secondary;
       border: none;
       font-size: $font-regular;
-      padding: 2%;
-      width: 95%;
-      margin-top: 5px;
-      margin-bottom: 20px;
-    }
-
-    a {
-      color: $color-black;
-      font-size: $font-small;
       font-family: $font-main;
+      font-weight: 500;
+      position: absolute;
+      left: 76%;
+      top: 70%;
+      padding: 1% 2%;
     }
   }
 
-  .geleKnop {
-    background-color: $color-secondary;
-    border: none;
-    font-size: $font-large;
-    font-family: $font-main;
-    position: relative;
-    left: 60%;
-    padding: 3%;
+
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
   }
-}
 
-//AccountAanmaakComponent
-.accountAanmaken {
-  background-color: $background-color;
-  margin: 5%;
-  padding: 3% 2%;
-  width: 40%;
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-  h1 {
+  // AanbiedingenComponent
+
+  .componentTitle
+  {
     font-size: $font-extraLarge;
     font-family: $font-main;
-    color: $color-black;
-    font-weight: 800;
-    margin-top: 100px;
-    margin-bottom: 30px;
-  }
-
-  p {
-    font-size: $font-small;
-    font-family: $font-secondary;
-    color: $color-black;
     font-style: italic;
-    margin-bottom: 19%;
+    font-weight: 800;
+    padding: 25px 0;
+    margin-left: 30px;
   }
 
-  .geleKnop {
-    background-color: $color-secondary;
-    border: none;
-    font-size: $font-large;
-    font-family: $font-main;
+  .aanbodContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1%;
+
+    .aanbieding {
+      flex: 1 0 calc(33.33% - 2%);
+      margin: 1%;
+      box-sizing: border-box;
+      img
+      {
+        width: 100%;
+        height: auto;
+      }
+      p
+      {
+        position: relative;
+        top: -25%;
+        font-size: $font-small;
+        font-family: $font-main;
+        font-style: italic;
+        font-weight: 800;
+        background-color: $color-secondary;
+        padding: 4%;
+        text-align: center;
+      }
+    }
+  }
+
+  //WinkelmandView
+  .winkelmandItem {
+    margin-left: 5%;
+
+    .winkelmandAantal {
+      .winkelmandMinder {
+        float: left;
+        width: 50px;
+        background-color: #6C5F5B;
+        text-align: center;
+      }
+      .winkelmandAantalNummer {
+        float: left;
+        width: 70px;
+        text-align: center;
+        border: #6C5F5B 1px solid;
+      }
+      .winkelmandMeer {
+        float: left;
+        width: 50px;
+        background-color: #6C5F5B;
+        text-align: center;
+      }
+    }
+  }
+
+  .formulierInfo {
+    visibility: hidden;
+  }
+
+  RouterLink {
+    margin: 0;
+    padding: 0;
+  }
+
+  .meubelsRij {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  //MeubelItemComponent
+
+  .meubelItem {
+    width: 250px;
     position: relative;
-    left: 40%;
-    padding: 2.5%;
+    height: 360px;
+    margin-bottom: 5%;
+    .favoritedItem {
+      visibility: hidden;
+    }
+
+    .meubelFoto {
+      width: 100%;
+    }
+
+    .meubelQuickview {
+      width: 100%;
+      visibility: hidden;
+      position: absolute;
+      text-align: center;
+      bottom: 25%;
+    }
+
+    &:hover {
+      .meubelQuickview {
+        visibility: visible;
+      }
+    }
+
+    .favoriteItem, .favoritedItem {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+    }
+
+    .meubelInfo {
+      display: flex;
+      align-items: center;
+      height: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      background-color: $grijs;
+
+      .meubelTitel {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
-}
-
-//WinkelmandView
-.winkelmandItem {
-  margin-left: 5%;
-
-  .winkelmandAantal {
-    .winkelmandMinder {
-      float: left;
-      width: 50px;
-      background-color: #6C5F5B;
-      text-align: center;
-    }
-    .winkelmandAantalNummer {
-      float: left;
-      width: 70px;
-      text-align: center;
-      border: #6C5F5B 1px solid;
-    }
-    .winkelmandMeer {
-      float: left;
-      width: 50px;
-      background-color: #6C5F5B;
-      text-align: center;
-
-    }
-  }
-}
-
-.formulierInfo {
-  visibility: hidden;
-}
-
-RouterLink {
-  margin: 0;
-  padding: 0;
-}

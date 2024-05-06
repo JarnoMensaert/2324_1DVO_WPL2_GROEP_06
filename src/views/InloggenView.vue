@@ -7,6 +7,7 @@ import FooterComponent from '../components/FooterComponent.vue'
 export default {
   data() {
     return {
+      aboutTitle: 'Inloggen',
     }
   },
   components: {
@@ -20,7 +21,7 @@ export default {
 
 <template>
   <HeaderComponent/>
-  <div class="aboutTitle">Inloggen</div>
+  <div class="aboutTitle">{{ aboutTitle }}</div>
   <div class="breadcrumb">
     <p>HOME / INLOGGEN</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
     <hr>

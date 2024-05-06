@@ -3,6 +3,14 @@ import { AkChevronDown } from "@kalimahapps/vue-icons";
 import { AkChevronUp } from "@kalimahapps/vue-icons";
 import { ref } from 'vue';
 
+const title = "Veel gestelde vragen";
+
+const topic1 = "Bestellen";
+const topic2 = "Betalingen";
+const topic3 = "Dienst na verkoop";
+const topic4 = "Afhalen";
+const topic5 = "Ladderlift";
+
 const accItems = ref([
   {
     id: 1,
@@ -102,10 +110,10 @@ const toggleAcc = (item) => {
 }
 </script>
 <template>
-  <h1 class="faq">Veel gestelde vragen</h1>
+  <h1 class="faq">{{ title }}</h1>
   <div>
     <template v-if="accItems.length > 0 && accItems[0].id === 1">
-      <h2>Bestellen</h2>
+      <h2>{{ topic1 }}</h2>
     </template>
 
     <div class="accWrapper" v-for="item in accItems" :key="item.id">
@@ -122,17 +130,17 @@ const toggleAcc = (item) => {
       </div>
 
       <template v-if="item.id === 1">
-        <h2>Betalingen</h2>
+        <h2>{{ topic2 }}</h2>
       </template>
 
       <template v-if="item.id === 8">
-        <h2>Dienst na verkoop</h2>
+        <h2>{{ topic3 }}</h2>
       </template>
       <template v-if="item.id === 11">
-        <h2>Afhalen</h2>
+        <h2>{{ topic4 }}</h2>
       </template>
       <template v-if="item.id === 14">
-        <h2>Ladderlift</h2>
+        <h2>{{ topic5 }}</h2>
       </template>
     </div>
   </div>
