@@ -1,27 +1,33 @@
 <script>
-import { AkSend } from "@kalimahapps/vue-icons";
-import { AkFacebookFill } from "@kalimahapps/vue-icons";
-import { AnFilledInstagram } from "@kalimahapps/vue-icons";
+import { RiInstagramFill } from "oh-vue-icons/icons";
+import { FaFacebookSquare } from "oh-vue-icons/icons";
+import { RiSendPlane2Line } from "oh-vue-icons/icons";
 
 export default {
   data() {
     return {
       footerTitleL: "Categories",
       footerInfoL: [
-        "Meubels",
-        "Woonaccesoires",
-        "Stories",
-        "Over ons",
-        "Klantenservice",
+        { name: "Meubels", path: "/meubels" },
+        { name: "Woonaccesoires", path: "/woonaccesoires"},
+        {name: "Stories", path: "/stories"},
+        {name: "Over ons", path: "/about"},
+        {name: "Klantenservice", path: "/klantenservice"},
       ],
       footerTitleM: "Comfortmeubel",
-      footerInfoM: [
-        "Kerkstraat 114, 2060 Antwerpen",
+      footerInfoMAdres: [
+        "Kerkstraat 114, 2060 Antwerpen"
+      ],
+      footerInfoMOpeningsuren: [
         "Maandag - Zaterdag: 09u30 - 18u00",
         "Dinsdag: Gesloten",
-        "Zondag & Feestdagen: 10u00 - 18u00",
+      ],
+      footerInfoMOpeningsurenZondag: [
+        "Zondag & Feestdagen: 10u00 - 18u00"
+      ],
+      footerInfoMMagazijn: [
         "Openingsuren Magazijn: 9u30 - 16u30",
-        "Zondag & Dinsdag: Gesloten",
+        "Zondag & Dinsdag: Gesloten"
       ],
       footerTitleR: "Contact",
       footerInfoR:
@@ -33,6 +39,11 @@ export default {
       footerInfoR2: "Schrijf u in voor onze nieuwsbrief en ontvang de laatste updates, nieuws en productaanbiedingen via e-mail",
       routerFooter: "Algemene voorwaarden / Cookies / Privacybeleid",
     }
+  },
+  components: {
+    FaFacebookSquare,
+    RiInstagramFill,
+    RiSendPlane2Line
   }
 }
 </script>
@@ -43,16 +54,26 @@ export default {
         <h5 class="footerTitle">{{ footerTitleL }}</h5>
         <ul class="footerList">
           <li class="footerListItem" v-for="(info, index) in footerInfoL" :key="index">
-            <a>{{ info }}</a>
+            <router-link :to="info.path">{{ info.name}}</router-link>
           </li>
         </ul>
       </div>
       <div class="footerInfo">
         <h5 class="footerTitle">{{ footerTitleM }}</h5>
         <ul class="footerList">
-          <li class="footerListItem" v-for="(info, index) in footerInfoM" :key="index">
+          <li class="footerListItem1 footerListItem" v-for="(info, index) in footerInfoMAdres" :key="index">
             <a>{{ info }}</a>
           </li>
+          <li class="footerListItem2 footerListItem" v-for="(info, index) in footerInfoMOpeningsuren" :key="index">
+            <a>{{ info }}</a>
+          </li>
+          <li class="footerListItem3 footerListItem" v-for="(info, index) in footerInfoMOpeningsurenZondag" :key="index">
+            <a>{{ info }}</a>
+          </li>
+          <li class="footerListItem4 footerListItem" v-for="(info, index) in footerInfoMMagazijn" :key="index">
+            <a>{{ info }}</a>
+          </li>
+
         </ul>
       </div>
       <div class="footerInfo">
@@ -65,12 +86,12 @@ export default {
       </div>
       <div class="footerInfo">
         <h5 class="footerTitle">{{ footerTitleR2 }}</h5>
-        <AkFacebookFill  class="icon clickable"/>
-        <AnFilledInstagram class="icon clickable"/>
+        <a href="https://www.facebook.com/comfortmeubel/"><img src="/assets/Icons/facebook.png" class="icon clickable" alt="Facebook"/></a>
+        <a href="https://www.instagram.com/comfortmeubel/"><img src= "/assets/Icons/instagram.png" class="icon clickable" alt="Instagram"/></a>
         <form>
           <p>{{ footerInfoR2 }}</p>
           <input id="email" type="email" placeholder="Je e-mailadres">
-          <button id="submitEmail" type="submit"><AkSend class="clickable"/></button>
+          <button id="submitEmail" type="submit"><img src="/assets/Icons/sendButton.png" alt="Send" class="clickable"/></button>
         </form>
       </div>
     </div>
