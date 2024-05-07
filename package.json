@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@kalimahapps/vue-icons": "^1.4.0",
+    "@kalimahapps/vue-icons": "^1.4.1",
     "bootstrap": "^5.3.3",
     "oh-vue-icons": "^1.0.0-rc3",
     "pinia": "^2.1.7",

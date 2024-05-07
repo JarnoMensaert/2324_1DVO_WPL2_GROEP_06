@@ -157,6 +157,7 @@
     @include textStyles($font-small);
     text-decoration: underline;
     text-align: center;
+    margin-top: -25px;
     .voorwaardenFooter {
       color: $color-white;
     }
