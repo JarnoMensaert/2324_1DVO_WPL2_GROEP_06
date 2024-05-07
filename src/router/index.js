@@ -9,6 +9,8 @@ import VoorwaardenView from "@/views/VoorwaardenView.vue";
 import WinkelmandView from "@/views/WinkelmandView.vue";
 import RegistreerView from "@/views/RegistreerView.vue";
 import InloggenView from "@/views/InloggenView.vue";
+import ConfirmationComponent from "@/components/ConfirmationComponent.vue";
+import ConfirmationView from "@/views/ConfirmationView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,6 +64,11 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: InloggenView
+    },
+    {
+      path: '/confirm/:token',
+      name: 'confirm',
+      component: ConfirmationView
     }
   ]
 })
