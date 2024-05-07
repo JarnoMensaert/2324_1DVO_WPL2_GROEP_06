@@ -41,7 +41,7 @@ export default {
     <div class="info">
       <h1 class="infoTitle">{{ story1.title }}</h1>
       <p>{{ story1.content }}</p>
-      <button>{{ readMore }}</button>
+      <button class="storyKnop">{{ readMore }}</button>
     </div>
   </div>
   <StoriesComponent/>
@@ -49,7 +49,7 @@ export default {
     <div class="info">
       <h1 class="infoTitle">{{ story2.title }}</h1>
       <p>{{ story2.content }}</p>
-      <button>{{ readMore }}</button>
+      <button class="storyKnop">{{ readMore }}</button>
     </div>
     <img src="@/assets/images/ZoekStudenten.png">
   </div>

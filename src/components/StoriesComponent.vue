@@ -25,7 +25,6 @@ export default {
 </script>
 <template>
   <div class="kleineRuimte">
-    <h3 class="groteTekst">Stories</h3>
     <div class="stories">
       <div class="story" v-for="(story, index) in stories" :key="index">
         <img class="storyImage" :src="story.image">

@@ -287,8 +287,10 @@
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      padding-bottom: 50px;
+      padding-bottom: 30px;
       width: 100%;
+      background-color: #F6F1EE;
+      padding-top: 50px;
 
       .story {
         .storyTitel {
@@ -321,6 +323,16 @@
     }
   }
 
+  .storyKnop {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-right: 325px;
+    padding: 10px 0;
+    color: $footer-background;
+  }
+
   // AboutView
 
   .aboutTitle {
@@ -336,6 +348,7 @@
 
     p {
       font-style: italic;
+      margin-left: 50px;
     }
   }
 
