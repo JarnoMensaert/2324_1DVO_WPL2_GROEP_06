@@ -157,6 +157,7 @@
     @include textStyles($font-small);
     text-decoration: underline;
     text-align: center;
+    margin-top: -25px;
     .voorwaardenFooter {
       color: $color-white;
     }
@@ -477,7 +478,7 @@
   .image-grid {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -503,6 +504,7 @@
             font-weight: $font-main;
             margin: 30px 0;
             color: $color-black;
+            font-family: "Nunito", sans-serif;
           }
         }
 
