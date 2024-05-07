@@ -6,7 +6,7 @@
     },
     data() {
       return {
-        knopText: "Quickview",
+        knopText: " Meer informatie",
         images: [
         { 
             src: "src/assets/Klantenservice/Afhalingen.png",
