@@ -7,6 +7,8 @@ export default {
       navItem3:   "Stories",
       navItem4:   "Over ons",
       navItem5:   "Klantenservice",
+      showPopup:  false,
+      showBar:    false,
     }
   },
   methods: {
@@ -31,6 +33,21 @@ export default {
     Winkelmand() {
       this.$router.push('/winkelmand')
     },
+    Profiel() {
+      this.$router.push('/profiel')
+    },
+    Login() {
+      this.$router.push('/login')
+    },
+    Favorieten() {
+      this.$router.push('/favorieten');
+    },
+    togglePopup() {
+      this.showPopup = !this.showPopup;
+    },
+    showSearchBar() {
+      this.showBar = !this.showBar;
+    },
   },
 }
 </script>
@@ -38,9 +55,17 @@ export default {
 <template>
   <nav class="nav">
     <div class="nav-top">
-      <img class="clickable iconlinks navtopitem" src="@/assets/Icons/Search.png"/>
+      <img class="clickable iconlinks navtopitem" src="@/assets/Icons/Search.png" @mouseover="showSearchBar()"/>
+      <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }"></input>
       <img @click="Home()" class="logo clickable" src="@/assets/Comfortmeubel/Logo.png"/>
-      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/Person.png"/>
+      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/Person.png"   @click="togglePopup()"/>
+      <div class="popup" :style="{ display: showPopup ? 'block' : 'none' }">
+        <div>
+          <button @click="Favorieten()"><img src="/public/assets/Icons/favorite.png">Favorieten</button>
+          <button @click="Profiel()"><img src="/public/assets/Icons/Person.png">Jouw Account</button>
+          <button @click="Login()" class="geleKnop">Aanmelden</button>
+        </div>
+      </div>
       <img @click="Winkelmand()" class="clickable iconrechts navtopitem" src="@/assets/Icons/Shopping Cart.png"/>
     </div>
     <div class="nav-bottom">

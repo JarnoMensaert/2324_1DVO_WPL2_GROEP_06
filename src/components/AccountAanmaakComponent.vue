@@ -14,6 +14,6 @@ export default {
   <div class="accountAanmaken">
     <h1>{{ title }}</h1>
     <p>{{ info }}</p>
-    <button class="geleKnop">{{ knopTekst }}</button>
+    <RouterLink to="/registreer"><button class="geleKnop">{{ knopTekst }}</button></RouterLink>
   </div>
 </template>

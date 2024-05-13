@@ -7,17 +7,17 @@ export default {
         {
           id: 1,
           aanbod: "10% korting op je verjaardag",
-          img: "/assets/images/aanbod1.png",
+          img: "/assets/images/aanbiedingVerjaardag.png",
         },
         {
           id: 2,
           aanbod: "Gratis cadeau bij aankoop van meubels",
-          img: "/assets/images/aanbod2.png",
+          img: "/assets/images/aanbiedingCadeau.png",
         },
         {
           id: 1,
           aanbod: "5% korting op sierkussens",
-          img: "/assets/images/aanbod3.png",
+          img: "/assets/images/aanbiedingSierkussens.png",
         },
       ]
     }
