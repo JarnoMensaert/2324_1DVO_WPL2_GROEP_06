@@ -1,19 +1,72 @@
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      componentTitle: "Nieuwe klant?",
+      componentTitle: "Register New User",
       mevrouw: "Mevrouw",
       meneer: "Meneer",
-      voornaam: "Voornaam*",
-      achternaam: "Achternaam*",
-      email: "E-mail*",
-      wachtwoord: "Wachtwoord*",
-      repeatWachtwoord: "Herhaal wachtwoord*",
-      opDeHoogteText: "Hou me op de hoogte van de laatste nieuwtjes, de nieuwe collecties en leuke acties van Comfortmeubel.",
+      voornaam: "Voornaam",
+      achternaam: "Achternaam",
+      email: "E-mail",
+      wachtwoord: "Wachtwoord",
+      repeatWachtwoord: "Herhaal Wachtwoord",
+      opDeHoogteText: "Op de hoogte blijven van nieuws en aanbiedingen?",
       perEmail: "Per e-mail",
+      userData: {
+        uservoornaam: "",
+        userachternaam: "",
+        useremail: "",
+        userwachtwoord: "",
+        nieuwpermail: false
+      },
+      repeatPassword: ""
+    };
+  },
+  methods: {
+    addUser() {
+      // Check if passwords match
+      if (this.userData.userwachtwoord !== this.repeatPassword) {
+        alert("Passwords do not match");
+        return;
+      }
 
+      // Prepare the request data
+      const userData = {
+        userid: 1,
+        uservoornaam: this.userData.uservoornaam,
+        userachternaam: this.userData.userachternaam,
+        useremail: this.userData.useremail,
+        isman: true, // Example value, replace with your logic
+        userwachtwoord: this.userData.userwachtwoord,
+        nieuwpermail: this.userData.nieuwpermail// Example value, replace with your logic
+      };
+
+      // Make the fetch request
+      fetch('http://localhost:3000/api/users/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify([userData])
+      })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Response from backend:', data);
+            // Handle the response from the backend here
+          })
+          .catch(error => {
+            console.error('Error sending data to backend:', error);
+            // Handle errors here
+          });
     }
+
   }
 }
 </script>
@@ -21,7 +74,7 @@ export default {
 <template>
   <div class="nieuweKlant">
     <h1>{{ componentTitle }}</h1>
-    <form @submit.prevent="">
+    <form @submit.prevent="addUser">
       <div class="gender">
         <input type="checkbox" id="mevrouw" name="mevrouw" value="mevrouw">
         <label for="mevrouw">{{ mevrouw }}</label>
@@ -30,19 +83,19 @@ export default {
       </div>
       <div class="accountInfo">
         <label for="voornaam">{{ voornaam }}</label><br>
-        <input type="text" id="voornaam" name="voornaam" value=""><br>
+        <input type="text" id="voornaam" name="voornaam" v-model="userData.uservoornaam"><br>
         <label for="achternaam">{{ achternaam }}</label><br>
-        <input type="text" id="achternaam" name="achternaam" value=""><br>
+        <input type="text" id="achternaam" name="achternaam" v-model="userData.userachternaam"><br>
         <label for="email">{{ email }}</label><br>
-        <input type="email" id="email" name="email" value=""><br>
+        <input type="email" id="email" name="email" v-model="userData.useremail"><br>
         <label for="password">{{ wachtwoord }}</label><br>
-        <input type="password" id="password" name="password" value=""><br>
+        <input type="password" id="password" name="password" v-model="userData.userwachtwoord"><br>
         <label for="repeatPassword">{{ repeatWachtwoord }}</label><br>
-        <input type="repeatPassword" id="repeatPassword" name="repeatPassword" value=""><br>
+        <input type="password" id="repeatPassword" name="repeatPassword" v-model="repeatPassword"><br>
       </div>
       <div class="opDeHoogte">
         <p>{{  opDeHoogteText }}</p>
-        <input type="checkbox" id="perEmail" name="perEmail" value="perEmail">
+        <input type="checkbox" id="perEmail" name="perEmail" value="perEmail" v-model="userData.nieuwpermail">
         <label for="perEmail">{{ perEmail }}</label><br>
       </div>
       <input type="submit" class="geleKnop" value="Account aanmaken">

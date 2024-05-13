@@ -4,16 +4,20 @@
 
 <template>
   <div class="winkelmandItem">
-    <img src="/assets/images/stoel.png" alt="stoel" />
-    <h3 class="winkelmandTitel">Relax Wuhan Manueel Verstelbaar Elephant</h3>
-    <p class="winkelmandOmschr">Poten metaal en bekleding PU – Max. 110 kg</p>
-    <p class="winkelmandKleur">Kleur: zwart</p>
-    <img src="/assets/Kleuren/Zwart.png" alt="zwart">
-    <h3 class="winkelmandPrijs">€399,00</h3>
-    <div class="winkelmandAantal">
-      <p class="winkelmandMinder">-</p>
-      <p class="winkelmandAantalNummer">1</p>
-      <p class="winkelmandMeer">+</p>
+    <div class="winkelmandItemLinks">
+      <img src="/assets/images/stoel.png" alt="stoel"/>
+    </div>
+    <div class="winkelmandItemRechts">
+      <h3 class="winkelmandTitel">Relax Wuhan Manueel Verstelbaar Elephant</h3>
+      <p class="winkelmandOmschr">Poten metaal en bekleding PU – Max. 110 kg</p>
+      <p class="winkelmandKleur">Kleur: zwart</p>
+      <img src="/assets/Kleuren/Zwart.png" alt="zwart">
+      <h3 class="winkelmandPrijs">€399,00</h3>
+      <div class="winkelmandAantal">
+        <p class="winkelmandMinder">-</p>
+        <p class="winkelmandAantalNummer">1</p>
+        <p class="winkelmandMeer">+</p>
+      </div>
     </div>
   </div>
 </template>
