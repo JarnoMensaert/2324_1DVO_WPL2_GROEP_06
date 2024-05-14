@@ -377,6 +377,16 @@
 
   // AboutView
 
+  @media (max-width: 833px) {   
+    .aboutTitle {
+      display: none;
+    }
+
+    .breadcrumb {
+      padding-top: 50px;
+    }
+  }
+
   .aboutTitle {
     text-align: center;
     font-size: $font-pageTitle;
@@ -390,7 +400,6 @@
 
     p {
       font-style: italic;
-      margin-left: 50px;
     }
   }
 
@@ -1235,3 +1244,45 @@
       }
     }
   }
+
+ //MOBILE
+
+ //SERVICE
+ @media (max-width: 833px) { 
+  .nav {
+    background-color: $color-white;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px !important;
+    margin-top: 45px !important;
+  }
+  .image-container {
+    margin-bottom: 0px !important;
+    margin-top: 30px !important;
+  }
+}
+
+//FOOTER
+@media (max-width: 833px) {
+  .footerTop {
+    display: grid;
+    grid-template-rows: repeat(4, min);
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .footerListItem a {
+    font-weight: lighter;
+  }
+
+  .footerTitle {
+    padding-bottom: 4px !important;
+    font-weight: bold !important;
+  }
+}
