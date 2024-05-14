@@ -23,7 +23,7 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">{{ aboutTitle }}</div>
   <div class="breadcrumb">
-    <p>HOME / REGISTREREN</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>HOME / REGISTREREN</p>
     <hr>
   </div>
   <AccountInfoComponent/>
