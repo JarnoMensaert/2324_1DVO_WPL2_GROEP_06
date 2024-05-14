@@ -1,15 +1,15 @@
 <script>
-import { RiInstagramFill } from "oh-vue-icons/icons";
-import { FaFacebookSquare } from "oh-vue-icons/icons";
-import { RiSendPlane2Line } from "oh-vue-icons/icons";
+import {RiInstagramFill} from "oh-vue-icons/icons";
+import {FaFacebookSquare} from "oh-vue-icons/icons";
+import {RiSendPlane2Line} from "oh-vue-icons/icons";
 
 export default {
   data() {
     return {
       footerTitleL: "Categories",
       footerInfoL: [
-        { name: "Meubels", path: "/meubels" },
-        { name: "Woonaccesoires", path: "/woonaccesoires"},
+        {name: "Meubels", path: "/meubels"},
+        {name: "Woonaccesoires", path: "/woonaccesoires"},
         {name: "Stories", path: "/stories"},
         {name: "Over ons", path: "/about"},
         {name: "Klantenservice", path: "/klantenservice"},
@@ -44,6 +44,21 @@ export default {
     FaFacebookSquare,
     RiInstagramFill,
     RiSendPlane2Line
+  },
+  methods: {
+    submitForm() {
+      // Get email value from the input field
+      const email = document.getElementById('email').value;
+      console.log('Email:', email);
+
+      // Close the modal
+      this.closeNewsletterModal();
+
+      // Redirect to the profile page with email query parameter and modal state
+      window.location.href = `http://localhost:5173/profiel?email=${encodeURIComponent(email)}&openModal=true`;
+    }
+
+
   }
 }
 </script>
@@ -54,7 +69,7 @@ export default {
         <h5 class="footerTitle">{{ footerTitleL }}</h5>
         <ul class="footerList">
           <li class="footerListItem" v-for="(info, index) in footerInfoL" :key="index">
-            <router-link :to="info.path">{{ info.name}}</router-link>
+            <router-link :to="info.path">{{ info.name }}</router-link>
           </li>
         </ul>
       </div>
@@ -67,7 +82,8 @@ export default {
           <li class="footerListItem2 footerListItem" v-for="(info, index) in footerInfoMOpeningsuren" :key="index">
             <a>{{ info }}</a>
           </li>
-          <li class="footerListItem3 footerListItem" v-for="(info, index) in footerInfoMOpeningsurenZondag" :key="index">
+          <li class="footerListItem3 footerListItem" v-for="(info, index) in footerInfoMOpeningsurenZondag"
+              :key="index">
             <a>{{ info }}</a>
           </li>
           <li class="footerListItem4 footerListItem" v-for="(info, index) in footerInfoMMagazijn" :key="index">
@@ -86,13 +102,17 @@ export default {
       </div>
       <div class="footerInfo">
         <h5 class="footerTitle">{{ footerTitleR2 }}</h5>
-        <a href="https://www.facebook.com/comfortmeubel/" target="_blank"><img src="/assets/Icons/facebook.png" class="icon clickable" alt="Facebook"/></a>
-        <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><img src= "/assets/Icons/instagram.png" class="icon clickable" alt="Instagram"/></a>
-        <form>
+        <a href="https://www.facebook.com/comfortmeubel/" target="_blank"><img src="/assets/Icons/facebook.png"
+                                                                               class="icon clickable"
+                                                                               alt="Facebook"/></a>
+        <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><img src="/assets/Icons/instagram.png"
+                                                                                class="icon clickable" alt="Instagram"/></a>
+        <form action="http://localhost:5173/profiel" method="GET">
           <p>{{ footerInfoR2 }}</p>
           <input id="email" type="email" placeholder="Je e-mailadres">
-          <button id="submitEmail" type="submit"><img src="/assets/Icons/sendButton.png" alt="Send" class="clickable"/></button>
+          <button id="submitEmail" type="submit" class="clickable">test</button>
         </form>
+
       </div>
     </div>
     <div class="footerBottom">
