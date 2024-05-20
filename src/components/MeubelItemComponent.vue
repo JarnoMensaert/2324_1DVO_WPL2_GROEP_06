@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../assets/scss/_layout.scss">
 <script>
 export default {
   data() {
@@ -11,17 +12,15 @@ export default {
 </script>
 
 <template>
-  <div class="meubelItem">
-    <img src="/assets/Icons/favorite.png" alt="Favorite" class="favoriteItem">
-    <img src="/assets/Icons/favorited.png" alt="Favorited" class="favoritedItem">
-    <div class="meubelQuickview">
-      <img src="/assets/Icons/quickview.png" alt="Quickview">
-      <p>{{ knopTekst }}</p>
+  <div class="product-card">
+    <div class="image-container">
+      <img src="path-to-your-image" alt="Chair Image" />
+      <button class="favorite-button"><img src="/assets/Icons/favorite.png" alt="Favorite"></button>
     </div>
-    <img src="/assets/images/stoel.png" alt="Stoel" class="meubelFoto">
-    <div class="meubelInfo">
-      <p class="meubelTitel">{{ meubelTitel }}</p>
-      <p class="meubelPrijs">{{ meubelPrijs }}</p>
+    <div class="product-details">
+      <p class="product-title">Stoel Alicia khaki velvet fire retardant (FR-Quartz 903 Khaki)</p>
+      <p class="product-price">€ 250,00</p>
+      <button class="zoom-button">🔍</button>
     </div>
   </div>
 </template>

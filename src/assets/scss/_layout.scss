@@ -1145,6 +1145,58 @@
       visibility: hidden;
     }
 
+    .product-card {
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+      background-color: #f9f9f9;
+      position: relative;
+    }
+
+    .image-container {
+      position: relative;
+    }
+
+    .image-container img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .favorite-button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: none;
+      font-size: 20px;
+    }
+
+    .product-details {
+      margin-top: 16px;
+    }
+
+    .product-title {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .product-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+      margin-top: 8px;
+    }
+
+    .zoom-button {
+      background: none;
+      border: none;
+      font-size: 20px;
+      margin-top: 16px;
+      cursor: pointer;
+    }
+
     .meubelFoto {
       width: 100%;
     }
