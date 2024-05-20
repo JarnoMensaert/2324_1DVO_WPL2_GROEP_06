@@ -20,7 +20,7 @@ export default {
     <div class="product-details">
       <p class="product-title">Stoel Alicia khaki velvet fire retardant (FR-Quartz 903 Khaki)</p>
       <p class="product-price">€ 250,00</p>
-      <button class="zoom-button">🔍</button>
+      <RouterLink :to="/product" class="zoom-button">🔍</RouterLink>
     </div>
   </div>
 </template>
