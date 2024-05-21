@@ -7,6 +7,14 @@ export default {
   data() {
     return {}
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Klantenservice() {
+      this.$router.push('/klantenservice')
+    },
+  },
   components: {
     HeaderComponent,
     KlantenserviceComponent,
@@ -17,9 +25,12 @@ export default {
 
 <template>
   <HeaderComponent/>
-  <div class="aboutTitle">Klantenservice</div>  
+  <div class="aboutTitle">Klantenservice</div>
   <div class="breadcrumb">
-    <p>HOME / KLANTENSERVICE</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Klantenservice()" class="breadcrumb-link">KLANTENSERVICE</div></p>
     <hr>
   </div>
   <KlantenserviceComponent/>

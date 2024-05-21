@@ -403,7 +403,12 @@ footer {
   margin: 0 40px;
 
   p {
-    font-style: italic;
+    display: flex;
+    align-items: center;
+    .breadcrumb-link {
+      margin-right: 5px; /* Adjust spacing between links */
+      cursor: pointer;
+    }
   }
 }
 
@@ -624,6 +629,11 @@ a, a:visited {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.winkelmandImg {
+  height: 200px;
+  width: 200px;
 }
 
 .modal-content {

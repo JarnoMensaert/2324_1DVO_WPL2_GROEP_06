@@ -22,6 +22,14 @@ export default {
           }
     }
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Stories() {
+      this.$router.push('/stories')
+    },
+  },
   components: {
     HeaderComponent,
     StoriesComponent,
@@ -33,7 +41,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">{{ pageTitle }}</div>
   <div class="breadcrumb">
-    <p>HOME / STORIES</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Stories()" class="breadcrumb-link">STORIES</div></p>
     <hr>
   </div>
   <div class="storiesInfo">

@@ -109,7 +109,7 @@ export default {
         <form action="http://localhost:5173/profiel" method="GET">
           <p>{{ footerInfoR2 }}</p>
           <input id="email" type="email" placeholder="Je e-mailadres">
-          <button id="submitEmail" type="submit" class="clickable">test</button>
+          <button id="submitEmail" type="submit" class="clickable"><img src="/assets/Icons/sendButton.png" alt="send"></button>
         </form>
 
       </div>

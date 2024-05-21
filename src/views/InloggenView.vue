@@ -10,6 +10,14 @@ export default {
       aboutTitle: 'Inloggen',
     }
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Login() {
+      this.$router.push('/login')
+    },
+  },
   components: {
     HeaderComponent,
     AanmeldenComponent,
@@ -23,7 +31,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">{{ aboutTitle }}</div>
   <div class="breadcrumb">
-    <p>HOME / INLOGGEN</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Login()" class="breadcrumb-link">INLOGGEN</div></p>
     <hr>
   </div>
   <div class="inlogInfo">

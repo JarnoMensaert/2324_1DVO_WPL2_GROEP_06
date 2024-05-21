@@ -9,6 +9,14 @@ export default {
 
     }
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Favorieten() {
+      this.$router.push('/favorieten')
+    }
+  },
   components: {
     HeaderComponent,
     FavorietenComponent,
@@ -21,7 +29,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">Favorieten</div>
   <div class="breadcrumb">
-    <p>HOME / FAVORIETEN</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Favorieten()" class="breadcrumb-link">FAVORIETEN</div></p>
     <hr>
   </div>
   <FavorietenComponent

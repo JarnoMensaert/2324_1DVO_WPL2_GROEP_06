@@ -10,6 +10,14 @@ export default {
       aboutTitle: "Mijn profiel",
     }
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Profiel() {
+      this.$router.push('/profiel')
+    },
+  },
   components: {
     HeaderComponent,
     AccountInfoComponent,
@@ -23,7 +31,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">{{ aboutTitle }}</div>
   <div class="breadcrumb">
-    <p>HOME / REGISTREREN</p>
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Profiel()" class="breadcrumb-link">MIJN PROFIEL</div></p>
     <hr>
   </div>
   <AccountInfoComponent/>

@@ -7,7 +7,17 @@ import FAQSectionComponent from '../components/FAQSectionComponent.vue'
 
 export default {
   data() {
-    return {}
+    return {
+
+    }
+  },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    About() {
+      this.$router.push('/about')
+    },
   },
   components: {
     HeaderComponent,
@@ -23,7 +33,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">Over Ons</div>
   <div class="breadcrumb">
-    <p>HOME / OVER ONS</p>
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="About()" class="breadcrumb-link">OVER ONS</div></p>
     <hr>
   </div>
   <MissieVisieComponent/>

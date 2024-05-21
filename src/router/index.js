@@ -87,6 +87,11 @@ const router = createRouter({
       path: '/product',
       name: 'product',
       component: ProductView
+    },
+    {
+      path: '/product:id',
+      name: 'product',
+      component: ProductView
     }
   ]
 })

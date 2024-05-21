@@ -6,17 +6,22 @@ import WinkelmandItemComponent from "@/components/WinkelmandItemComponent.vue";
 import WinkelmandComponent from "@/components/WinkelmandComponent.vue";
 
 export default {
-  data() {
-    return {}
+  name: 'WinkelmandView',
+  components: {WinkelmandComponent, HeaderComponent},
+  computed: {},
+  methods: {
+    data() {
+      return {}
+    }
+    ,
+    components: {
+      WinkelmandComponent,
+      WinkelmandItemComponent,
+      VoorwaardenComponent,
+      HeaderComponent,
+      FooterComponent,
+    },
   }
-  ,
-  components: {
-    WinkelmandComponent,
-    WinkelmandItemComponent,
-    VoorwaardenComponent,
-    HeaderComponent,
-    FooterComponent,
-  },
 }
 </script>
 
