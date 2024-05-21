@@ -58,7 +58,6 @@ export default {
       window.location.href = `http://localhost:5173/profiel?email=${encodeURIComponent(email)}&openModal=true`;
     }
 
-
   }
 }
 </script>

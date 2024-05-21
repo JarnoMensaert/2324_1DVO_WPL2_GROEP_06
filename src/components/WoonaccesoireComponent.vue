@@ -6,6 +6,7 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
 import AanmeldenComponent from "@/components/AanmeldenComponent.vue";
 import AccountAanmaakComponent from "@/components/AccountAanmaakComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
+import WoonaccesoireItemComponent from "@/components/WoonaccesoireItemComponent.vue";
 
 export default {
   data() {
@@ -19,7 +20,8 @@ export default {
     AanmeldenComponent,
     AccountAanmaakComponent,
     FooterComponent,
-    MeubelItemComponent
+    MeubelItemComponent,
+    WoonaccesoireItemComponent
   },
 }
 
@@ -28,12 +30,12 @@ export default {
 <template>
   <div class="aboutTitle">{{ Titel }}</div>
   <div class="breadcrumb">
-    <p>HOME / MEUBELS</p>
+    <p>HOME / WOONACCESOIRES</p>
     <hr>
   </div>
   <FilterComponent/>
   <div class="meubelsRij">
-    <MeubelItemComponent/>
+    <WoonaccesoireItemComponent/>
   </div>
 </template>
 
