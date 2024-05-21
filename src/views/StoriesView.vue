@@ -6,7 +6,7 @@ import FooterComponent from '../components/FooterComponent.vue'
 export default {
   data() {
     return {
-      pageTitle: "Stories",
+      pageTitle: "Verhalen",
       readMore: "Read more",
       story1:
           {
@@ -44,7 +44,7 @@ export default {
       <button class="storyKnop">{{ readMore }}</button>
     </div>
   </div>
-  <StoriesComponent/>
+  <StoriesComponent class="storiesSecond"/>
   <div class="storiesInfo">
     <div class="info">
       <h1 class="infoTitle">{{ story2.title }}</h1>

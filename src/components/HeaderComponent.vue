@@ -4,7 +4,7 @@ export default {
     return {
       navItem1:   "Meubels",
       navItem2:   "Woonaccesoires",
-      navItem3:   "Stories",
+      navItem3:   "Verhalen",
       navItem4:   "Over ons",
       navItem5:   "Klantenservice",
       showPopup:  false,

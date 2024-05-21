@@ -780,6 +780,10 @@
   }
   // StoriesView
 
+  .storiesSecond .stories {
+    background-color: $background-color;
+  }
+
   .storiesInfo
   {
     display: flex;
