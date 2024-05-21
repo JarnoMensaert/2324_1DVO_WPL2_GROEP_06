@@ -55,18 +55,18 @@ export default {
 <template>
   <nav class="nav">
     <div class="nav-top">
-      <img class="clickable iconlinks navtopitem" src="@/assets/Icons/Search.png" @mouseover="showSearchBar()"/>
-      <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }"></input>
+      <img class="clickable iconlinks navtopitem magnifyingGlass" src="@/assets/Icons/magnifying-glass-solid.png" @mouseover="showSearchBar()"/>
+      <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }">
       <img @click="Home()" class="logo clickable" src="@/assets/Comfortmeubel/Logo.png"/>
-      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/Person.png"   @click="togglePopup()"/>
+      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/user-solid.png"   @click="togglePopup()"/>
       <div class="popup" :style="{ display: showPopup ? 'block' : 'none' }">
         <div>
           <button @click="Favorieten()"><img src="/public/assets/Icons/favorite.png">Favorieten</button>
-          <button @click="Profiel()"><img src="/public/assets/Icons/Person.png">Jouw Account</button>
+          <button @click="Profiel()"><img src="/public/assets/Icons/user-solid.png">Jouw Account</button>
           <button @click="Login()" class="geleKnop">Aanmelden</button>
         </div>
       </div>
-      <img @click="Winkelmand()" class="clickable iconrechts navtopitem" src="@/assets/Icons/Shopping Cart.png"/>
+      <img @click="Winkelmand()" class="clickable iconrechts navtopitem" src="@/assets/Icons/cart-shopping-solid.png"/>
     </div>
     <div class="nav-bottom">
       <ul class="navitems">

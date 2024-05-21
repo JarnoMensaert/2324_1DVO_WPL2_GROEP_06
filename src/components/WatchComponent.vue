@@ -20,7 +20,7 @@
         <span><p>30%</p></span>
         <img src="@/assets/images/zetel.png"/>
         <h5 class="aanbtitel">Eenpersoons bed</h5>
-        <p class="initialprijs">€1700,00</p>
+        <p class="initialprijs"><s>€1700,00</s></p>
         <p class="aanbprijs">€250,00</p>
       </div>
     </div>

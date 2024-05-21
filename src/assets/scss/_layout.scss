@@ -18,7 +18,7 @@
   // HeaderComponent
   .nav {
     height: 280px;
-    background-color: $background-color;
+    background-color: $color-white;
     position: relative;
     padding-right: 2%;
 
@@ -30,8 +30,7 @@
       align-items: center;
 
       img {
-        height: 39px;
-        width: 39px;
+        height: 18%;
         margin-right: 2%;
       }
       .searchBar
@@ -117,6 +116,10 @@
           cursor: pointer;
         }
       }
+    }
+
+    .magnifyingGlass {
+      height: 15%;
     }
   }
 
@@ -210,6 +213,7 @@
   .caroussel {
     width: 100%;
     text-align: center;
+    background-color: $background-color;
 
     img {
       width: 100%;
@@ -223,6 +227,7 @@
       position: relative;
       top: -100px;
       border: none;
+      color: $color-black;
     }
   }
 
@@ -231,10 +236,12 @@
   .middleScreen {
     width: 100%;
     text-align: center;
+    background-color: $background-color;
 
     .groteTekst {
       font-size: $font-extraLarge;
       margin-bottom: 50px;
+      color: $color-black;
     }
 
     .aanbiedingen {
@@ -244,6 +251,7 @@
 
       .aanbieding {
         width: 30%;
+        color: $color-black;
 
         img {
           height: 360px;
@@ -258,11 +266,14 @@
   .fullscreen {
     width: 100%;
     position: relative;
+    margin-bottom: -6px;
+    background-color: $background-color;
 
     h3 {
       font-size: $font-extraLarge;
       margin-bottom: 50px;
       text-align: center;
+      color: $color-black;
     }
 
     .lookingForWhat {
@@ -272,6 +283,7 @@
       margin: 0;
       padding: 0;
       width: auto;
+      color: $color-black;
 
       .lookingFor {
         width: 20%;
@@ -300,6 +312,7 @@
           text-align: start;
           padding-left: 10%;
           margin-bottom: 1%;
+          margin-top: 5px;
         }
 
         .shopNow {
@@ -331,7 +344,7 @@
       flex-wrap: wrap;
       padding-bottom: 30px;
       width: 100%;
-      background-color: #F6F1EE;
+      background-color: $color-white;
       padding-top: 50px;
 
       .story {
@@ -340,6 +353,7 @@
           font-family: $font-main;
           padding: 20px 0;
           text-align: left;
+          color: $color-black;
         }
 
         .storyBeschrijving {
