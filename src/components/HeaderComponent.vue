@@ -4,7 +4,7 @@ export default {
     return {
       navItem1:   "Meubels",
       navItem2:   "Woonaccesoires",
-      navItem3:   "Stories",
+      navItem3:   "Verhalen",
       navItem4:   "Over ons",
       navItem5:   "Klantenservice",
       showPopup:  false,
@@ -63,10 +63,11 @@ export default {
       <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }"></input>
       <img @click="Home()" class="logo clickable" src="/assets/Comfortmeubel/Logo.png"/>
       <img class="clickable iconrechts navtopitem" src="/assets/Icons/Person.png"   @click="togglePopup()"/>
+
       <div class="popup" :style="{ display: showPopup ? 'block' : 'none' }">
         <div>
           <button @click="Favorieten()"><img src="/public/assets/Icons/favorite.png">Favorieten</button>
-          <button @click="Profiel()"><img src="/public/assets/Icons/Person.png">Jouw Account</button>
+          <button @click="Profiel()"><img src="/public/assets/Icons/user-solid.png">Jouw Account</button>
           <button @click="Login()" class="geleKnop">Aanmelden</button>
         </div>
       </div>
