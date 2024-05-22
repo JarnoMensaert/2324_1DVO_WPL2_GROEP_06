@@ -9,6 +9,7 @@ export default {
       navItem5:   "Klantenservice",
       showPopup:  false,
       showBar:    false,
+      showMenu:   false,
     }
   },
   methods: {
