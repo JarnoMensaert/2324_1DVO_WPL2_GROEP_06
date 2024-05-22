@@ -1,0 +1,5 @@
+Favorieten werkend maken
+Winkelmand met pinia store
+Responsief van Meubels en woonaccesoires en betalen
+Confirm pagina unsubscribe button
+

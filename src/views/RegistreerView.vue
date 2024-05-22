@@ -9,6 +9,14 @@ export default {
       aboutTitle: 'Registreren',
     }
   },
+  methods: {
+    Home() {
+      this.$router.push('/')
+    },
+    Registreer() {
+      this.$router.push('/registreer')
+    },
+  },
   components: {
     HeaderComponent,
     RegistreerComponent,
@@ -20,7 +28,10 @@ export default {
   <HeaderComponent/>
   <div class="aboutTitle">{{ aboutTitle }}</div>
   <div class="breadcrumb">
-    <p>HOME / REGISTREREN</p> <!--TODO: DIT DOEN IN JAVASCRIPT -->
+    <p>
+      <div @click="Home()" class="breadcrumb-link">HOME</div>
+      <div class="breadcrumb-link">/</div>
+      <div @click="Registreer()" class="breadcrumb-link">REGISTREREN</div></p>
     <hr>
   </div>
   <RegistreerComponent/>

@@ -13,7 +13,8 @@ export default {
       try {
         const response = await fetch('http://localhost:3000/api/producten');
         const data = await response.json();
-        this.producten = data.filter(product => product.isMeubel == true);
+        // Filter products where isMeubel is true
+        this.producten = data.filter(product => product.isMeubel == false);
       } catch (error) {
         console.error('Error fetching products:', error);
       }

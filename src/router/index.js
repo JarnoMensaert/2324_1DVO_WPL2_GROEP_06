@@ -13,6 +13,7 @@ import ConfirmationComponent from "@/components/ConfirmationComponent.vue";
 import ConfirmationView from "@/views/ConfirmationView.vue";
 import MijnProfielView from "@/views/mijnProfielView.vue";
 import FavorietenView from "@/views/FavorietenView.vue";
+import ProductView from "@/views/ProductView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -81,6 +82,16 @@ const router = createRouter({
       path: '/favorieten',
       name: 'favorieten',
       component: FavorietenView
+    },
+    {
+      path: '/product',
+      name: 'product',
+      component: ProductView
+    },
+    {
+      path: '/product:id',
+      name: 'product',
+      component: ProductView
     }
   ]
 })

@@ -6,7 +6,7 @@
     },
     data() {
       return {
-        knopText: " Meer informatie",
+        knopText: "Meer informatie",
         images: [
         { 
             src: "src/assets/Klantenservice/Afhalingen.png",
@@ -35,7 +35,7 @@
         },
         { 
             src: "src/assets/Klantenservice/Formulieren.png",
-            info: "<div class='formulierInfo><img src='@/assets/images/Service6.png'>'<div class='info'><h1>Formulieren</h1><p>Kies welkformulier u wilt invullen<p></div><button class='geleKnop'>Contactformulier</button><button class='geleKnop'>Klachtenformulier</button></div>",
+            info: "<div class='formulierInfo><img src='/assets/images/Service6.png'>'<div class='info'><h1>Formulieren</h1><p>Kies welkformulier u wilt invullen<p></div><button class='geleKnop'>Contactformulier</button><button class='geleKnop'>Klachtenformulier</button></div>",
             title: "Formulieren" 
         },
         ],

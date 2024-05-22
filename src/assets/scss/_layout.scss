@@ -1,657 +1,520 @@
-  @use 'base' as *;
+@use 'base' as *;
 
-  body {
-    font: $font-main;
+body {
+  font: $font-main;
 
-    p, a, h1, h2, h3, h4, h5, h6 {
+  p, a, h1, h2, h3, h4, h5, h6 {
 
-      font-family: $font-main;
-    }
+    font-family: $font-main;
   }
+}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  // HeaderComponent
-  .nav {
-    height: 280px;
-    background-color: $color-white;
-    position: relative;
-    padding-right: 2%;
+// HeaderComponent
+.nav {
+  height: 280px;
+  background-color: $background-color;
+  position: relative;
+  padding-right: 2%;
 
-    &-top {
-      display: flex;
-      height: 200px;
+  &-top {
+    display: flex;
+    height: 200px;
 
-      justify-content: flex-end;
-      align-items: center;
-
-      img {
-        height: 18%;
-        margin-right: 2%;
-      }
-      .searchBar
-      {
-        display: none;
-        margin: -5px 0 0 45px;
-        outline: none;
-        border: none;
-        border-bottom: 1px solid $color-black;
-        background-color: transparent;
-        font-size: $font-small;
-      }
-
-      .popup {
-        background-color: $color-brown;
-        display: none;
-        padding: 5px;
-        position: absolute;
-        top: 120px;
-        right: 125px
-      }
-
-      .popup > div > .geleKnop {
-        background-color: $color-secondary;
-        border: none;
-        display: block;
-        text-align: center;
-      }
-
-      .popup button {
-        display: block;
-        font-size: $font-regular;
-        background-color: $color-brown;
-        border: none;
-        padding: 5px;
-        width: 200px;
-        text-align: left;
-
-        img
-        {
-          width: 20px;
-          height: 20px;
-        }
-      }
-
-      .logo {
-        height: 96px;
-        width: 246px;
-        position: absolute;
-        left: calc((100% - 246px) / 2);
-        top: 50px;
-      }
-
-      .iconlinks {
-        position: absolute;
-        left: 2%;
-      }
-
-      .iconrechts:nth-child(1),
-      .iconrechts:nth-child(2) {
-        margin-right: 5%;
-      }
-    }
-
-    &-bottom {
-      display: flex;
-
-      .navitems {
-        width: 1083px;
-        display: flex;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: space-between;
-
-        .navitem {
-          list-style-type: none;
-          font-size: $font-regular;
-          font-family: $font-main;
-        }
-
-        .navitem:hover {
-          text-decoration: underline;
-          cursor: pointer;
-        }
-      }
-    }
-
-    .magnifyingGlass {
-      height: 15%;
-    }
-  }
-
-  // FooterComponent
-  footer {
-    background-color: $footer-background;
-    height: 300px;
-    padding-bottom: 5px;
-  }
-
-  .footerTop {
-    width: 85%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-
-    .footerInfo {
-      padding: 20px;
-      @include textStyles($font-small);
-      padding: 30px 0;
-
-      .icon {
-        font-size: 45px;
-        margin-right: 20px;
-        color: $background-color;
-      }
-
-      .footerTitle {
-        @include textStyles($font-regular);
-        font-weight: normal;
-        padding-bottom: 40px;
-      }
-
-      .footerList {
-        list-style-type: none;
-        .footerListItem
-        {
-          a
-          {
-            color: $color-white;
-          }
-        }
-      }
-
-
-      .footerListItem1, .footerListItem3 {
-        padding-bottom: 10px;
-      }
-
-      #email {
-        border: none;
-        background-color: transparent;
-        color: $background-color;
-        border-bottom: 1px solid $background-color;
-        margin-top: 25px;
-        padding: 5px 0;
-        width: 100%;
-      }
-
-      #email::placeholder {
-        @include textStyles($font-small);
-      }
-
-      #email:focus {
-        outline: none;
-      }
-
-      #submitEmail {
-        position: absolute;
-        margin: 32px 0 0 -30px;
-        background-color: transparent;
-        border: none;
-        color: $background-color;
-      }
-    }
-  }
-
-  .footerBottom {
-    @include textStyles($font-small);
-    text-decoration: underline;
-    text-align: center;
-    margin-top: -25px;
-    .voorwaardenFooter {
-      color: $color-white;
-    }
-  }
-
-  // DiscoverMoreComponent
-
-  .caroussel {
-    width: 100%;
-    text-align: center;
-    background-color: $background-color;
+    justify-content: flex-end;
+    align-items: center;
 
     img {
-      width: 100%;
+      height: 39px;
+      width: 39px;
+      margin-right: 2%;
     }
 
-    #discover {
-      width: 15%;
-      @include textStyles($font-large);
-      background-color: $color-secondary;
-      padding: 20px 10px;
-      position: relative;
-      top: -100px;
+    .searchBar {
+      display: none;
+      margin: -5px 0 0 45px;
+      outline: none;
       border: none;
-      color: $color-black;
-    }
-  }
-
-  // WatchComponent
-
-  .middleScreen {
-    width: 100%;
-    text-align: center;
-    background-color: $background-color;
-
-    .groteTekst {
-      font-size: $font-extraLarge;
-      margin-bottom: 50px;
-      color: $color-black;
+      border-bottom: 1px solid $color-black;
+      background-color: transparent;
+      font-size: $font-small;
     }
 
-    .aanbiedingen {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-
-      .aanbieding {
-        width: 30%;
-        color: $color-black;
-
-        img {
-          height: 360px;
-          width: 283px;
-        }
-      }
+    .popup {
+      background-color: $color-brown;
+      display: none;
+      padding: 5px;
+      position: absolute;
+      top: 120px;
+      right: 125px
     }
-  }
 
-  // LookingForComponent
-
-  .fullscreen {
-    width: 100%;
-    position: relative;
-    margin-bottom: -6px;
-    background-color: $background-color;
-
-    h3 {
-      font-size: $font-extraLarge;
-      margin-bottom: 50px;
+    .popup > div > .geleKnop {
+      background-color: $color-secondary;
+      border: none;
+      display: block;
       text-align: center;
-      color: $color-black;
     }
 
-    .lookingForWhat {
-      position: relative;
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-      width: auto;
-      color: $color-black;
-
-      .lookingFor {
-        width: 20%;
-        padding: 0;
-        margin: 0;
-        height: auto;
-      }
+    .popup button {
+      display: block;
+      font-size: $font-regular;
+      background-color: $color-brown;
+      border: none;
+      padding: 5px;
+      width: 200px;
+      text-align: left;
 
       img {
-        height: 580px;
-        padding: 0;
-        margin: 0;
-        width: calc(100vw / 5);
+        width: 20px;
+        height: 20px;
       }
+    }
 
-      .lookingForTekst {
-        position: absolute;
-        bottom: 0.8%;
-        background-color: $licht-grijs-geel;
-        width: calc(100vw / 5);
-        height: 64px;
-        font: $font-main;
+    .logo {
+      height: 96px;
+      width: 246px;
+      position: absolute;
+      left: calc((100% - 246px) / 2);
+      top: 50px;
+    }
 
-        .homeCategorie {
-          font-size: $font-regular;
-          text-align: start;
-          padding-left: 10%;
-          margin-bottom: 1%;
-          margin-top: 5px;
-        }
+    .iconlinks {
+      position: absolute;
+      left: 2%;
+    }
 
-        .shopNow {
-          font-size: $font-small;
-          padding-left: 10%;
-          margin-bottom: 1%;
-        }
-      }
+    .iconrechts:nth-child(1),
+    .iconrechts:nth-child(2),
+    .iconrechts:nth-child(2) {
+      margin-right: 5%;
     }
   }
 
-  // StoriesComponent
+  .menu-icon {
+    display: none;
+  }
 
-  .kleineRuimte {
-    width: 100%;
+  &-bottom {
+    display: flex;
 
-    .groteTekst {
-      text-align: center;
-      font-size: $font-extraLarge;
-      font-family: $font-main;
-      font-weight: normal;
-      margin: 100px 0 50px 0;
-      width: 100%;
-    }
-
-    .stories {
+    .navitems {
+      width: 1083px;
       display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      padding-bottom: 30px;
-      width: 100%;
-      background-color: $color-white;
-      padding-top: 50px;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: space-between;
 
-      .story {
-        .storyTitel {
-          font-size: $font-extraLarge;
-          font-family: $font-main;
-          padding: 20px 0;
-          text-align: left;
-          color: $color-black;
-        }
+      .navitem {
+        list-style-type: none;
+        font-size: $font-regular;
+        font-family: $font-main;
+      }
 
-        .storyBeschrijving {
-          font-size: $font-small;
-          font-family: $font-secondary;
-          text-align: left;
-          width: 400px;
-        }
-
-        .storyKnop {
-          background: transparent;
-          border: none;
-          font-weight: bold;
-          text-decoration: underline;
-          margin-right: 325px;
-          padding: 10px 0;
-          color: $footer-background;
-        }
-
-        .storyImage {
-        }
+      .navitem:hover {
+        text-decoration: underline;
+        cursor: pointer;
       }
     }
   }
+}
 
-  .storyKnop {
-    background: transparent;
+// FooterComponent
+footer {
+  background-color: $footer-background;
+  height: 300px;
+  padding-bottom: 5px;
+}
+
+.footerTop {
+  width: 85%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  .footerInfo {
+    padding: 20px;
+    @include textStyles($font-small);
+    padding: 30px 0;
+
+    .icon {
+      font-size: 45px;
+      margin-right: 20px;
+      color: $background-color;
+    }
+
+    .footerTitle {
+      @include textStyles($font-regular);
+      font-weight: normal;
+      padding-bottom: 40px;
+    }
+
+    .footerList {
+      list-style-type: none;
+
+      .footerListItem {
+        a {
+          color: $color-white;
+        }
+      }
+    }
+
+
+    .footerListItem1, .footerListItem3 {
+      padding-bottom: 10px;
+    }
+
+    #email {
+      border: none;
+      background-color: transparent;
+      color: $background-color;
+      border-bottom: 1px solid $background-color;
+      margin-top: 25px;
+      padding: 5px 0;
+      width: 100%;
+    }
+
+    #email::placeholder {
+      @include textStyles($font-small);
+    }
+
+    #email:focus {
+      outline: none;
+    }
+
+    #submitEmail {
+      position: absolute;
+      margin: 32px 0 0 -30px;
+      background-color: transparent;
+      border: none;
+      color: $background-color;
+    }
+  }
+}
+
+.footerBottom {
+  @include textStyles($font-small);
+  text-decoration: underline;
+  text-align: center;
+  margin-top: -25px;
+
+  .voorwaardenFooter {
+    color: $color-white;
+  }
+}
+
+// DiscoverMoreComponent
+
+.caroussel {
+  width: 100%;
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+
+  #discover {
+    width: 15%;
+    @include textStyles($font-large);
+    background-color: $color-secondary;
+    padding: 20px 10px;
+    position: relative;
+    top: -100px;
     border: none;
-    font-weight: bold;
-    text-decoration: underline;
-    margin-right: 325px;
-    padding: 10px 0;
-    color: $footer-background;
+  }
+}
+
+// WatchComponent
+
+.middleScreen {
+  width: 100%;
+  text-align: center;
+
+  .groteTekst {
+    font-size: $font-extraLarge;
+    margin-bottom: 50px;
   }
 
-  // AboutView
+  .aanbiedingen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
-  @media (max-width: 833px) {   
-    .aboutTitle {
-      display: none;
-    }
+    .aanbieding {
+      width: 30%;
 
-    .breadcrumb {
-      padding-top: 50px;
+      img {
+        height: 360px;
+        width: 283px;
+      }
     }
   }
+}
 
-  .aboutTitle {
+// LookingForComponent
+
+.fullscreen {
+  width: 100%;
+  position: relative;
+
+  h3 {
+    font-size: $font-extraLarge;
+    margin-bottom: 50px;
     text-align: center;
-    font-size: $font-pageTitle;
-    font-weight: 400;
+  }
+
+  .lookingForWhat {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
+    .lookingFor {
+      width: 20%;
+      padding: 0;
+      margin: 0;
+      height: auto;
+    }
+
+    img {
+      height: 580px;
+      padding: 0;
+      margin: 0;
+      width: calc(100vw / 5);
+    }
+
+    .lookingForTekst {
+      position: absolute;
+      bottom: 0.8%;
+      background-color: $licht-grijs-geel;
+      width: calc(100vw / 5);
+      height: 64px;
+      font: $font-main;
+
+      .homeCategorie {
+        font-size: $font-regular;
+        text-align: start;
+        padding-left: 10%;
+        margin-bottom: 1%;
+      }
+
+      .shopNow {
+        font-size: $font-small;
+        padding-left: 10%;
+        margin-bottom: 1%;
+      }
+    }
+  }
+}
+
+// StoriesComponent
+
+.kleineRuimte {
+  width: 100%;
+
+  .groteTekst {
+    text-align: center;
+    font-size: $font-extraLarge;
     font-family: $font-main;
-    padding: 50px;
+    font-weight: normal;
+    margin: 100px 0 50px 0;
+    width: 100%;
+  }
+
+  .stories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    width: 100%;
+    background-color: #F6F1EE;
+    padding-top: 50px;
+
+    .story {
+      .storyTitel {
+        font-size: $font-extraLarge;
+        font-family: $font-main;
+        padding: 20px 0;
+        text-align: left;
+      }
+
+      .storyBeschrijving {
+        font-size: $font-small;
+        font-family: $font-secondary;
+        text-align: left;
+        width: 400px;
+      }
+
+      .storyKnop {
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-right: 325px;
+        padding: 10px 0;
+        color: $footer-background;
+      }
+
+      .storyImage {
+      }
+    }
+  }
+}
+
+.storyKnop {
+  background: transparent;
+  border: none;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-right: 325px;
+  padding: 10px 0;
+  color: $footer-background;
+}
+
+// AboutView
+
+@media (max-width: 833px) {
+  .aboutTitle {
+    display: none;
   }
 
   .breadcrumb {
-    margin: 0 40px;
+    padding-top: 50px;
+  }
+}
+
+.aboutTitle {
+  text-align: center;
+  font-size: $font-pageTitle;
+  font-weight: 400;
+  font-family: $font-main;
+  padding: 50px;
+}
+
+.breadcrumb {
+  margin: 0 40px;
+
+  p {
+    display: flex;
+    align-items: center;
+    .breadcrumb-link {
+      margin-right: 5px; /* Adjust spacing between links */
+      cursor: pointer;
+    }
+  }
+}
+
+// MissieVisieComponent
+
+.missieVisie {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 50%;
+    height: auto;
+    padding: 40px;
+    margin-right: 40px;
+  }
+
+  .info {
+    flex: 1;
+
+    .infoTitle {
+      font-family: $font-main;
+      font-size: $font-extraLarge;
+      font-weight: 400;
+      margin-bottom: 25px;
+    }
 
     p {
-      font-style: italic;
-    }
-  }
-
-  // MissieVisieComponent
-
-  .missieVisie {
-    display: flex;
-    align-items: center;
-
-    img {
-      width: 50%;
-      height: auto;
-      padding: 40px;
-      margin-right: 40px;
-    }
-
-    .info {
-      flex: 1;
-
-      .infoTitle {
-        font-family: $font-main;
-        font-size: $font-extraLarge;
-        font-weight: 400;
-        margin-bottom: 25px;
-      }
-
-      p {
-        font-family: $font-main;
-        font-size: $font-small;
-        width: 40vw;
-      }
-    }
-  }
-
-  // AdresContactComponent
-
-  .adresContact {
-    background-color: $background-color;
-    display: flex;
-    align-items: center;
-
-    .info {
-      flex: 1;
-      padding-left: 20px;
-
-      .infoTitle {
-        font-family: $font-main;
-        font-size: $font-extraLarge;
-        font-weight: 400;
-        margin: 0 0 25px 25px;
-      }
-
-      p {
-        font-family: $font-main;
-        font-size: $font-small;
-        width: 575px;
-        margin: 0 0 25px 25px;
-      }
-    }
-
-    iframe {
-      width: 50%;
-      height: 500px;
-      padding: 40px;
-      border: 0;
-    }
-  }
-
-  //FAQSectionComponent
-
-  .faq {
-    font-size: $font-extraLarge;
-    font-family: $font-main;
-    font-weight: 400;
-    padding: 25px 0;
-    margin-left: 30px;
-  }
-
-  h2 {
-    font-size: $font-large;
-    font-family: $font-main;
-    font-weight: 400;
-    margin-left: 40px;
-  }
-
-  .accWrapper {
-    width: 60%;
-
-    .accTitle {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      cursor: pointer;
-
-      p {
-        font-size: $font-regular;
-        margin-left: 60px;
-        padding: 10px 0;
-      }
-    }
-
-    .accContent {
+      font-family: $font-main;
       font-size: $font-small;
+      width: 40vw;
+    }
+  }
+}
+
+// AdresContactComponent
+
+.adresContact {
+  background-color: $background-color;
+  display: flex;
+  align-items: center;
+
+  .info {
+    flex: 1;
+    padding-left: 20px;
+
+    .infoTitle {
       font-family: $font-main;
-      font-weight: 300;
-      margin-left: 60px;
-      width: 75%;
-
-      a {
-        color: $color-black;
-      }
-
-      ul {
-        margin-left: 20px;
-      }
-    }
-  }
-
-  .faqButton {
-    width: 20px;
-    height: auto;
-    color: black;
-    font-size: 200px;
-  }
-
-
-  .clickable:hover {
-    cursor: pointer;
-  }
-
-  .inputtext:hover {
-    cursor: alias;
-  }
-
-  a, a:visited {
-    text-decoration: none;
-    color: $color-black;
-  }
-
-  //ImageGridComponent
-  .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    justify-content: center;
-    .image-container {
-      position: relative;
-      margin: 45px 60px;
-
-
-      .image-wrapper {
-        position: relative;
-
-        .image-content {
-          display: flex;
-          flex-direction: column;
-
-          img {
-            width: 330px;
-            height: 320px;
-          }
-
-          .title {
-            font-size: $font-extraLarge;
-            font-weight: $font-main;
-            margin: 30px 0;
-            color: $color-black;
-            font-family: "Nunito", sans-serif;
-          }
-        }
-
-        button {
-          display: flex;
-          align-items: center;
-          width: 90%;
-          background-color: $color-secondary;
-          border: none;
-
-          .quickviewButton {
-            font-size: $font-small;
-            color: $color-black;
-          }
-
-          .buttonText {
-            font-size: $font-small;
-            text-align: center;
-          }
-        }
-      }
-
-      button {
-        position: absolute;
-        bottom: 120px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-      }
-
-      .image-wrapper:hover button,
-      .image-wrapper:hover button:hover,
-      .button-container button:hover {
-        display: block;
-      }
-    }
-  }
-
-  //ModalComponent
-
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-content {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    overflow: auto;
-    background-color: $background-color;
-    padding: 20px;
-    border-radius: 5px;
-    font-family: $font-main;
-
-    h1 {
-      padding-top: 50px;
       font-size: $font-extraLarge;
-      font-family: $font-main;
       font-weight: 400;
+      margin: 0 0 25px 25px;
     }
+
+    p {
+      font-family: $font-main;
+      font-size: $font-small;
+      width: 575px;
+      margin: 0 0 25px 25px;
+    }
+  }
+
+  iframe {
+    width: 50%;
+    height: 500px;
+    padding: 40px;
+    border: 0;
+  }
+}
+
+//FAQSectionComponent
+
+.faq {
+  font-size: $font-extraLarge;
+  font-family: $font-main;
+  font-weight: 400;
+  padding: 25px 0;
+  margin-left: 30px;
+}
+
+h2 {
+  font-size: $font-large;
+  font-family: $font-main;
+  font-weight: 400;
+  margin-left: 40px;
+}
+
+.accWrapper {
+  width: 60%;
+
+  .accTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: $font-regular;
+      margin-left: 60px;
+      padding: 10px 0;
+    }
+  }
+
+  .accContent {
+    font-size: $font-small;
+    font-family: $font-main;
+    font-weight: 300;
+    margin-left: 60px;
+    width: 75%;
 
     a {
       color: $color-black;
@@ -659,78 +522,384 @@
 
     ul {
       margin-left: 20px;
-
-      .thuisLevering {
-        list-style-type: none;
-      }
-
-      .prijsLevering {
-        list-style-type: none;
-        margin-left: 30px;
-      }
     }
   }
+}
 
-  .closeBtn {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    top: 3%;
-    right: 3%;
+.faqButton {
+  width: 20px;
+  height: auto;
+  color: black;
+  font-size: 200px;
+}
 
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.inputtext:hover {
+  cursor: alias;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: $color-black;
+}
+
+//ImageGridComponent
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: center;
+
+  .image-container {
+    position: relative;
+    margin: 45px 60px;
+
+
+    .image-wrapper {
+      position: relative;
+
+      .image-content {
+        display: flex;
+        flex-direction: column;
+
+        img {
+          width: 330px;
+          height: 320px;
+        }
+
+        .title {
+          font-size: $font-extraLarge;
+          font-weight: $font-main;
+          margin: 30px 0;
+          color: $color-black;
+          font-family: "Nunito", sans-serif;
+        }
+      }
+
+      button {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        background-color: $color-secondary;
+        border: none;
+
+        .quickviewButton {
+          font-size: $font-small;
+          color: $color-black;
+        }
+
+        .buttonText {
+          font-size: $font-small;
+          text-align: center;
+        }
+      }
+    }
+
+    button {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+    }
+
+    .image-wrapper:hover button,
+    .image-wrapper:hover button:hover,
+    .button-container button:hover {
+      display: block;
+    }
+  }
+}
+
+//ModalComponent
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winkelmandImg {
+  height: 200px;
+  width: 200px;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: $background-color;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: $font-main;
+
+  h1 {
+    padding-top: 50px;
     font-size: $font-extraLarge;
+    font-family: $font-main;
+    font-weight: 400;
   }
 
-  //InloggenView
-  .inlogInfo {
-    display: flex;
+  a {
+    color: $color-black;
   }
 
-  // AanmeldenComponent
+  ul {
+    margin-left: 20px;
 
-  .aanmelden {
-    background-color: $background-color;
-    margin: 5%;
-    padding: 3% 2%;
-    width: 40%;
-
-    h1 {
-      font-size: $font-extraLarge;
-      font-family: $font-main;
-      color: $color-black;
-      font-weight: 800;
+    .thuisLevering {
+      list-style-type: none;
     }
 
-    p {
+    .prijsLevering {
+      list-style-type: none;
+      margin-left: 30px;
+    }
+  }
+}
+
+.closeBtn {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+
+  font-size: $font-extraLarge;
+}
+
+//InloggenView
+.inlogInfo {
+  display: flex;
+}
+
+// AanmeldenComponent
+
+.aanmelden {
+  background-color: $background-color;
+  margin: 5%;
+  padding: 3% 2%;
+  width: 40%;
+
+  h1 {
+    font-size: $font-extraLarge;
+    font-family: $font-main;
+    color: $color-black;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: $font-small;
+    font-family: $font-secondary;
+    color: $color-black;
+    font-style: italic;
+    margin-bottom: 35px;
+  }
+
+  form {
+    label {
       font-size: $font-small;
       font-family: $font-secondary;
       color: $color-black;
       font-style: italic;
-      margin-bottom: 35px;
     }
 
-    form {
+    input {
+      background-color: $color-brown;
+      border: none;
+      font-size: $font-regular;
+      padding: 2%;
+      width: 95%;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: $color-black;
+      font-size: $font-small;
+      font-family: $font-main;
+    }
+  }
+
+  .geleKnop {
+    background-color: $color-secondary;
+    border: none;
+    font-size: $font-large;
+    font-family: $font-main;
+    position: relative;
+    left: 60%;
+    padding: 3%;
+  }
+}
+
+//AccountAanmaakComponent
+.accountAanmaken {
+  background-color: $background-color;
+  margin: 5%;
+  padding: 3% 2%;
+  width: 40%;
+
+  h1 {
+    font-size: $font-extraLarge;
+    font-family: $font-main;
+    color: $color-black;
+    font-weight: 800;
+    margin-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: $font-small;
+    font-family: $font-secondary;
+    color: $color-black;
+    font-style: italic;
+    margin-bottom: 19%;
+  }
+
+  .geleKnop {
+    background-color: $color-secondary;
+    border: none;
+    font-size: $font-large;
+    font-family: $font-main;
+    position: relative;
+    left: 40%;
+    padding: 2.5%;
+  }
+}
+
+// StoriesView
+
+.storiesInfo {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 50%;
+    height: auto;
+    padding: 40px;
+    margin-right: 40px;
+  }
+
+  .info {
+    flex: 1;
+    padding: 100px;
+
+    .infoTitle {
+      font-family: $font-main;
+      font-size: $font-extraLarge;
+      font-weight: 400;
+      margin-bottom: 25px;
+
+    }
+
+    p {
+      font-family: $font-main;
+      font-size: $font-small;
+      width: 350px;
+    }
+  }
+}
+
+// RegistreerComponent
+
+.nieuweKlant {
+  background-color: $background-color;
+  width: 65%;
+  font-family: $font-main;
+  padding-left: 2%;
+  margin-left: 5%;
+
+  h1 {
+    color: $color-black;
+    font-size: $font-extraLarge;
+    padding-top: 15%;
+    padding-bottom: 40px;
+  }
+
+  form {
+    .gender {
+      font-size: $font-small;
+
       label {
-        font-size: $font-small;
-        font-family: $font-secondary;
-        color: $color-black;
-        font-style: italic;
+        margin-right: 80px;
+        text-align: center;
+      }
+
+      input[type="checkbox"] {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $color-brown;
+        outline: none;
+        appearance: none;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      input[type="checkbox"]:checked {
+        appearance: auto;
+        // Niet gedesigned op FIGMA
+      }
+    }
+
+    .accountInfo {
+      font-size: $font-small;
+
+      label {
+        display: block;
+        margin: 40px 0 20px 0;
       }
 
       input {
+        position: relative;
+        width: 70%;
+        height: 40px;
         background-color: $color-brown;
+        outline: none;
         border: none;
-        font-size: $font-regular;
-        padding: 2%;
-        width: 95%;
-        margin-top: 5px;
-        margin-bottom: 20px;
+        appearance: none;
+        cursor: pointer;
+      }
+    }
+
+    .opDeHoogte {
+      margin-top: 40px;
+      background-color: $color-brown;
+      width: 90%;
+      padding: 2%;
+
+      p {
+        width: 80%;
       }
 
-      a {
-        color: $color-black;
-        font-size: $font-small;
-        font-family: $font-main;
+      label {
+        margin-right: 80px;
+        text-align: center;
+      }
+
+      input[type="checkbox"] {
+        margin-top: 2%;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $background-color;
+        appearance: none;
+        outline: none;
+        margin-right: 20px;
+        cursor: pointer;
       }
     }
 
@@ -739,535 +908,586 @@
       border: none;
       font-size: $font-large;
       font-family: $font-main;
+      font-weight: 500;
       position: relative;
-      left: 60%;
+      left: 10%;
+      margin: 5% -10%;
       padding: 3%;
     }
   }
+}
 
-  //AccountAanmaakComponent
-  .accountAanmaken {
-    background-color: $background-color;
-    margin: 5%;
-    padding: 3% 2%;
-    width: 40%;
+//AccountInfoComponent
 
-    h1 {
-      font-size: $font-extraLarge;
-      font-family: $font-main;
-      color: $color-black;
-      font-weight: 800;
-      margin-top: 100px;
-      margin-bottom: 30px;
+.profielInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $color-brown;
+  margin: 20px 60px;
+  padding: 10px 0;
+
+  p {
+    font-size: $font-regular;
+
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: $background-color;
+  margin: 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+
+  h1 {
+    margin-top: -3%;
+    margin-bottom: 3%;
+    font-size: $font-pageTitle;
+  }
+
+  p {
+    font-size: $font-extraLarge;
+    margin-bottom: 5%;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .field {
+      margin-bottom: 15px;
+      width: 50%
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 80%;
+      height: 50px;
+      padding: 8px;
+      background-color: $color-brown;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .voorwaarden {
+      label {
+        margin-right: 80px;
+        text-align: center;
+      }
+
+      input[type="checkbox"] {
+        margin-top: 2%;
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background-color: $color-brown;
+        appearance: none;
+        outline: none;
+        margin-right: 20px;
+        cursor: pointer;
+      }
+
+      // input[type="checkbox"]:checked
+      // {
+      //     //Niet gedesigned in FIGMA
+      // }
+    }
+  }
+
+  .geleKnop {
+    background-color: $color-secondary;
+    border: none;
+    font-size: $font-regular;
+    font-family: $font-main;
+    font-weight: 500;
+    position: absolute;
+    left: 76%;
+    top: 70%;
+    padding: 1% 2%;
+  }
+}
+
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// VoorwaardenComponent
+
+.voorwaardenHoofdtitel {
+  font-family: $font-main;
+  font-size: $font-large;
+  margin: 40px 0 20px 35px;
+}
+
+.voorwaardenTitel {
+  font-family: $font-main;
+  font-weight: bold;
+  font-size: $font-regular;
+  font-style: italic;
+  margin: 20px 0 0 35px;
+}
+
+.voorwaardenTekst {
+  font-family: $font-main;
+  font-style: italic;
+  margin: 10px 0 0 35px;
+}
+
+// AanbiedingenComponent
+
+.componentTitle {
+  font-size: $font-extraLarge;
+  font-family: $font-main;
+  font-style: italic;
+  font-weight: 800;
+  padding: 25px 0;
+  margin-left: 30px;
+}
+
+.aanbodContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1%;
+
+  .aanbieding {
+    flex: 1 0 calc(33.33% - 2%);
+    margin: 1%;
+    box-sizing: border-box;
+
+    img {
+      width: 100%;
+      height: auto;
     }
 
     p {
-      font-size: $font-small;
-      font-family: $font-secondary;
-      color: $color-black;
-      font-style: italic;
-      margin-bottom: 19%;
-    }
-
-    .geleKnop {
-      background-color: $color-secondary;
-      border: none;
-      font-size: $font-large;
-      font-family: $font-main;
       position: relative;
-      left: 40%;
-      padding: 2.5%;
-    }
-  }
-  // StoriesView
-
-  .storiesSecond .stories {
-    background-color: $background-color;
-  }
-
-  .storiesInfo
-  {
-    display: flex;
-    align-items: center;
-    img
-    {
-      width: 50%;
-      height: auto;
-      padding: 40px;
-      margin-right: 40px;
-    }
-    .info
-    {
-      flex: 1;
-      padding: 100px;
-      .infoTitle
-      {
-        font-family: $font-main;
-        font-size: $font-extraLarge;
-        font-weight: 400;
-        margin-bottom: 25px;
-
-      }
-      p
-      {
-        font-family: $font-main;
-        font-size: $font-small;
-        width: 350px;
-      }
-    }
-  }
-
-  // RegistreerComponent
-
-  .nieuweKlant
-  {
-    background-color: $background-color;
-    width: 65%;
-    font-family: $font-main;
-    padding-left: 2%;
-    margin-left: 5%;
-    h1
-    {
-      color: $color-black;
-      font-size: $font-extraLarge;
-      padding-top: 15%;
-      padding-bottom: 40px;
-    }
-    form
-    {
-      .gender
-      {
-        font-size: $font-small;
-        label
-        {
-          margin-right: 80px;
-          text-align: center;
-        }
-        input[type="checkbox"]
-        {
-          position: relative;
-          width: 20px;
-          height: 20px;
-          background-color: $color-brown;
-          outline: none;
-          appearance: none;
-          margin-right: 20px;
-          cursor: pointer;
-        }
-        input[type="checkbox"]:checked
-        {
-          appearance: auto;
-          // Niet gedesigned op FIGMA
-        }
-      }
-      .accountInfo
-      {
-        font-size: $font-small;
-        label
-        {
-          display: block;
-          margin: 40px 0 20px 0;
-        }
-        input
-        {
-          position: relative;
-          width: 70%;
-          height: 40px;
-          background-color: $color-brown;
-          outline: none;
-          border: none;
-          appearance: none;
-          cursor: pointer;
-        }
-      }
-      .opDeHoogte
-      {
-        margin-top: 40px;
-        background-color: $color-brown;
-        width: 90%;
-        padding: 2%;
-        p
-        {
-          width: 80%;
-        }
-        label
-        {
-          margin-right: 80px;
-          text-align: center;
-        }
-        input[type="checkbox"]
-        {
-          margin-top: 2%;
-          position: relative;
-          width: 20px;
-          height: 20px;
-          background-color: $background-color;
-          appearance: none;
-          outline: none;
-          margin-right: 20px;
-          cursor: pointer;
-        }
-      }
-      .geleKnop
-      {
-        background-color: $color-secondary;
-        border: none;
-        font-size: $font-large;
-        font-family: $font-main;
-        font-weight: 500;
-        position: relative;
-        left: 10%;
-        margin: 5% -10%;
-        padding: 3%;
-      }
-    }
-  }
-
-  //AccountInfoComponent
-
-  .profielInfo
-  {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $color-brown;
-    margin: 20px 60px;
-    padding: 10px 0;
-    p
-    {
-      font-size: $font-regular;
-
-    }
-  }
-
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
-
-  .modal-content {
-    background-color: $background-color;
-    margin: 15% auto;
-    border: 1px solid #888;
-    width: 80%;
-
-    h1
-    {
-      margin-top: -3%;
-      margin-bottom: 3%;
-      font-size: $font-pageTitle;
-    }
-    p
-    {
-      font-size: $font-extraLarge;
-      margin-bottom: 5%;
-    }
-    form
-    {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 100%;
-      margin: 0 auto;
-      .field {
-        margin-bottom: 15px;
-        width: 50%
-      }
-
-      input[type="text"],
-      input[type="email"] {
-        width: 80%;
-        height: 50px;
-        padding: 8px;
-        background-color: $color-brown;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-      }
-      .voorwaarden
-      {
-        label
-        {
-          margin-right: 80px;
-          text-align: center;
-        }
-        input[type="checkbox"]
-        {
-          margin-top: 2%;
-          position: relative;
-          width: 20px;
-          height: 20px;
-          background-color: $color-brown;
-          appearance: none;
-          outline: none;
-          margin-right: 20px;
-          cursor: pointer;
-        }
-        // input[type="checkbox"]:checked
-        // {
-        //     //Niet gedesigned in FIGMA
-        // }
-      }
-    }
-
-    .geleKnop
-    {
-      background-color: $color-secondary;
-      border: none;
-      font-size: $font-regular;
+      top: -25%;
+      font-size: $font-small;
       font-family: $font-main;
-      font-weight: 500;
-      position: absolute;
-      left: 76%;
-      top: 70%;
-      padding: 1% 2%;
+      font-style: italic;
+      font-weight: 800;
+      background-color: $color-secondary;
+      padding: 4%;
+      text-align: center;
     }
   }
+}
 
 
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
+//WinkelmandView
+.winkelmandItem {
+  margin-left: 5%;
+  margin-bottom: 5%;
 
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
+  .winkelmandAantal {
+    .winkelmandMinder {
+      float: left;
+      width: 50px;
+      background-color: #6C5F5B;
+      text-align: center;
+    }
 
-  // VoorwaardenComponent
+    .winkelmandAantalNummer {
+      float: left;
+      width: 70px;
+      text-align: center;
+      border: #6C5F5B 1px solid;
+    }
 
-  .voorwaardenHoofdtitel
-  {
-    font-family: $font-main;
-    font-size: $font-large;
-    margin: 40px 0 20px 35px;
-  }
-
-  .voorwaardenTitel
-  {
-    font-family: $font-main;
-    font-weight: bold;
-    font-size: $font-regular;
-    font-style: italic;
-    margin: 20px 0 0 35px;
-  }
-  .voorwaardenTekst
-  {
-    font-family: $font-main;
-    font-style: italic;
-    margin: 10px 0 0 35px;
-  }
-
-  // AanbiedingenComponent
-
-  .componentTitle
-  {
-    font-size: $font-extraLarge;
-    font-family: $font-main;
-    font-style: italic;
-    font-weight: 800;
-    padding: 25px 0;
-    margin-left: 30px;
-  }
-
-  .aanbodContainer {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -1%;
-
-    .aanbieding {
-      flex: 1 0 calc(33.33% - 2%);
-      margin: 1%;
-      box-sizing: border-box;
-      img
-      {
-        width: 100%;
-        height: auto;
-      }
-      p
-      {
-        position: relative;
-        top: -25%;
-        font-size: $font-small;
-        font-family: $font-main;
-        font-style: italic;
-        font-weight: 800;
-        background-color: $color-secondary;
-        padding: 4%;
-        text-align: center;
-      }
+    .winkelmandMeer {
+      float: left;
+      width: 50px;
+      background-color: #6C5F5B;
+      text-align: center;
     }
   }
+}
+
+.formulierInfo {
+  visibility: hidden;
+}
+
+RouterLink {
+  margin: 0;
+  padding: 0;
+}
+
+.meubelsRij  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 70px;
+  padding: 70px; /* Adjust padding as needed */
+  max-width: 1200px; /* Optional: Limit maximum width of the container */
+  margin: 0 auto;
+}
 
 
-  //WinkelmandView
-  .winkelmandItem {
-    margin-left: 5%;
-    margin-bottom: 5%;
 
-    .winkelmandAantal {
-      .winkelmandMinder {
-        float: left;
-        width: 50px;
-        background-color: #6C5F5B;
-        text-align: center;
-      }
-      .winkelmandAantalNummer {
-        float: left;
-        width: 70px;
-        text-align: center;
-        border: #6C5F5B 1px solid;
-      }
-      .winkelmandMeer {
-        float: left;
-        width: 50px;
-        background-color: #6C5F5B;
-        text-align: center;
-      }
-    }
-  }
+//MeubelItemComponent
 
-  .formulierInfo {
+.meubelItem {
+  width: 250px;
+  position: relative;
+  height: 360px;
+  margin-bottom: 5%;
+
+  .favoritedItem {
     visibility: hidden;
   }
 
-  RouterLink {
-    margin: 0;
-    padding: 0;
+  .meubelFoto {
+    width: 100%;
   }
 
-  .meubelsRij {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .meubelQuickview {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    text-align: center;
+    bottom: 25%;
   }
 
   //MeubelItemComponent
 
-  .meubelItem {
+  /* Import any necessary global styles here, if needed */
+
+  .Product {
     width: 250px;
     position: relative;
     height: 360px;
     margin-bottom: 5%;
-    .favoritedItem {
-      visibility: hidden;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #F6F1EE !important;
+    float: left;
+
+    .Rectangle185 {
+      display: none; /* Assuming this is not needed */
+    }
+
+    .backgroundMeubel {
+      font-size: 14px;
+      color: #333;
+      margin-top: 16px;
+    }
+
+    .meubelPrijs {
+      font-size: 18px;
+      font-weight: bold;
+      color: #000;
+      margin-top: 8px;
+    }
+
+    .Group2648 {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+    }
+
+    .AddToFavorites {
+      position: relative;
+
+      .HeartStreamlineCore {
+        visibility: hidden;
+
+        .Vector {
+          /* Add your vector styling here */
+        }
+      }
     }
 
     .meubelFoto {
       width: 100%;
+      border-radius: 8px;
     }
 
-    .meubelQuickview {
-      width: 100%;
-      visibility: hidden;
+    .Quickview {
       position: absolute;
-      text-align: center;
-      bottom: 25%;
-    }
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
 
-    &:hover {
-      .meubelQuickview {
-        visibility: visible;
-      }
-    }
-
-    .favoriteItem, .favoritedItem {
-      position: absolute;
-      top: 2%;
-      right: 2%;
-    }
-
-    .meubelInfo {
-      display: flex;
-      align-items: center;
-      height: 50px;
-      flex-wrap: wrap;
-      justify-content: center;
-      width: 100%;
-      background-color: $grijs;
-
-      .meubelTitel {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-
-  //FavorietenComponent
-
-  .favorieten
-  {
-    display: flex;
-
-    &-image
-    {
-      flex: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    &-info
-    {
-      flex: 5;
-      justify-content: center;
-      align-items: center;
-      padding-top: 30px;
-      margin-left: -100px;
-      width: 60%;
-      h1
-      {
-        font-family: $font-main;
-        font-size: $font-large;
-        font-weight: 400;
-      }
-      p
-      {
-        padding: 20px 0;
-        font-size: $font-small;
-      }
-      .price
-      {
-        padding: 0;
-        font-size: $font-main;
-        font-weight: bold;
+      .Rectangle203 {
+        display: none; /* Assuming this is not needed */
       }
 
-    }
-    &-icon
-    {
-      flex: 1;
-      display: flex;
-      justify-content:  center;
-      width: 100%;
-      button
-      {
-        background-color: transparent;
-        border: none;
-        img
-        {
-          width: 400%;
-          position: relative;
-          top: -65px;
+      .MagnifyingGlassStreamlineCore1 {
+        position: relative;
+
+        .MagnifyingGlassStreamlineCoreSvg {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .Vector,
+          .Vector2 {
+            /* Add your vector styling here */
+          }
         }
       }
     }
   }
 
- //MOBILE
+  &:hover {
+    .meubelQuickview {
+      visibility: visible;
+    }
+  }
 
- //SERVICE
- @media (max-width: 833px) { 
+  .favoriteItem, .favoritedItem {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  .meubelInfo {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: $grijs;
+
+    .meubelTitel {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+//FavorietenComponent
+
+.favorieten {
+  display: flex;
+
+  &-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-info {
+    flex: 5;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    margin-left: -100px;
+    width: 60%;
+
+    h1 {
+      font-family: $font-main;
+      font-size: $font-large;
+      font-weight: 400;
+    }
+
+    p {
+      padding: 20px 0;
+      font-size: $font-small;
+    }
+
+    .price {
+      padding: 0;
+      font-size: $font-main;
+      font-weight: bold;
+    }
+
+  }
+
+  &-icon {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    button {
+      background-color: transparent;
+      border: none;
+
+      img {
+        width: 400%;
+        position: relative;
+        top: -65px;
+      }
+    }
+  }
+}
+
+//Meubel pagina
+
+.Product {
+  width: 339px;
+  height: 451px;
+  position: relative;
+}
+
+.Rectangle185 {
+  width: 339px;
+  height: 451px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #F6F1EE;
+  border-radius: 5px
+}
+
+.backgroundMeubel {
+  width: 296px;
+  height: 31px;
+  left: 21px;
+  top: 349px;
+  position: absolute;
+  color: #353535;
+  font-size: 15px;
+  font-family: Dosis;
+  font-weight: 300;
+  word-wrap: break-word;
+}
+
+.meubelPrijs {
+  width: 112px;
+  height: 27px;
+  left: 21px;
+  top: 406px;
+  position: absolute;
+  color: #353535;
+  font-size: 20px;
+  font-family: Nunito;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.Group2648 {
+  width: 19px;
+  height: 19px;
+  left: 287px;
+  top: 21px;
+  position: absolute
+}
+
+.AddToFavorites {
+  width: 19px;
+  height: 19px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+}
+
+.HeartStreamlineCore {
+  width: 26px;
+  height: 26px;
+  left: -2px;
+  top: -2px;
+  position: absolute;
+}
+
+.Vector {
+  width: 23.96px;
+  height: 19.99px;
+  left: 1.02px;
+  top: 3px;
+  position: absolute;
+  border: 1px #353535 solid;
+}
+
+.meubelFoto {
+  width: 238px;
+  height: 302px;
+  left: 50px;
+  top: 30px;
+  position: absolute
+}
+
+.Quickview {
+  width: 47px;
+  height: 47px;
+  left: 275px;
+  top: 382px;
+  position: absolute;
+}
+
+.Rectangle203 {
+  width: 47px;
+  height: 47px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  background: #FFD966;
+  border-radius: 3px;
+}
+
+.MagnifyingGlassStreamlineCore1 {
+  width: 27px;
+  height: 27px;
+  left: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+.MagnifyingGlassStreamlineCoreSvg {
+  width: 24px;
+  height: 25px;
+  left: 1px;
+  top: 1px;
+  position: absolute;
+}
+
+.Vector {
+  width: 18px;
+  height: 18px;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  border: 2px #353535 solid;
+}
+
+.Vector2 {
+  width: 9px;
+  height: 9px;
+  left: 15px;
+  top: 16px;
+  position: absolute;
+  border: 2px #353535 solid;
+}
+
+//MOBILE
+
+//SERVICE
+@media (max-width: 833px) {
   .nav {
     background-color: $color-white;
   }
@@ -1288,7 +1508,7 @@
 @media (max-width: 833px) {
   .footerTop {
     display: grid;
-    grid-template-rows: repeat(4, min);
+    grid-template-rows: repeat(4, min-content);
     grid-template-columns: 1fr;
   }
 

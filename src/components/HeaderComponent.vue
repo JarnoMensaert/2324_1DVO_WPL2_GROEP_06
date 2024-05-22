@@ -9,6 +9,7 @@ export default {
       navItem5:   "Klantenservice",
       showPopup:  false,
       showBar:    false,
+      showMenu:   false,
     }
   },
   methods: {
@@ -48,6 +49,9 @@ export default {
     showSearchBar() {
       this.showBar = !this.showBar;
     },
+    toggleMenu() {
+      this.showMenu = !this.showMenu;
+    },
   },
 }
 </script>
@@ -55,10 +59,11 @@ export default {
 <template>
   <nav class="nav">
     <div class="nav-top">
-      <img class="clickable iconlinks navtopitem magnifyingGlass" src="@/assets/Icons/magnifying-glass-solid.png" @mouseover="showSearchBar()"/>
-      <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }">
-      <img @click="Home()" class="logo clickable" src="@/assets/Comfortmeubel/Logo.png"/>
-      <img class="clickable iconrechts navtopitem" src="@/assets/Icons/user-solid.png"   @click="togglePopup()"/>
+      <img class="clickable iconlinks navtopitem" src="/assets/Icons/Search.png" @mouseover="showSearchBar()"/>
+      <input class="clickable iconlinks navtopitem searchBar" placeholder="Zoek een product..." :style="{ display: showBar ? 'block' : 'none' }"></input>
+      <img @click="Home()" class="logo clickable" src="/assets/Comfortmeubel/Logo.png"/>
+      <img class="clickable iconrechts navtopitem" src="/assets/Icons/Person.png"   @click="togglePopup()"/>
+
       <div class="popup" :style="{ display: showPopup ? 'block' : 'none' }">
         <div>
           <button @click="Favorieten()"><img src="/public/assets/Icons/favorite.png">Favorieten</button>
@@ -66,9 +71,10 @@ export default {
           <button @click="Login()" class="geleKnop">Aanmelden</button>
         </div>
       </div>
-      <img @click="Winkelmand()" class="clickable iconrechts navtopitem" src="@/assets/Icons/cart-shopping-solid.png"/>
+      <img @click="Winkelmand()" class="clickable iconrechts navtopitem" src="/assets/Icons/Shopping Cart.png"/>
+      <img @click="toggleMenu()" class="menu-icon iconrechts" src="/assets/Icons/BurgerMenu.png" onclick="toggleMenu(this)">
     </div>
-    <div class="nav-bottom">
+    <div class="nav-bottom" :class="{ 'mobile-menu': showMenu }">
       <ul class="navitems">
         <li class="navitem clickable"><a @click="Meubels()">{{ navItem1 }}</a></li>
         <li class="navitem clickable"><a @click="Woonaccesoires()">{{ navItem2 }}</a></li>
