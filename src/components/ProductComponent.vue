@@ -2,10 +2,12 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useWinkelStore } from '../stores/winkelstore.js';  // Adjust the path according to your project structure
+import { useFavoritesStore } from '@/stores/favoritePinia.js';  // Adjust the path according to your project structure
 
 const route = useRoute();
 const product = ref(null);
 const winkelStore = useWinkelStore();
+const favoritesStore = useFavoritesStore(); // Access the Pinia store
 
 const fetchProduct = async (id) => {
   try {
@@ -28,12 +30,24 @@ const addToCart = () => {
   }
 };
 
+const toggleFavorite = async () => {
+  try {
+    await favoritesStore.toggleFavorite(product.value.id); // Toggle favorite status
+  } catch (error) {
+    console.error('Error toggling favorite:', error);
+  }
+};
+
 onMounted(() => {
   const productId = route.params.id;
   if (productId) {
     fetchProduct(productId);
   }
 });
+
+const isFavorite = (productId) => {
+  return favoritesStore.isFavorite(productId); // Check if product is favorite
+};
 </script>
 
 <template>
@@ -47,7 +61,14 @@ onMounted(() => {
         </div>
       </div>
       <div class="productRechts">
-        <h2 class="productTitel">{{ product.producttitel }}</h2>
+        <div class="productHeader">
+          <h2 class="productTitel">{{ product.producttitel }}</h2>
+          <button @click="toggleFavorite">
+            <img :src="isFavorite(product.id) ? '/public/assets/Icons/favorited.png' : '/public/assets/Icons/favorite.png'"
+                 height="22" width="26"
+                 :alt="isFavorite(product.id) ? 'Unfavorite' : 'Favorite'"/>
+          </button>
+        </div>
         <span class="stocked">IN STOCK</span>
         <p class="productOmschr">{{ product.productomschrijving }}</p>
         <p class="dimensies">Dimensies:<br>{{ product.dimensies || 'N/A' }}</p>
