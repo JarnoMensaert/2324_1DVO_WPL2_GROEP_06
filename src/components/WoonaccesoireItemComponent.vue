@@ -6,7 +6,7 @@ const producten = ref([]);
 
 const fetchProducts = async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/producten');
+    const response = await fetch('https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/producten');
     const data = await response.json();
     // Filter products where isMeubel is false
     producten.value = data.filter(product => !product.isMeubel);

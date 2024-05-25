@@ -116,7 +116,7 @@ export default {
       this.formData.name = `${this.formData.voornaam} ${this.formData.achternaam}`;
 
       // Send form data to the backend
-      fetch('http://localhost:3000/new', {
+      fetch('https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/new', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

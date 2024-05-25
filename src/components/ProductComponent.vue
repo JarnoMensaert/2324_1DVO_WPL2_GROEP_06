@@ -11,7 +11,7 @@ const favoritesStore = useFavoritesStore(); // Access the Pinia store
 
 const fetchProduct = async (id) => {
   try {
-    const response = await fetch(`http://localhost:3001/api/product/${id}`);
+    const response = await fetch(`https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/product/${id}`);
     const data = await response.json();
 
     if (response.ok) {
