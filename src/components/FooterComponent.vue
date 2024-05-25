@@ -55,7 +55,7 @@ export default {
       this.closeNewsletterModal();
 
       // Redirect to the profile page with email query parameter and modal state
-      window.location.href = `http://localhost:5173/profiel?email=${encodeURIComponent(email)}&openModal=true`;
+      window.location.href = `https://comfortmeubel.netlify.app/profiel?email=${encodeURIComponent(email)}&openModal=true`;
     }
 
   }
@@ -106,7 +106,7 @@ export default {
                                                                                alt="Facebook"/></a>
         <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><img src="/assets/Icons/instagram.png"
                                                                                 class="icon clickable" alt="Instagram"/></a>
-        <form action="http://localhost:5173/profiel" method="GET">
+        <form action="https://comfortmeubel.netlify.app/profiel" method="GET">
           <p>{{ footerInfoR2 }}</p>
           <input id="email" type="email" placeholder="Je e-mailadres">
           <button id="submitEmail" type="submit" class="clickable"><img src="/assets/Icons/sendButton.png" alt="send"></button>

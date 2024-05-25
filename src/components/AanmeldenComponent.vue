@@ -41,7 +41,7 @@ export default {
   },
   methods: {
     login() {
-      fetch('http://localhost:3000/api/login', {
+      fetch('https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

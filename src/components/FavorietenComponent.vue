@@ -16,7 +16,7 @@ export default {
   methods: {
     async fetchProductData() {
       try {
-        const response = await fetch(`http://localhost:3000/api/product/${this.productId}`);
+        const response = await fetch(`https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/product/${this.productId}`);
         const data = await response.json();
         this.product = data;
       } catch (error) {

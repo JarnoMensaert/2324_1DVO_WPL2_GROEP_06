@@ -31,7 +31,7 @@ export default {
   methods: {
     confirmSubscription() {
       // Send a request to confirm subscription using the token
-      fetch(`http://localhost:5173/confirm/${this.token}`, { // Use the correct base URL
+      fetch(`https://comfortmeubel.netlify.app/confirm/${this.token}`, { // Use the correct base URL
         method: 'PUT'
       })
           .then(response => response.json())
