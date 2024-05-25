@@ -1,45 +1,23 @@
-<script>
+<script setup>
+import { ref, onMounted } from 'vue';
 import { useFavoritesStore } from '@/stores/favoritePinia.js'; // Import the Pinia store
 
-export default {
-  data() {
-    return {
-      producten: []
-    };
-  },
-  mounted() {
-    this.fetchProducts();
-  },
-  methods: {
-    async fetchProducts() {
-      try {
-        const response = await fetch('http://localhost:3000/api/producten');
-        const data = await response.json();
-        // Filter products where isMeubel is true
-        this.producten = data.filter(product => product.isMeubel == false);
-      } catch (error) {
-        console.error('Error fetching products:', error);
-      }
-    },
-    async toggleFavorite(productid) {
-      try {
-        const favoritesStore = useFavoritesStore(); // Access the Pinia store
-        await favoritesStore.toggleFavorite(productid); // Toggle the favorite status
-      } catch (error) {
-        console.error('Error toggling favorite:', error);
-      }
-    },
-    async isFavorite(productid) {
-      try {
-        const favoritesStore = useFavoritesStore(); // Access the Pinia store
-        return await favoritesStore.isFavorite(productid); // Check if product is favorite
-      } catch (error) {
-        console.error('Error checking favorite:', error);
-        return false; // Return false if an error occurs
-      }
-    }
+const producten = ref([]);
+
+const fetchProducts = async () => {
+  try {
+    const response = await fetch('http://localhost:3000/api/producten');
+    const data = await response.json();
+    // Filter products where isMeubel is false
+    producten.value = data.filter(product => !product.isMeubel);
+  } catch (error) {
+    console.error('Error fetching products:', error);
   }
 };
+
+const { toggleFavorite, isFavorite } = useFavoritesStore(); // Access the store methods
+
+onMounted(fetchProducts);
 </script>
 
 <template>
@@ -53,7 +31,9 @@ export default {
           <div class="HeartStreamlineCore">
             <img
                 :src="isFavorite(product.productid) ? '/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
-                height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"/>
+                height="22" width="26"
+                :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"
+            />
           </div>
         </div>
       </div>
@@ -61,10 +41,12 @@ export default {
       <div class="Quickview">
         <div class="Rectangle203"></div>
         <div class="MagnifyingGlassStreamlineCore1">
-          <router-link :to="{ name: 'product', params: { id: product.productid } }"
-                       class="MagnifyingGlassStreamlineCoreSvg">
-
-            <img src="/assets/Icons/magnifying.png" height="27" width="26" alt="See more"/></router-link>
+          <router-link
+              :to="{ name: 'product', params: { id: product.productid } }"
+              class="MagnifyingGlassStreamlineCoreSvg"
+          >
+            <img src="/assets/Icons/magnifying.png" height="27" width="26" alt="See more"/>
+          </router-link>
         </div>
       </div>
     </div>
