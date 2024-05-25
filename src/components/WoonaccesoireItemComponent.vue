@@ -52,7 +52,7 @@ export default {
         <div class="AddToFavorites" @click="toggleFavorite(product.productid)">
           <div class="HeartStreamlineCore">
             <img
-                :src="isFavorite(product.productid) ? '/assets/Icons/favorite.png' : '/assets/Icons/favorited.png'"
+                :src="isFavorite(product.productid) ? '/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
                 height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"/>
           </div>
         </div>

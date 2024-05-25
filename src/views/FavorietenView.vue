@@ -2,7 +2,7 @@
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import FavorietenComponent from "@/components/FavorietenComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
-import { useFavoritesStore } from "@/stores/favoritePinia.js";
+import { useFavoritesStore } from '@/stores/favoritePinia.js'; // Import the Pinia store
 
 export default {
   data() {
@@ -14,23 +14,6 @@ export default {
     },
     Favorieten() {
       this.$router.push('/favorieten');
-    },
-    async toggleFavorite(productid) {
-      try {
-        const favoritesStore = useFavoritesStore(); // Access the Pinia store
-        await favoritesStore.toggleFavorite(productid); // Toggle the favorite status
-      } catch (error) {
-        console.error('Error toggling favorite:', error);
-      }
-    },
-    async isFavorite(productid) {
-      try {
-        const favoritesStore = useFavoritesStore(); // Access the Pinia store
-        return await favoritesStore.isFavorite(productid); // Check if product is favorite
-      } catch (error) {
-        console.error('Error checking favorite:', error);
-        return false; // Return false if an error occurs
-      }
     }
   },
   components: {
@@ -38,7 +21,13 @@ export default {
     FavorietenComponent,
     FooterComponent,
   },
-};
+  computed: {
+    favoriteProductIds() {
+      const favoritesStore = useFavoritesStore(); // Access the Pinia store
+      return Object.keys(favoritesStore.favorites);
+    }
+  }
+}
 </script>
 
 <template>
@@ -53,11 +42,7 @@ export default {
       </p>
       <hr>
     </div>
-    <!-- Pass isFavorite and toggleFavorite methods to FavorietenComponent -->
-    <FavorietenComponent
-        :isFavorite="isFavorite"
-        :toggleFavorite="toggleFavorite"
-    />
+    <FavorietenComponent v-for="productId in favoriteProductIds" :key="productId" :productId="productId" />
     <FooterComponent/>
   </div>
 </template>

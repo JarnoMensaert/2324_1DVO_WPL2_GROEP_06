@@ -11,7 +11,7 @@ import WoonaccesoireItemComponent from "@/components/WoonaccesoireItemComponent.
 export default {
   data() {
     return {
-      Titel: "Meubels",
+      Titel: "Woonaccesoires",
     }
   },
   components: {
