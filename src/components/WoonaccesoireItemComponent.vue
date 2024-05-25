@@ -1,4 +1,6 @@
 <script>
+import { useFavoritesStore } from '@/stores/favoritePinia.js'; // Import the Pinia store
+
 export default {
   data() {
     return {
@@ -18,6 +20,23 @@ export default {
       } catch (error) {
         console.error('Error fetching products:', error);
       }
+    },
+    async toggleFavorite(productid) {
+      try {
+        const favoritesStore = useFavoritesStore(); // Access the Pinia store
+        await favoritesStore.toggleFavorite(productid); // Toggle the favorite status
+      } catch (error) {
+        console.error('Error toggling favorite:', error);
+      }
+    },
+    async isFavorite(productid) {
+      try {
+        const favoritesStore = useFavoritesStore(); // Access the Pinia store
+        return await favoritesStore.isFavorite(productid); // Check if product is favorite
+      } catch (error) {
+        console.error('Error checking favorite:', error);
+        return false; // Return false if an error occurs
+      }
     }
   }
 };
@@ -29,9 +48,12 @@ export default {
       <div class="backgroundMeubel">{{ product.producttitel }}</div>
       <div class="meubelPrijs">€ {{ product.prijs.toFixed(2) }}</div>
       <div class="Group2648">
-        <div class="AddToFavorites">
+        <!-- Toggle favorite button -->
+        <div class="AddToFavorites" @click="toggleFavorite(product.productid)">
           <div class="HeartStreamlineCore">
-            <img src="/assets/Icons/favorite.png" height="22" width="26" alt="Favorite"/>
+            <img
+                :src="isFavorite(product.productid) ? '/assets/Icons/favorite.png' : '/assets/Icons/favorited.png'"
+                height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"/>
           </div>
         </div>
       </div>

@@ -1,4 +1,6 @@
 <script>
+import { useFavoritesStore } from '../stores/favoritePinia.js';
+
 export default {
   data() {
     return {
@@ -17,6 +19,14 @@ export default {
       } catch (error) {
         console.error('Error fetching products:', error);
       }
+    },
+    toggleFavorite(productid) {
+      const favoritesStore = useFavoritesStore();
+      favoritesStore.toggleFavorite(productid);
+    },
+    isFavorite(productid) {
+      const favoritesStore = useFavoritesStore();
+      return favoritesStore.isFavorite(productid);
     }
   }
 };
@@ -28,9 +38,11 @@ export default {
       <div class="backgroundMeubel">{{ product.producttitel }}</div>
       <div class="meubelPrijs">€ {{ product.prijs.toFixed(2) }}</div>
       <div class="Group2648">
-        <div class="AddToFavorites">
+        <div class="AddToFavorites" @click="toggleFavorite(product.productid)">
           <div class="HeartStreamlineCore">
-            <img src="/assets/Icons/favorite.png" height="22" width="26" alt="Favorite"/>
+            <img
+                :src="isFavorite(product.productid) ? '/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
+                height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"/>
           </div>
         </div>
       </div>
@@ -40,8 +52,8 @@ export default {
         <div class="MagnifyingGlassStreamlineCore1">
           <router-link :to="{ name: 'product', params: { id: product.productid } }"
                        class="MagnifyingGlassStreamlineCoreSvg">
-
-            <img src="/assets/Icons/magnifying.png" height="27" width="26" alt="See more"/></router-link>
+            <img src="/assets/Icons/magnifying.png" height="27" width="26" alt="See more"/>
+          </router-link>
         </div>
       </div>
     </div>

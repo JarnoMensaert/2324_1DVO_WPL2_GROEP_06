@@ -1,51 +1,70 @@
 <script>
-import HeaderComponent from "@/components/HeaderComponent.vue";
-import FavorietenComponent from "@/components/FavorietenComponent.vue"
-import FooterComponent from "@/components/FooterComponent.vue";
+import { useFavoritesStore } from '../stores/favoritePinia.js';
 
 export default {
   data() {
     return {
-
-    }
+      producten: []
+    };
+  },
+  mounted() {
+    this.fetchProducts();
   },
   methods: {
-    Home() {
-      this.$router.push('/')
+    async fetchProducts() {
+      try {
+        const response = await fetch('http://localhost:3000/api/producten');
+        const data = await response.json();
+        this.producten = data.filter(product => product.isMeubel == false);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
     },
-    Favorieten() {
-      this.$router.push('/favorieten')
+    toggleFavorite(productid) {
+      const favoritesStore = useFavoritesStore();
+      favoritesStore.toggleFavorite(productid);
+    },
+    isFavorite(productid) {
+      const favoritesStore = useFavoritesStore();
+      return favoritesStore.isFavorite(productid);
     }
-  },
-  components: {
-    HeaderComponent,
-    FavorietenComponent,
-    FooterComponent,
   }
-}
+};
 </script>
 
 <template>
-  <HeaderComponent/>
-  <div class="aboutTitle">Favorieten</div>
-  <div class="breadcrumb">
-    <p>
-      <div @click="Home()" class="breadcrumb-link">HOME</div>
-      <div class="breadcrumb-link">/</div>
-      <div @click="Favorieten()" class="breadcrumb-link">FAVORIETEN</div></p>
-    <hr>
+  <div>
+    <div v-for="product in producten" :key="product.productid" class="Product">
+      <div class="backgroundMeubel">{{ product.producttitel }}</div>
+      <div class="meubelPrijs">€ {{ product.prijs.toFixed(2) }}</div>
+      <div class="Group2648">
+        <div class="AddToFavorites" @click="toggleFavorite(product.productid)">
+          <div class="HeartStreamlineCore">
+            <img
+                :src="isFavorite(product.productid) ? '/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
+                height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'"/>
+          </div>
+        </div>
+      </div>
+      <img :alt="product.producttitel" class="meubelFoto" :src="product.productafbeelding"/>
+      <div class="Quickview">
+        <div class="Rectangle203"></div>
+        <div class="MagnifyingGlassStreamlineCore1">
+          <router-link :to="{ name: 'product', params: { id: product.productid } }"
+                       class="MagnifyingGlassStreamlineCoreSvg">
+            <img src="/assets/Icons/magnifying.png" height="27" width="26" alt="See more"/>
+          </router-link>
+        </div>
+      </div>
+    </div>
   </div>
-  <FavorietenComponent
-      title="Relax Wuhan Manueel Verstelbaar Elephant"
-      description="Poten metaal en bekleding PU – Max. 110 kg"
-      price="€ 399,00"
-      img="/public/assets/images/stoel.png"
-  />
-  <FavorietenComponent
-      title="Bijzettafel Odile 50Ø"
-      description="Gewicht: 13.56 kg 50x50x50"
-      price="€ 249,00"
-      img="/public/assets/images/tafel.png"
-  />
-  <FooterComponent/>
 </template>
+
+<style scoped>
+/* Ensure you import your stylesheet here if not already globally imported */
+@import '../assets/scss/_layout.scss';
+
+* {
+  float: left;
+}
+</style>
