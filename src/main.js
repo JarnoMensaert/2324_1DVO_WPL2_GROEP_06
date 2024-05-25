@@ -18,3 +18,4 @@ app.use(pinia);
 pinia.use(piniaPluginPersistedstate);
 
 app.mount('#app');
+
