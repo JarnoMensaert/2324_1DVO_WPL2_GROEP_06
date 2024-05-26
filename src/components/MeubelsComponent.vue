@@ -31,7 +31,6 @@ export default {
     <p>HOME / MEUBELS</p>
     <hr>
   </div>
-  <FilterComponent/>
   <div class="meubelsRij">
     <MeubelItemComponent/>
   </div>
