@@ -24,5 +24,5 @@ export const useFavoritesStore = defineStore('favorites', {
             this.saveFavoritesToLocalStorage(); // Save favorites to local storage after removing
         }
     },
-    persist: true, // Enable persistence to local storage
+    persist: true,
 });
