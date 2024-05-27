@@ -2,7 +2,12 @@
   <div>
     <h1>Subscription Confirmation</h1>
     <div v-if="loading">Confirming subscription...</div>
-    <div v-if="confirmationMessage" :class="{ 'success': confirmed, 'error': !confirmed }">{{ confirmationMessage }}</div>
+    <div v-if="confirmationMessage" :class="{ 'success': confirmed, 'error': !confirmed }">
+      {{ confirmationMessage }}
+    </div>
+    <div v-if="confirmed">
+      <a href="#" @click.prevent="deleteSubscription">Unsubscribe</a>
+    </div>
   </div>
 </template>
 
@@ -53,6 +58,29 @@ export default {
           .finally(() => {
             this.loading = false;
           });
+    },
+    deleteSubscription() {
+      // Send a delete request to the specified backend using the token
+      fetch(`https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/subscriptions`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({token: this.token})
+      })
+          .then(response => response.json())
+          .then(data => {
+            if (data.message === 'Successfully unsubscribed!') {
+              this.confirmationMessage = data.message;
+              this.confirmed = false;
+            } else {
+              this.confirmationMessage = data.message;
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            this.confirmationMessage = 'Error unsubscribing. Please try again later.';
+          })
     }
   }
 };
