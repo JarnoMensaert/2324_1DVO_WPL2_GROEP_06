@@ -13,18 +13,26 @@ export default {
   methods: {
     async fetchProducts() {
       try {
-        const response = await fetch('/api/producten', {
+        const response = await fetch('https://two324-1dvo-wpl2-groep-06-backend-1.onrender.com/api/producten', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': '*'
           }
         });
+        const text = await response.text();
+
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
-        const data = await response.json();
-        this.producten = data.filter(product => product.isMeubel == true);
+
+        try {
+          const data = JSON.parse(text);
+          this.producten = data.filter(product => product.isMeubel);
+        } catch (error) {
+          console.error('Error parsing JSON:', error);
+          console.error('Response text:', text);
+        }
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -39,7 +47,6 @@ export default {
     }
   }
 };
-
 </script>
 
 <template>
@@ -71,7 +78,6 @@ export default {
 </template>
 
 <style scoped>
-/* Ensure you import your stylesheet here if not already globally imported */
 @import '../assets/scss/_layout.scss';
 
 * {
