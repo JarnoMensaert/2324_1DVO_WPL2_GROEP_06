@@ -258,6 +258,22 @@ footer {
   }
 }
 
+.aanbiedingen {
+  position: relative;
+  .aanbieding {
+    position: relative;
+    .aanbiedingkorting {
+      background-color: $color-secondary;
+      position: absolute;
+      top: 0;
+      left: 40%;
+      padding: 2%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
+
 // LookingForComponent
 
 .fullscreen {
@@ -1101,6 +1117,84 @@ a, a:visited {
   }
 }
 
+//ProductComponent
+
+.productInfo
+{
+  width: 100%;
+  display: flex;
+  .productLinks
+  {
+    width: 48%;
+    margin-right: 4%;
+    flex: 1;
+    #carouselFotos
+    {
+      img
+      {
+        width: 100%;
+      }
+    }
+  }
+  .productRechts
+  {
+    width: 48%;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    .productHeader
+    {
+      width: 90%;
+      display: flex;
+      .productTitel
+      {
+        flex: 1;
+        margin: 20px 0;
+      }
+      button
+      {
+        background-color: transparent;
+        border: none;
+        img
+        {
+          width: 150%;
+          height: auto;
+          flex: 1;
+        }
+      }
+    }
+    .stocked
+    {
+      padding: 10px;
+      border: 1px solid $color-black;
+    }
+    .productOmschr, .dimensies
+    {
+      margin: 35px 150px 0 0;
+    }
+    #productPrijs
+    {
+      margin: 15px 0 0 0;
+      font-family: $font-main;
+      font-size: $font-extraLarge;
+      font-weight: bold;
+    }
+    .addToCartButton
+    {
+      padding: 10px 20px;
+      border: none;
+      background-color: $color-secondary;
+      border-radius: 0;
+      color: $color-black;
+      margin: 15px 0;
+      cursor: pointer;
+    }
+    .shipping1
+    {
+      margin: 15px 0 0 0;
+    }
+  }
+}
 
 //WinkelmandView
 .winkelmandItem {
