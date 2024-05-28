@@ -64,7 +64,7 @@ const isFavorite = (productId) => {
         <div class="productHeader">
           <h2 class="productTitel">{{ product.producttitel }}</h2>
           <button @click="toggleFavorite">
-            <img :src="isFavorite(product.id) ? '/public/assets/Icons/favorited.png' : '/public/assets/Icons/favorite.png'"
+            <img :src="isFavorite(product.id) ? '/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
                  height="22" width="26"
                  :alt="isFavorite(product.id) ? 'Unfavorite' : 'Favorite'"/>
           </button>
