@@ -33,7 +33,6 @@ export default {
     <p>HOME / WOONACCESOIRES</p>
     <hr>
   </div>
-  <FilterComponent/>
   <div class="meubelsRij">
     <WoonaccesoireItemComponent/>
   </div>

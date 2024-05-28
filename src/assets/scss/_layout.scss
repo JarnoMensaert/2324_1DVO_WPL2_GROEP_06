@@ -1539,10 +1539,14 @@ RouterLink {
   background-color: $color-secondary;
 }
 
+.sort-container {
+  position: absolute;
+  left: 10%;
+}
+
 
 /* MOBILE */
-/* Updated media query for modern phones */
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .nav {
     background-color: $color-white;
   }
@@ -1562,7 +1566,7 @@ RouterLink {
 
 /* FOOTER */
 /* Updated media query for modern phones */
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   .footerTop {
     display: grid;
     grid-template-rows: repeat(4, min-content);
