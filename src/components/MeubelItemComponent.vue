@@ -1,10 +1,20 @@
 <script>
-import { useFavoritesStore } from '../stores/favoritePinia.js';
+import {useFavoritesStore} from '../stores/favoritePinia.js';
 
 export default {
   data() {
     return {
-      producten: []
+      producten: [],
+      selectedFilters: {
+        isZitmeubel: [],
+        isEetkamer: [],
+        isSlapen: [],
+        isTafels: [],
+        isKasten: [],
+        prijsGoed: [],
+      },
+      sortCriteria: 'price',
+      sortDirection: 'asc'
     };
   },
   mounted() {
@@ -44,6 +54,57 @@ export default {
     isFavorite(productid) {
       const favoritesStore = useFavoritesStore();
       return favoritesStore.isFavorite(productid);
+    },
+    sortProducts(products) {
+      if (this.sortCriteria === 'price') {
+        products.sort((a, b) => {
+          if (this.sortDirection === 'asc') {
+            return a.prijs - b.prijs;
+          } else {
+            return b.prijs - a.prijs;
+          }
+        });
+      } else if (this.sortCriteria === 'title') {
+        products.sort((a, b) => {
+          if (this.sortDirection === 'asc') {
+            return a.producttitel.localeCompare(b.producttitel);
+          } else {
+            return b.producttitel.localeCompare(a.producttitel);
+          }
+        });
+      }
+      return products;
+    },
+    filteredProducts() {
+      let filteredProducts = [...this.producten];
+      console.log("Original products:", filteredProducts);
+
+      // Apply filters (if any)
+      // Example for isZitmeubel filter
+      if (this.selectedFilters.isZitmeubel.length > 0) {
+        filteredProducts = filteredProducts.filter(product => {
+          return this.selectedFilters.isZitmeubel.includes(product.isZitmeubel);
+        });
+        console.log("After isZitmeubel filter:", filteredProducts);
+      }
+
+      // More filters here...
+      // ...
+
+      // Apply sorting
+      filteredProducts = this.sortProducts(filteredProducts);
+
+      console.log("Filtered and sorted products:", filteredProducts);
+      return filteredProducts;
+    },
+    setSortCriteria(event) {
+      const value = event.target.value;
+      if (value.includes('price')) {
+        this.sortCriteria = 'price';
+      } else if (value.includes('title')) {
+        this.sortCriteria = 'title';
+      }
+      this.sortDirection = value.includes('asc') ? 'asc' : 'desc';
     }
   }
 };
@@ -51,7 +112,18 @@ export default {
 
 <template>
   <div>
-    <div v-for="product in producten" :key="product.productid" class="Product">
+    <!-- Sorting controls -->
+    <div class="sort-container">
+      <label for="sort">Sorteren op: </label>
+      <select id="sort" @change="setSortCriteria">
+        <option value="price-asc">Prijs (Laag - Hoog)</option>
+        <option value="price-desc">Prijs (Hoog - Laag)</option>
+        <option value="title-asc">Titel (A - Z)</option>
+        <option value="title-desc">Titel (Z - A)</option>
+      </select>
+    </div>
+
+    <div v-for="product in filteredProducts()" :key="product.productid" class="Product">
       <div class="backgroundMeubel">{{ product.producttitel }}</div>
       <div class="meubelPrijs">€ {{ product.prijs.toFixed(2) }}</div>
       <div class="Group2648">

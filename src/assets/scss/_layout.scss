@@ -1484,10 +1484,65 @@ RouterLink {
   border: 2px #353535 solid;
 }
 
-//MOBILE
+//Filter functie
+.sort-container {
+  display: inline-block;
+  background-color: $color-secondary;
+  border: 1px solid $color-secondary;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
 
-//SERVICE
-@media (max-width: 833px) {
+.sort-container select {
+  background-color: $color-secondary;
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.sort-container select::-ms-expand {
+  display: none;
+}
+
+.sort-container label {
+  margin-right: 10px;
+}
+
+//Scroll to top
+ .scroll-top-button {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   display: none;
+   background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   font-size: 20px;
+   cursor: pointer;
+   z-index: 1000;
+ }
+
+.scroll-top-button:hover {
+  background-color: $color-secondary;
+}
+
+
+/* MOBILE */
+/* Updated media query for modern phones */
+@media (max-width: 767px) {
   .nav {
     background-color: $color-white;
   }
@@ -1498,14 +1553,16 @@ RouterLink {
     margin-bottom: 0px !important;
     margin-top: 45px !important;
   }
+
   .image-container {
     margin-bottom: 0px !important;
     margin-top: 30px !important;
   }
 }
 
-//FOOTER
-@media (max-width: 833px) {
+/* FOOTER */
+/* Updated media query for modern phones */
+@media (max-width: 767px) {
   .footerTop {
     display: grid;
     grid-template-rows: repeat(4, min-content);
