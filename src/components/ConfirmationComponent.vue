@@ -45,11 +45,6 @@ export default {
               this.confirmationMessage = data.message;
             }
           })
-          .catch(error => {
-            console.error('Error:', error);
-            // Show error message
-            this.confirmationMessage = 'Error confirming subscription. Please try again later.';
-          })
           .finally(() => {
             this.loading = false;
           });
