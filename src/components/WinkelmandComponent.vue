@@ -3,10 +3,14 @@
 import WinkelmandItemComponent from "@/components/WinkelmandItemComponent.vue";
 import {defineComponent} from "vue";
 
-export default defineComponent({
+export default {
+  data() {
+    return {
+      Titel: "Meubels",
+    }
+  },
   components: {WinkelmandItemComponent}
-})
-
+}
 </script>
 
 <template>
