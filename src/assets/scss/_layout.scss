@@ -1345,7 +1345,7 @@ RouterLink {
       border: none;
 
       img {
-        width: 400%;
+        width: 100%;
         position: relative;
         top: -65px;
       }
@@ -1550,6 +1550,7 @@ RouterLink {
   left: 10%;
 }
 
+
 .manditem {
   .winkelmandItemLinks {
     width: 200px;
@@ -1561,6 +1562,26 @@ RouterLink {
   .winkelmandItemRechts {
     width: 40vw;
   }
+}
+
+.favorieten {
+  .favorieten-image {
+    img {
+      width: 200px;
+      height: auto;
+    }
+    margin-right: 2%;
+    float: left;
+  }
+
+  .favorieten-info {
+    width: 40vw;
+  }
+}
+
+.unfavorite {
+  height: 40px;
+  width: auto;
 }
 
 .winkelmandTotalen {
