@@ -17,7 +17,7 @@
         <p class="aanbprijs">€1700,00</p>
       </div>
       <div class="aanbieding">
-        <span><p>30%</p></span>
+        <span class="aanbiedingkorting"><p>30%</p></span>
         <img src="@/assets/images/zetel.png"/>
         <h5 class="aanbtitel">Eenpersoons bed</h5>
         <p class="initialprijs"><s>€1700,00</s></p>
