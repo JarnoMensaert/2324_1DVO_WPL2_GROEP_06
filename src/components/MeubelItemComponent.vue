@@ -114,7 +114,7 @@ export default {
   <div>
     <!-- Sorting controls -->
     <div class="sort-container">
-      <label for="sort">Sorteren op: </label>
+      <label for="sort" class="sortlabel">Sorteren op: </label>
       <select id="sort" @change="setSortCriteria">
         <option value="price-asc">Prijs (Laag - Hoog)</option>
         <option value="price-desc">Prijs (Hoog - Laag)</option>
