@@ -13,6 +13,6 @@ Er werdt ons gevraagd om een nieuwe design te maken en te implementeren voor hun
 - Jarno Mensaert (Designer)
 
 # Bronnen
-We hebben veel informatie gehaald van https://comfortmeubel.be/ zelf. Dit gaat dan vooral over images en productinformatie.
-We hebben veel gebruik gemaakt van ChatGPT voor het schrijven en fixen van code.
-Ook hebben we gebruik gemaakt van StackOverflow.
+- We hebben veel informatie gehaald van https://comfortmeubel.be/ zelf. Dit gaat dan vooral over images en productinformatie.
+- We hebben veel gebruik gemaakt van ChatGPT voor het schrijven en fixen van code.
+- Ook hebben we gebruik gemaakt van StackOverflow.
