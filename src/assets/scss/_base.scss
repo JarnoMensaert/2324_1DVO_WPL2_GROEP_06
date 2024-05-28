@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+$background-color: #F6F1EE;
+$footer-background: rgba(#6C5F5B, 0.85);
+$color-secondary: #FFD966;
+$color-black: #353535;
+$color-white: #ffffff;
+$grijs: #BDBBB0;
+$licht-grijs-geel: rgba(186, 185, 178, 0.6);
+$color-brown: #D3CFCE;
+
+$font-main: "Nunito", sans-serif;
+$font-secondary: "Dosis", sans-serif;
+
+$font-pageTitle: 64px;
+$font-extraLarge: 32px;
+$font-large: 26px;
+$font-regular: 20px;
+$font-small: 15px;
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin textStyles($fontSize)
+{
+  font-size: $fontSize;
+  font-family: $font-main;
+  color: $background-color;
+}
