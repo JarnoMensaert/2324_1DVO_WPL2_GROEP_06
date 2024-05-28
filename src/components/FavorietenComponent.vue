@@ -53,7 +53,7 @@ export default {
       <!-- Toggle favorite button -->
       <button @click="toggleFavorite">
         <img
-            :src="isFavorite(product.productid) ? '/public/assets/Icons/favorited.png' : '/public/assets/Icons/favorite.png'"
+            :src="isFavorite(product.productid) ? '/public/assets/Icons/favorited.png' : '/assets/Icons/favorite.png'"
             height="22" width="26" :alt="isFavorite(product.productid) ? 'Unfavorite' : 'Favorite'" class="unfavorite"/>
       </button>
     </div>
