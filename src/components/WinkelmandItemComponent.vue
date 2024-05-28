@@ -1,7 +1,7 @@
 <script>
-import { defineComponent } from 'vue';
-import { useWinkelStore } from '../stores/winkelstore.js'; // Make sure the import path is correct
-import { mapActions, mapState } from 'pinia';
+import {defineComponent} from 'vue';
+import {useWinkelStore} from '../stores/winkelstore.js'; // Make sure the import path is correct
+import {mapActions, mapState} from 'pinia';
 
 export default defineComponent({
   name: 'WinkelmandItemComponent',
@@ -44,29 +44,33 @@ export default defineComponent({
 </script>
 
 <template>
-  <div v-for="(product, index) in winkelMandje" :key="product.id" class="winkelmandItem">
-    <div class="winkelmandItemLinks">
-      <img class="winkelmandImg" :src="product.productafbeelding" :alt="product.producttitel"/>
-    </div>
-    <div class="winkelmandItemRechts">
-      <h3 class="winkelmandTitel">{{ product.producttitel }}</h3>
-      <p class="winkelmandOmschr">{{ product.productomschrijving }}</p>
-<!-- /     <p class="winkelmandKleur">Kleur: {{ product.color }}</p>-->
-<!--      <img :src="product.colorImage" :alt="product.color">-->
-      <h3 class="winkelmandPrijs">€{{ product.prijs }}</h3>
-      <div class="winkelmandAantal">
-        <button @click="updateQuantity({ index, quantity: product.quantity - 1 })" class="winkelmandMinder">-</button>
-        <p class="winkelmandAantalNummer">{{ product.quantity }}</p>
-        <button @click="updateQuantity({ index, quantity: product.quantity + 1 })" class="winkelmandMeer">+</button>
+  <div class="manditem">
+    <div v-for="(product, index) in winkelMandje" :key="product.id" class="winkelmandItem">
+      <div class="winkelmandItemLinks">
+        <img class="winkelmandImg" :src="product.productafbeelding" :alt="product.producttitel"/>
       </div>
-      <button @click="removeFromWinkelmandje(index)">Verwijderen</button>
+      <div class="winkelmandItemRechts">
+        <h3 class="winkelmandTitel">{{ product.producttitel }}</h3>
+        <p class="winkelmandOmschr">{{ product.productomschrijving }}</p>
+        <!-- /     <p class="winkelmandKleur">Kleur: {{ product.color }}</p>-->
+        <!--      <img :src="product.colorImage" :alt="product.color">-->
+        <h3 class="winkelmandPrijs">€{{ product.prijs }}</h3>
+        <div class="winkelmandAantal">
+          <button @click="updateQuantity({ index, quantity: product.quantity - 1 })" class="winkelmandMinder">-</button>
+          <p class="winkelmandAantalNummer">{{ product.quantity }}</p>
+          <button @click="updateQuantity({ index, quantity: product.quantity + 1 })" class="winkelmandMeer">+</button>
+        </div>
+        <button @click="removeFromWinkelmandje(index)">Verwijderen</button>
+      </div>
     </div>
   </div>
 
   <div class="winkelmandTotalen">
-    <p>Subtotal: €{{ calculateTotalPrice() }}</p>
+    <p>Totaal van je artikelen: €{{ calculateTotalPrice() }}</p>
+    <hr>
     <p>BTW: €{{ calculateTotalVAT() }}</p>
-    <button @click="simulateOrder">Bestelling plaatsen</button>
+    <hr>
+    <button @click="simulateOrder" class="afrekenKnop">Afrekenen</button>
   </div>
 </template>
 
